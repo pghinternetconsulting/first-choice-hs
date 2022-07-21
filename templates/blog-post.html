@@ -1,89 +1,116 @@
 <!--
   templateType: blog_post
   isAvailableForNewContent: true
-  label: Boilerplate - blog post
-  screenshotPath: ../images/template-previews/blog-post.png
+  label: PIC Theme - blog post
 -->
-{% set template_css = "../../css/templates/blog.css" %}
-{% extends "./layouts/base.html" %}
+{% set template_css = '../../css/templates/blog.css' %}
+{% extends './layouts/base.html' %}
 
 {% block body %}
-<div class="body-container body-container--blog-post">
+<main id="main-content" class="body-container-wrapper">
+    <div class="body-container body-container--blog-post">
 
-  {# Blog post #}
-
-  <div class="content-wrapper">
-    <article class="blog-post">
-      <h1>{{ content.name }}</h1>
-      <div class="blog-post__meta">
-        <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
-          {{ content.blog_post_author.display_name }}
-        </a>
-        <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
-          {{ content.publish_date_localized }}
-        </time>
-      </div>
-      <div class="blog-post__body">
-        {{ content.post_body }}
-      </div>
-      {% if content.tag_list %}
-        <div class="blog-post__tags">
-          {% icon
-            name="tag",
-            purpose="decorative",
-            style="SOLID"
-          %}
-          {% for tag in content.tag_list %}
-            <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-    </article>
-    {% if group.allow_comments %}
-      <div class="blog-comments">
-        {% module "blog_comments"
-          path="@hubspot/blog_comments",
-          label="Blog comments"
-        %}
-      </div>
-    {% endif %}
-  </div>
-
-  {# Recent posts listing #}
-
-  {# This macro is used to format each recent post card and gets passed to the related_blog_posts HubL tag below #}
-
-  {% macro related_posts(post, count, total) %}
-    {% if count == 1 %}
-      <section class="blog-related-posts">
+        {# Blog post #}
         <div class="content-wrapper">
-          <h2>Read On</h2>
-          <div class="blog-related-posts__list">
-    {% endif %}
-            <article class="blog-related-posts__post" aria-label="Blog post summary: {{ post.name }}">
-              {% if post.featured_image %}
-                <a class="blog-related-posts__post-image-wrapper" href="{{ post.absolute_url }}" aria-label="{% if post.featured_image_alt_text %} Featured image: {{ post.featured_image_alt_text }} - {% endif %}Read full post: {{ post.name }}">
-                  <img class="blog-related-posts__image" src="{{ post.featured_image }}" loading="lazy" width="352" alt="{{ post.featured_image_alt_text }}">
-                </a>
-              {% endif %}
-              <div class="blog-related-posts__content">
-                <h3 class="blog-related-posts__title">
-                  <a class="blog-related-posts__title-link" href="{{ post.absolute_url }}">{{ post.name }}</a></h3>
-                {{ post.post_summary|truncatehtml(100) }}
-              </div>
+            <article class="blog-post">
+
+                <h1 class="blogtitle">
+                    {{ content.name }}
+                </h1>
+                <p class="custom-date-comment-wrapper">
+                    {% for topic in content.topic_list %}
+                        {% if topic.slug in hidden_tags %}
+                        {% else %}
+                            {% if not loop.first %},{% endif %} <a class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>
+                        {% endif %}     
+                    {% endfor %}
+                    |
+                    <span class="reading-minutes">
+                        {% set initialPostWords = content.post_body|wordcount %}
+                        {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+                        {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+                        {% set number = finishedPostWords|round %}
+                        {% if number < 1 %} {% else %} {{ finishedPostWords|round }} minute read {% endif %} </span>
+                </p>
+
+                {% if content.post_list_summary_featured_image %}
+                <div class="hs-featured-image-wrapper">
+                    <img src="{{ content.post_list_summary_featured_image }}" class="{# hs-featured-image #}">
+                </div>
+                {% endif %}
+                <div class="section post-body">
+                    {{ content.post_body }}
+                </div>
+
+                <div class="author-desc">
+                    <div class="post-author-avatar">
+                        {% if content.blog_post_author.avatar %}
+                        <div class="hs-author-avatar"> <img height="200px" width="200px" loading="lazy"
+                                src="{{ content.blog_post_author.avatar }}"
+                                alt="{{ content.blog_post_author.display_name }}"> </div>
+                        {% else %}
+                        <div class="hs-author-avatar"> <img height="200px" width="200px" loading="lazy"
+                                src="http://cdn2.hubspot.net/hub/483844/file-2523036294-jpg/images/gravatar.jpg"
+                                alt="{{ content.blog_post_author.display_name }}"> </div>
+                        {% endif %}
+                    </div>
+                    <div class="author-bio">
+                        <h4>
+                            <a class="author-link"
+                                href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{
+                                content.blog_post_author.display_name }}</a>
+                        </h4>
+                        <p>{{ content.blog_post_author.bio }}</p>
+                        <div class="author-social-profiles">
+                            {% if content.blog_post_author.has_social_profiles %}
+                            <div class="hs-author-social-section">
+                                <!-- <span class="hs-author-social-label">Find me on:</span> -->
+                                <div class="hs-author-social-links">
+                                    {% if content.blog_post_author.facebook %}
+                                    <a href="{{ content.blog_post_author.facebook }}" target="_blank"
+                                        class="hs-author-social-link accentColor1">
+                                        {% icon
+                                            extra_classes='social-links__icon',
+                                            name='facebook-f',
+                                            purpose='semantic',
+                                            style='SOLID',
+                                            title='Facebook'
+                                          %}
+                                    </a>
+                                    {% endif %}
+                                    {% if content.blog_post_author.linkedin %}
+                                    <a href="{{ content.blog_post_author.linkedin }}" target="_blank"
+                                        class="hs-author-social-link accentColor1">
+                                        {% icon
+                                            extra_classes='social-links__icon',
+                                            name='linkedin-in',
+                                            purpose='semantic',
+                                            style='SOLID',
+                                            title='Facebook'
+                                          %}
+                                    </a>
+                                    {% endif %}
+                                    {% if content.blog_post_author.twitter %}
+                                    <a href="{{ content.blog_post_author.twitter }}" target="_blank"
+                                        class="hs-author-social-link accentColor1">
+                                        {% icon
+                                            extra_classes='social-links__icon',
+                                            name='twitter',
+                                            purpose='semantic',
+                                            style='SOLID',
+                                            title='Facebook'
+                                          %}
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             </article>
-      {% if count == total %}
-          </div>
+            {# End blog post #}
         </div>
-      </section>
-    {% endif %}
-  {% endmacro %}
-
-  {% related_blog_posts
-    limit=3,
-    no_wrapper=True,
-    post_formatter="related_posts"
-  %}
-
-</div>
+    </div>
+</main>
 {% endblock body %}

@@ -9,6 +9,7 @@ Note: _macros.css needs to be imported into each stylesheet where macros are use
 This is where reset, normalize & box-sizing styles go.
 */
 
+{% include './elements/_typography.css' %}
 {% include './generic/_reset.css' %}
 {% include './generic/_normalize.css' %}
 
@@ -23,7 +24,6 @@ Non-cosmetic design patterns including grid and layout classes)
 Base HMTL elements are styled in this section (<body<, <h1>, <a>, <p>, <button> etc.)
 */
 
-{% include './elements/_typography.css' %}
 {% include './elements/_buttons.css' %}
 {% include './elements/_forms.css' %}
 {% include './elements/_tables.css' %}
@@ -33,6 +33,7 @@ Specific pieces of UI that are stylized. Typically used for global partial styli
 */
 
 {% include './components/_header.css' %}
+{% include './components/_footer.css' %}
 {% include './components/_default-modules.css' %}
 
 /* Utilities
@@ -40,3 +41,4 @@ Helper classes with ability to override anything that comes before it
 */
 
 {% include './utilities/_helper.css' %}
+{% include './templates/_blog.css' %}

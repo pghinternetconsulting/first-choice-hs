@@ -86,3 +86,40 @@ img {
   font-size: 0.583rem;
   word-break: normal;
 }
+
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-black-webfont.woff2') format('woff2'),
+       url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-medium-webfont-1.woff2') format('woff2'),
+       url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-light-webfont.woff2') format('woff2'),
+       url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-thin-webfont.woff2') format('woff2'),
+       url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3{
+  font-family:'Roboto Light';
+  font-weight: 400;
+}

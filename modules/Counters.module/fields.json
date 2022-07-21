@@ -1,0 +1,96 @@
+[ {
+  "id" : "7d85ff2e-252b-781c-7e08-d72cf3d8a323",
+  "name" : "Backgrond",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "be1ba729-0368-401d-6d2b-81abbeb52fb1",
+    "name" : "bg_color",
+    "display_width" : null,
+    "label" : "BG Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#4B9343",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "39c54f1a-59af-25ad-5704-1c69b7a927af",
+    "name" : "font_color",
+    "display_width" : null,
+    "label" : "Font Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "bg_color" : {
+      "color" : "#4B9343",
+      "opacity" : 100
+    },
+    "font_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "8598c97e-fe08-ab17-1182-cb0edf7d8362",
+  "name" : "counter",
+  "display_width" : null,
+  "label" : "Counter",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "75ea6957-0e89-689b-b83b-e0955acb3415",
+    "name" : "symbol",
+    "display_width" : null,
+    "label" : "Symbol",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "1765c2bf-a956-9b66-84d3-99ebbcc57ffd",
+    "name" : "number",
+    "display_width" : null,
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "id" : "c8adc914-10f3-9532-089c-0d5cfddf92ae",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

@@ -1,0 +1,10 @@
+<div class="counter-bg" style="background-color: {{ module.Backgrond.bg_color.color }};";>
+	<div class="counter-bg-inner">
+	{% for item in module.counter %}
+		<div class="counter">
+			<div class="counter-number" style="color: {{ module.Backgrond.font_color.color }};"><span data-count="{{ item.number }}">0</span>{{ item.symbol }}</div>
+			<div class="counter-description" style="color: {{ module.Backgrond.font_color.color }};">{{ item.description }}</div>
+		</div>
+	{% endfor %}
+	</div>
+</div> 

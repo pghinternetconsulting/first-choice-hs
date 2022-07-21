@@ -1,0 +1,26 @@
+.counter-bg-inner{
+    display: flex;
+    flex-flow: row;
+}
+.counter{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.counter-number, .counter-number span{
+    font-size: 62px;
+    font-family: 'Roboto Black';
+    margin-bottom: 10px;
+}
+.counter-description{
+    font-size: 16px;
+    max-width: 220px;
+}
+@media screen and (max-width: 767px){
+    .counter-bg-inner {
+        flex-flow: column;
+        margin-bottom: 10px;
+    }
+}

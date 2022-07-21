@@ -1,0 +1,211 @@
+[ {
+  "id" : "444ad2f0-2134-c0bf-9408-a733b8c0687e",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Flexible & Measurable Inbound Strategies"
+}, {
+  "id" : "3bc10a4c-61f2-8f4a-3be8-db8b837b6e9c",
+  "name" : "text_above",
+  "display_width" : null,
+  "label" : "Text Above",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ae8408db-d583-9625-83ec-66df961b3c28",
+  "name" : "main_content",
+  "display_width" : null,
+  "label" : "Main content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "80743b26-ef0f-0d5f-e6c3-187f295b97e4",
+  "name" : "cta",
+  "display_width" : null,
+  "label" : "CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "96b757d2-63d0-4885-bb64-7994b9891112"
+}, {
+  "id" : "f7c5ba7d-d623-6a7c-9749-3f69624857be",
+  "name" : "background",
+  "display_width" : null,
+  "label" : "Background",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "10470d7d-9897-258d-e9f8-01fd264de1cb",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking.jpg",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "background.background_image_mobile",
+    "name" : "background_image_mobile",
+    "display_width" : null,
+    "label" : "Background Mobile Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking-mobile.jpg",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "3ccac251-ee69-f696-9800-2b814997dd3b",
+    "name" : "overlay_color",
+    "display_width" : null,
+    "label" : "Overlay Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#252731",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "e3078329-1aa5-b1e2-e3f9-c711c9ef927e",
+    "name" : "overlay_opacity",
+    "display_width" : null,
+    "label" : "Overlay opacity %",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 80
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking.jpg",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "background_image_mobile" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking-mobile.jpg",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "overlay_color" : {
+      "color" : "#252731",
+      "opacity" : 100
+    },
+    "overlay_opacity" : 80
+  }
+}, {
+  "id" : "5938089f-8960-dbbc-17c3-327cda590e31",
+  "name" : "settings",
+  "display_width" : null,
+  "label" : "Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "6600288c-9859-5d48-9505-2b83e00a3b5f",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "02a17f5d-bbc6-0c7c-8f8c-140227ad8a6c",
+    "name" : "title_max_width",
+    "display_width" : null,
+    "label" : "Title - Max Width",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 100,
+    "max" : 1600,
+    "step" : 1,
+    "type" : "number",
+    "default" : 860
+  }, {
+    "id" : "eaa73cf2-8310-d226-c9fd-3601e9e911b8",
+    "name" : "text_size",
+    "display_width" : null,
+    "label" : "Text Size",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 10,
+    "step" : 1,
+    "type" : "number",
+    "default" : 20
+  }, {
+    "id" : "64133d03-ca78-e25d-4cc0-5d5d1006ba12",
+    "name" : "size",
+    "display_width" : null,
+    "label" : "Banner padding in pixels",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 500,
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "5d5db857-b7dc-47f9-927b-5659cf0252b7",
+    "name" : "button_alignment",
+    "display_width" : null,
+    "label" : "Button alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "placeholder" : "Search",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "type" : "choice"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_color" : {
+      "color" : "#FFF",
+      "opacity" : 100
+    },
+    "title_max_width" : 860,
+    "text_size" : 20,
+    "size" : 100
+  }
+} ]

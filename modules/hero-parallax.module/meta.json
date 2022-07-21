@@ -1,0 +1,12 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 78645985685,
+  "js_assets" : [ {
+    "url" : "https://f.hubspotusercontent40.net/hubfs/483844/paraxify.min.js",
+    "autoload" : true,
+    "name" : "paraxify.min.js"
+  } ],
+  "label" : "Hero Parallax",
+  "is_available_for_new_content" : true
+}

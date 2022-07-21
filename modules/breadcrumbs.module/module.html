@@ -1,0 +1,43 @@
+{% set menu_id = module.renamed_from_id || module.menu %}
+
+
+
+{% set blog_id = group.id %}
+
+{% if blog_id == 57892525359 %}
+  <ul class="hs-breadcrumb-menu">
+    <li class="hs-breadcrumb-menu-item first-crumb"><a href="/" class="hs-breadcrumb-label">Home</a><span class="hs-breadcrumb-menu-divider"></span></li>
+    {% if 'Listing' in content.name %}
+      <li class="hs-breadcrumb-menu-item last-crumb"><a href="/case-studies" class="hs-breadcrumb-label">Case Studies</a></li>
+    {% else %}
+      <li class="hs-breadcrumb-menu-item"><a href="/case-studies" class="hs-breadcrumb-label">Case Studies</a><span class="hs-breadcrumb-menu-divider"></span></li>
+      <li class="hs-breadcrumb-menu-item last-crumb"><span class="hs-breadcrumb-label">{{ content.name }}</span></li>
+    {% endif %}
+    
+  </ul>
+
+
+
+{% elif blog_id == 7333466430 %}
+
+  <ul class="hs-breadcrumb-menu">
+    <li class="hs-breadcrumb-menu-item first-crumb"><a href="/" class="hs-breadcrumb-label">Home</a><span class="hs-breadcrumb-menu-divider"></span></li>
+    {% if 'listing' in content.name %}
+      <li class="hs-breadcrumb-menu-item last-crumb"><a href="/blog" class="hs-breadcrumb-label">Blog</a></li>
+    {% else %}
+      <li class="hs-breadcrumb-menu-item"><a href="/blog" class="hs-breadcrumb-label">Blog</a><span class="hs-breadcrumb-menu-divider"></span></li>
+      <li class="hs-breadcrumb-menu-item last-crumb"><span class="hs-breadcrumb-label">{{ content.name }}</span></li>
+    {% endif %}
+  </ul>
+
+{% elif menu_id %}
+
+  {% menu 
+    id="{{ menu_id }}", 
+    root_type="{{ module.root_type }}", 
+    flyouts="{{ module.flyouts }}", 
+    max_levels="{{ module.max_levels }}", 
+    flow="{{ module.flow }}"
+  %}
+
+{% endif %}

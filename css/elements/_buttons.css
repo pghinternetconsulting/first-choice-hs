@@ -5,6 +5,7 @@ button,
   text-align: center;
   transition: all 0.15s linear;
   white-space: normal;
+  letter-spacing: 1px;
 }
 
 button:disabled,

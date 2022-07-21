@@ -1,0 +1,67 @@
+[ {
+  "id" : "90f2cc23-0eed-e7a1-0be7-c7ca78cc52dc",
+  "name" : "job_lists",
+  "display_width" : null,
+  "label" : "Job Lists",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "f0b2a881-f5bc-69cd-c663-aab2355884e5",
+    "name" : "job_position",
+    "display_width" : null,
+    "label" : "Job Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "a4441eb6-e70a-b2d3-c506-760861930ab6",
+    "name" : "job_description",
+    "display_width" : null,
+    "label" : "Job Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  }, {
+    "id" : "320f0f8e-3135-17ed-dc78-0459380025a5",
+    "name" : "job_link",
+    "display_width" : null,
+    "label" : "Job Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "job_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

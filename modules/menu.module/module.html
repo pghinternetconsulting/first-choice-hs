@@ -11,26 +11,13 @@
           color: {{ module.styles.text.color.color }};
         }
 
-        .menu__child-toggle-icon {
-          border-top-color: {{ module.styles.text.color.color }};
-        }
-
         .menu .menu__link:hover,
         .menu .menu__link:focus {
           color: {{ color_variant(module.styles.text.color.color, -40) }};
         }
 
-        .menu__child-toggle-icon:hover,
-        .menu__child-toggle-icon:focus {
-          border-top-color: {{ color_variant(module.styles.text.color.color, -40) }};
-        }
-
         .menu .menu__link:active {
           color: {{ color_variant(module.styles.text.color.color, 40) }};
-        }
-
-        .menu__child-toggle-icon:active {
-          border-top-color: {{ color_variant(module.styles.text.color.color, 40) }};
         }
 
         .menu .menu__item--depth-1 > .menu__link--active-link:after {
@@ -67,14 +54,6 @@
         {% endif %}
       }
 
-      .menu__submenu .menu__child-toggle-icon,
-      .menu__submenu .menu__child-toggle-icon:hover,
-      .menu__submenu .menu__child-toggle-icon:focus {
-        {% if module.styles.drop_downs.text.color.color %}
-          border-top-color: {{ module.styles.drop_downs.text.color.color }};
-        {% endif %}
-      }
-
     {% end_scope_css %}
   </style>
 {% end_require_css %}
@@ -100,7 +79,6 @@
         {% if depth and depth < module.max_levels %}
           <button class="menu__child-toggle no-button" aria-expanded="false">
             <span class="show-for-sr">Show submenu for {{ link.label }}</span>
-            <span class="menu__child-toggle-icon"></span>
           </button>
           <ul class="menu__submenu menu__submenu--level-{{ depth + 1 }} no-list">
             {% set depth = depth + 1 %}

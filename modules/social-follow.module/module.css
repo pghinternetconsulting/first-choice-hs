@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .social-links__icon {
@@ -15,17 +14,21 @@
 }
 
 .social-links__icon svg {
-  fill: #FFF;
-  height: 0.625rem;
+  fill: #000;
+  height: 1rem;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-}
+} 
 
 .social-links__icon:hover svg,
 .social-links__icon:focus svg,
 .social-links__icon:active svg {
-  fill: #FFF;
+  fill: #000;
+}
+
+.social-links__icon{
+  background-color: #ffffff;
 }

@@ -1,0 +1,26 @@
+{% if module.job_lists %}
+<div class="job-container">
+  {% for item in module.job_lists %}
+    <div class="job-block">
+      <div>
+        <h4 style="font-weight:600;">{{ item.job_position }}</h4>
+      </div>
+      <div class="job-desc">{{ item.job_description }}</div>
+      <div class="apply-button">
+        {% set href = item.job_link.url.href %}
+        {% if item.job_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+        {% if item.job_link.open_in_new_tab %}target="_blank"{% endif %}
+        {% if item.job_link.rel %}rel="{{ item.job_link.rel }}"{% endif %}
+        >Apply Now</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="nojob-listed">
+  No listed jobs available
+</div>
+{% endif %}

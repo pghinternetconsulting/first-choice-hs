@@ -1,0 +1,11 @@
+{
+  "global" : false,
+  "js_render_options" : {
+    "defer" : true
+  },
+  "icon" : "fontawesome-5.14.0:Clock:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 78939105431,
+  "label" : "Counters",
+  "is_available_for_new_content" : true
+}
