@@ -3,10 +3,12 @@ jQuery(document).ready(function($){
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-      $('.header').addClass('sticky');
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+      $('div[data-global-resource-path="first-theme-hs/templates/partials/header.html"]').addClass('sticky');
+      $('div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"]').addClass('sticky');
     } else {
-      $('.header').removeClass('sticky');
+      $('div[data-global-resource-path="first-theme-hs/templates/partials/header.html"]').removeClass('sticky');
+      $('div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"]').removeClass('sticky');
     }
   }
 

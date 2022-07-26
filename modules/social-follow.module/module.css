@@ -27,8 +27,10 @@
 .social-links__icon:focus svg,
 .social-links__icon:active svg {
   fill: #000;
+  transition: ease all 0.3s;
 }
 
 .social-links__icon{
   background-color: #ffffff;
+  transition: ease all 0.3s;
 }

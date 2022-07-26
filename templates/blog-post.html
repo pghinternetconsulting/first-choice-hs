@@ -24,13 +24,17 @@
                             {% if not loop.first %},{% endif %} <a class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>
                         {% endif %}     
                     {% endfor %}
+
+                    {% set initialPostWords = content.post_body|wordcount %}
+                    {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+                    {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+                    {% set number = finishedPostWords|round %}
+                    {% if number < 1 %} {% else %} 
                     |
                     <span class="reading-minutes">
-                        {% set initialPostWords = content.post_body|wordcount %}
-                        {% set calculatedPostWords = (initialPostWords/100) * 100 %}
-                        {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
-                        {% set number = finishedPostWords|round %}
-                        {% if number < 1 %} {% else %} {{ finishedPostWords|round }} minute read {% endif %} </span>
+                        {{ finishedPostWords|round }} minute read 
+                    </span>
+                    {% endif %} 
                 </p>
 
                 {% if content.post_list_summary_featured_image %}

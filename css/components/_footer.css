@@ -31,6 +31,9 @@ footer .footer-row > div:not(:first-child){
 footer .contact-info a{
   transition: ease all 0.3s;
 }
+footer .contact-info a:hover{
+  color: #77BF45;
+}
 footer .contact-info > div {
   display: flex;
   flex-flow: row;
@@ -98,7 +101,7 @@ footer .menu__wrapper > li{
   font-family: 'Roboto';
   transition: ease all 0.3s;
 }
-.footer-col h4 a, footer .menu__item--depth-1 > a, footer .menu__item--depth-1 > span{
+.footer-col h4 a, footer .menu__item--depth-1 > a, footer .menu__item--depth-1 > span, .footer-col-mobile h4, .footer-col-mobile h4 a{
   font-weight: bold;
   color: #77BF45;
   text-transform: uppercase;
@@ -113,10 +116,10 @@ footer .menu__item--depth-2 span, footer .menu__item--depth-2 a{
   font-size: 16px;
   color: #ffffff !important;
 }
-footer .menu__item--depth-1 > span:hover, footer .menu__item--depth-1 > a:hover, .footer-col h4 a:hover{
+footer .menu__item--depth-1 > span:hover, footer .menu__item--depth-1 > a:hover, .footer-col h4 a:hover, .copyright a:hover{
   color: #ffffff !important;
 }
-footer .menu__item--depth-2 span:hover, footer .menu__item--depth-2 :hover, .copyright a:hover{
+footer .menu__item--depth-2 span:hover, footer .menu__item--depth-2 :hover{
   color: #77BF45 !important;
 }
 footer .words span{
@@ -131,6 +134,7 @@ footer .copyright{
 }
 footer .copyright a{
   color: #77BF45;
+  transition: ease all 0.3s;
 }
 footer .contact-info{
   color: #ffffff;

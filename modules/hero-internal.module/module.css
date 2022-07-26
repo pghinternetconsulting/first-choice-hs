@@ -1,0 +1,253 @@
+.hs-breadcrumb-menu {
+    padding-top: 30px;
+	padding-bottom: 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hs-breadcrumb-menu-item {
+	display: flex;
+    flex-wrap: wrap;
+    padding-right: 10px;
+    padding-top: 0;
+	line-height: 1 !important;
+	padding-left: 0px;
+	float: none;
+}
+
+.hs-breadcrumb-menu li a{
+	font-weight: 700;
+}
+
+.hs-breadcrumb-menu li span{
+	font-weight: 100;
+}
+
+.hs-breadcrumb-menu li span, .hs-breadcrumb-menu li a{
+	color: #ffffff;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.hs-breadcrumb-menu li span{
+	color: #ffffff;
+}
+
+.hs-breadcrumb-menu li a{
+	color: #4B9343;
+}
+
+/* Single Blog Post */
+
+.hs-blog-post.hs-blog-id-7333466430 .hs-breadcrumb-menu li a, 
+.hs-blog-post.hs-blog-id-7333466430 .hs-breadcrumb-menu li span{
+	color: #747474;
+}
+
+.hs-blog-post.hs-blog-id-7333466430 .hs-breadcrumb-menu {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* End Single Blog Post */
+
+.hs-blog-post.hs-blog-id-7333466430 .hs-breadcrumb-menu li a:hover,
+.hs-breadcrumb-menu li a:hover {
+	color: #4B9343;
+}
+
+.hs-hero {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(87, 87, 87, 1);
+  }
+  
+  .hs-hero img {
+	object-fit: cover;
+	width: 100%;
+  }
+  
+  .hs-hero:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.2;
+  }
+  
+  .hs-hero__content {
+	padding: 0 1em;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+  }
+  
+  .hs-hero__content--center {
+	text-align: center;
+  }
+  
+  .hs-hero__content--right {
+	text-align: right;
+  }
+  
+  .hs-hero h1 {
+	text-align: center;
+    font-size: 50px !important;
+    font-family: 'Roboto Medium';
+    font-weight: 400 !important;
+    color: #ffffff;
+	margin-top: 0px;
+	margin-bottom: 52px;
+  }
+  
+  .hs-hero__content h2 {
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+  }
+  
+  .hs-hero__content .text-above{
+	font-size: 21px;
+	max-width: 720px;
+	width: 100%;
+	margin: 0 auto; 
+	color: #ffffff;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.hs-hero h1 {
+	  font-size: 46px !important;
+	}
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.hs-hero img {
+	  height: 100% !important;
+	}
+  
+	.hs-hero {
+	  height: 185px;
+	  display: flex;
+	  align-items: center;
+	}
+  
+	.hs-hero__content {
+	  max-width: 1520px;
+	  justify-content: center;
+	  display: flex;
+	  text-align: center;
+	}
+  
+	.hs-hero h1 {
+	  font-size: 62px;
+	  font-weight:900;
+	  line-height: 1.1em;
+	}
+  
+	.hero-cta a.cta_button {
+	  margin-top: 60px;
+	}
+  
+	.mobile {
+	  display: none;
+	}
+  }
+  
+  @media only screen and (max-width: 767px) {
+	.hs-hero img {
+	  max-height: 280px;
+	}
+  
+	.hs-hero {
+	  max-height: 280px;
+	}
+  
+	.hs-hero h1 {
+	  font-size: 30px !important;
+	}
+  
+	.hs-hero__content {
+	  top: 0;
+	  bottom: 0;
+	  display: flex;
+	  align-items: center;
+	  text-align: center;
+	}
+  
+	.desktop,
+	.bubble {
+	  display: none;
+	}
+  }
+  
+  /* Testing Animations */
+  @keyframes softmove {
+	0% {
+	  transform: rotate(0deg) scale(0.7);
+	}
+	50% {
+	  transform: rotate(30deg) scale(1);
+	}
+	100% {
+	  transform: rotate(0deg) scale(0.7);
+	}
+  }
+  
+  .bubble {
+	position: absolute;
+	bottom: -150px;
+	left: -200px;
+	animation-name: softmove;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes softmove2 {
+	0% {
+	  transform: rotate(45deg) scale(1);
+	}
+	50% {
+	  transform: rotate(0deg) scale(1.2);
+	}
+	100% {
+	  transform: rotate(45deg) scale(1);
+	}
+  }
+  
+  .bubble.top {
+	position: absolute;
+	top: -50px;
+	left: auto;
+	right: -100px;
+	animation-name: softmove2;
+	animation-duration: 80s;
+	animation-iteration-count: infinite;
+  }
+  
+  @media screen and (max-width: 767px){
+	.hs-breadcrumb-menu {
+		padding-top: 0px;
+		padding-bottom: 30px;
+	}
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px){
+	.hero-cta a.cta_button {
+	  margin: 30px auto;
+	}
+  }
+  
+  @media screen and (max-width: 479px){
+	.hs-hero h1 {
+	  font-size: 18px;
+	}
+	.hero-cta a.cta_button{
+	  margin: 10px auto;
+	}
+  }

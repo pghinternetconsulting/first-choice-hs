@@ -116,13 +116,26 @@
   height: 130px;
   border-radius: 5px;
 }
-.contact-form form > fieldset:last-of-type{
+.contact-form select{
+  width: 100% !important;
+  padding: 0.5rem 0.7rem !important;
+  border-radius: 5px;
+}
+.contact-form form > fieldset.form-columns-1:last-of-type{
   float: left;
   width: 50%;
 }
-.contact-form form > fieldset:last-of-type label{
+.contact-form form > fieldset:last-of-type .hs_accept_storage_data label, .contact-form .hs-error-msg{
   font-size: 12px;
   line-height: 1;
+}
+.contact-form form > fieldset:last-of-type  .inputs-list > li{
+  margin-top: 0px;
+}
+.contact-form form input[type=file]{
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
 }
 .contact-form form .hs_submit{
   float: right;
@@ -130,6 +143,22 @@
 }
 .contact-form form .hs-form-required{
   color: #ffffff;
+}
+.contact-form form .hs_fileupload{
+  display: flex;
+  flex-flow: column;
+}
+.contact-form form .hs_fileupload label{
+  order: 1
+}
+.contact-form form .hs_fileupload .input{
+  order: 2;
+}
+.contact-form form .hs_fileupload legend{
+  order: 3;
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 8px;
 }
 @media screen and (min-width: 1380px){
   .text-form-row{
