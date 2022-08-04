@@ -13,32 +13,32 @@
             <article class="employment-post">
                 <div class="employment-content">
                     <div class="breadcrumbs">
-                        {% module "breadcrumbs" 
-                            path="/first-theme-hs/modules/breadcrumbs",
-                            offset=0,
-                            width=12,
-                            renamed_from_id=79382493240
+                        {% module "breadcrumbs"
+                        path="/first-theme-hs/modules/breadcrumbs",
+                        offset=0,
+                        width=12,
+                        renamed_from_id=79382493240
                         %}
                     </div>
                     <h1 class="employment-title">
                         {{ content.name }}
                     </h1>
-                    <div class="employment-descriotion">
+                    <div class="employment-description">
                         {{ content.post_body }}
                     </div>
                 </div>
                 <div class="employment-form contact-form">
                     <h2>Apply for this position</h2>
                     {% module "employment form"
-                        path="@hubspot/form",
-                        offset=0,
-                        width=12,
-                        form={
-                        "form_id" : "56e8edfc-94f8-4e06-bd22-cd7fbd5833cf",
-                        "form_type" : "HUBSPOT",
-                        "message" : "Thanks for submitting the form.",
-                        "response_type" : "inline"
-                        }
+                    path="@hubspot/form",
+                    offset=0,
+                    width=12,
+                    form={
+                    "form_id" : "56e8edfc-94f8-4e06-bd22-cd7fbd5833cf",
+                    "form_type" : "HUBSPOT",
+                    "message" : "Thanks for submitting the form.",
+                    "response_type" : "inline"
+                    }
                     %}
                 </div>
             </article>
