@@ -219,7 +219,8 @@
     content: "" !important;
   }
   #main-content{
-    margin-top: 73px; /* I leave this here because is to compensate the header sticky height */
+    /* margin-top: 73px; /* I leave this here because is to compensate the header sticky height */  */
+    margin-top: 0px; /* Changed it because it's not working on blog posts */
   }
   .top-header{
     display: none;

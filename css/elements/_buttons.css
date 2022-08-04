@@ -37,3 +37,7 @@ button:disabled,
   text-decoration: none;
   transition: none;
 }
+
+.body-container a:not(.hs-button, .cta_button, .blog-index__post-title-link, .apply-button a, .button, .hero-phone a){
+  color: #4B9343;
+}

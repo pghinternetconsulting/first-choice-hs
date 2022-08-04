@@ -22,22 +22,55 @@
   "show_emoji_picker" : false,
   "type" : "text"
 }, {
-  "id" : "ae8408db-d583-9625-83ec-66df961b3c28",
-  "name" : "main_content",
+  "id" : "47817570-ddfc-0497-9770-d917fa76e878",
+  "name" : "button_text",
   "display_width" : null,
-  "label" : "Main content",
+  "label" : "Button Text",
   "required" : false,
   "locked" : false,
-  "type" : "richtext"
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
 }, {
-  "id" : "80743b26-ef0f-0d5f-e6c3-187f295b97e4",
-  "name" : "cta",
+  "id" : "d679cb38-33ea-d4d6-99d6-7ad42b8a5086",
+  "name" : "button_url",
   "display_width" : null,
-  "label" : "CTA",
+  "label" : "Button URL",
   "required" : false,
   "locked" : false,
-  "type" : "cta",
-  "default" : "96b757d2-63d0-4885-bb64-7994b9891112"
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "default" : {
+    "content_id" : null,
+    "href" : "",
+    "type" : "EXTERNAL"
+  }
+}, {
+  "id" : "b80adcaa-9074-c66d-e100-ff237d4ccf01",
+  "name" : "link_text",
+  "display_width" : null,
+  "label" : "Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e70ab967-5322-c9cf-3095-abcdac5461b3",
+  "name" : "link_url",
+  "display_width" : null,
+  "label" : "Link URL",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "type" : "url",
+  "default" : {
+    "content_id" : null,
+    "href" : "",
+    "type" : "EXTERNAL"
+  }
 }, {
   "id" : "f7c5ba7d-d623-6a7c-9749-3f69624857be",
   "name" : "background",

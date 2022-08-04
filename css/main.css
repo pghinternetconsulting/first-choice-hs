@@ -42,3 +42,5 @@ Helper classes with ability to override anything that comes before it
 
 {% include './utilities/_helper.css' %}
 {% include './templates/_blog.css' %}
+{% include './templates/_employment.css' %}
+{% include './utilities/_general.css' %}

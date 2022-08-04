@@ -2,42 +2,103 @@
   templateType: page
   isAvailableForNewContent: true
   label: Thank You
-  screenshotPath: ../images/template-previews/about.png
+  screenshotPath: ../images/template-previews/thank-you.png
 -->
 {% extends "./layouts/base.html" %}
 
 {% block body %}
 {% dnd_area "dnd_area"
   label="Main section",
-  class="body-container body-container--about"
+  class="body-container body-container--thank-you"
 %}
 
-  {# Two column image left #}
+  {% dnd_section
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12,
+      padding={
+        "default" : {
+          "left" : "0px",
+          "right" : "0px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/hero-parallax",
+          offset=0,
+          width=12,
+          background={
+            "background_image" : {
+              "alt" : "hero",
+              "height" : 934,
+              "loading" : "lazy",
+              "max_height" : 934,
+              "max_width" : 1920,
+              "size_type" : "auto",
+              "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png",
+              "width" : 1920
+            },
+            "background_image_mobile" : {
+              "alt" : "hero-mobile",
+              "height" : 639,
+              "loading" : "lazy",
+              "max_height" : 639,
+              "max_width" : 585,
+              "size_type" : "auto",
+              "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero-mobile.png",
+              "width" : 585
+            }
+          },
+          button_text="Lorem Ipsum",
+          button_url={
+            "content_id" : 78640669571,
+            "type" : "CONTENT"
+          },
+          heading="Thank you for Lorem Ipsum.",
+          settings={
+            "text_size" : 16,
+            "title_max_width" : 1520
+          },
+          text_above="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
 
   {% dnd_section
-    vertical_alignment="TOP"
+    padding={
+      "default" : {
+        "top" : "60px"
+      }
+    }
   %}
-    {% dnd_module
-      path="@hubspot/linked_image",
-      img={
-        "alt": "Coworkers sitting together and smiling outside.",
-        "loading": "disabled",
-        "max_height": 449,
-        "max_width": 605,
-        "size_type": "auto_custom_max",
-        "src": get_asset_url("../images/team-image.jpg")
-      },
+    {% dnd_column
       offset=0,
-      width=6
+      width=12
     %}
-    {% end_dnd_module %}
-    {% dnd_module
-      path="@hubspot/rich_text",
-      html="<h1>Meet our team</h1><p>Use this page to help your visitors learn more about you. Include images so that folks will recognize you at conferences and events.</p>"
-      offset=6,
-      width=6
-    %}
-    {% end_dnd_module %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/blog-recent",
+          offset=0,
+          width=12,
+          blog_field=78645249427,
+          publish_date=true,
+          title_blog="Check Out Some of Our Latest Blog Posts"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
   {% end_dnd_section %}
 
 {% end_dnd_area %}

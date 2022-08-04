@@ -77,7 +77,7 @@ blockquote {
 
 hr {
   border: none;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Image alt text */
@@ -86,7 +86,7 @@ img {
   font-size: 0.583rem;
   word-break: normal;
 }
-
+/* 
 @font-face {
   font-family: 'Roboto Black';
   src: url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-black-webfont.woff2') format('woff2'),
@@ -117,9 +117,9 @@ img {
        url('https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/fonts/roboto-thin-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
+} */
+/* 
 h3{
   font-family:'Roboto Light';
   font-weight: 400;
-}
+} */

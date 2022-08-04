@@ -44,6 +44,31 @@
     "description" : null,
     "placeholders" : null
   },
+  "image_bg.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.label" : {
+    "message" : "Imagen",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "max_levels.choices.1" : {
     "message" : "1",
     "description" : null,
@@ -110,7 +135,7 @@
     "placeholders" : null
   },
   "name" : {
-    "message" : "메뉴",
+    "message" : "hero-internal",
     "description" : null,
     "placeholders" : null
   },
@@ -146,6 +171,36 @@
   },
   "root_type.placeholder" : {
     "message" : "검색",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Texto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.validation_regex" : {
+    "message" : "",
     "description" : null,
     "placeholders" : null
   }

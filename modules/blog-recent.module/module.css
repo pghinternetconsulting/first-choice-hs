@@ -1,8 +1,8 @@
-.recent-posts-blog-title{
+.recent-posts-blog-title {
   font-size: 32px;
   text-align: center;
   margin-bottom: 60px;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
 }
 
 .blog-author-heading,
@@ -22,20 +22,20 @@
   text-align: center;
 }
 
-.content-padding{
+.content-padding {
   padding-top: 60px;
 }
-.date-n-tag{
+.date-n-tag {
   display: flex;
   flex-flow: row;
   font-size: 12px;
   margin-bottom: 10px;
   justify-content: center;
 }
-.recent-post-date{
+.recent-post-date {
   padding-right: 5px;
 }
-.blog-index__post-tags{
+.blog-index__post-tags {
   padding-left: 5px;
 }
 
@@ -90,29 +90,30 @@
   width: 30px;
 }
 
-.recent-posts{
+.recent-posts {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-.recent-posts .blog-index__post-button{
+.recent-posts .blog-index__post-button {
   margin-top: 20px;
 }
 
-.recent-posts .blog-index__post-button:hover{
+.recent-posts .blog-index__post-button:hover {
   background-color: transparent !important;
   border: 0px solid transparent;
   color: #000000;
 }
 
-.recent-posts .blog-index__post-title{
+.recent-posts .blog-index__post-title {
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.recent-posts .blog-index__post-title a{
-  font-family: 'Roboto Light';
+.recent-posts .blog-index__post-title a {
+  font-family: Roboto, sans-serif;
   font-size: 28px;
+  font-weight: 300;
 }
 
 .recent-posts .blog-index__post-image {
@@ -121,10 +122,10 @@
 }
 
 .recent-posts:after {
-    content: unset;
-    -webkit-box-flex: unset;
-    -ms-flex: auto;
-    flex: auto;
+  content: unset;
+  -webkit-box-flex: unset;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .recent-posts {
@@ -139,26 +140,26 @@
   text-decoration: underline;
   transition: ease all 0.3s;
 }
-.case-study-link:hover{
-  color: #6796BF;
+.case-study-link:hover {
+  color: #6796bf;
 }
 
-.blog-index__post-title-link{
-  color: rgba(51,51,51,1);
+.blog-index__post-title-link {
+  color: rgba(51, 51, 51, 1);
 }
 
-.blog-index__post-tag{
-  color: rgba(51,51,51,1);
+.blog-index__post-tag {
+  color: rgba(51, 51, 51, 1);
   font-size: 12px;
 }
 
-@media screen and (min-width: 768px){
-  .blog-index.recent-posts.most-recent article{
-      flex: 0 0 calc(96% / 3) !important;
-    }
+@media screen and (min-width: 768px) {
+  .blog-index.recent-posts.most-recent article {
+    flex: 0 0 calc(96% / 3) !important;
+  }
 }
-@media screen and (max-width: 767px){
-  .recent-posts article{
+@media screen and (max-width: 767px) {
+  .recent-posts article {
     margin-bottom: 15px;
   }
 }

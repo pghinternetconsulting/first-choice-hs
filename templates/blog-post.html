@@ -1,9 +1,9 @@
 <!--
   templateType: blog_post
   isAvailableForNewContent: true
-  label: PIC Theme - blog post
+  label: Blog Posts
 -->
-{% set template_css = '../../css/templates/blog.css' %}
+<!-- {% set template_css = '../../css/templates/blog.css' %} -->
 {% extends './layouts/base.html' %}
 
 {% block body %}
@@ -19,22 +19,21 @@
                 </h1>
                 <p class="custom-date-comment-wrapper">
                     {% for topic in content.topic_list %}
-                        {% if topic.slug in hidden_tags %}
-                        {% else %}
-                            {% if not loop.first %},{% endif %} <a class="topic-link" href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>
-                        {% endif %}     
+                    {% if topic.slug in hidden_tags %}
+                    {% else %}
+                    {% if not loop.first %},{% endif %} <a class="topic-link"
+                        href="{{ group.absolute_url }}/topic/{{ topic.slug }}">{{ topic.name }}</a>
+                    {% endif %}
                     {% endfor %}
 
                     {% set initialPostWords = content.post_body|wordcount %}
                     {% set calculatedPostWords = (initialPostWords/100) * 100 %}
                     {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
                     {% set number = finishedPostWords|round %}
-                    {% if number < 1 %} {% else %} 
-                    |
-                    <span class="reading-minutes">
-                        {{ finishedPostWords|round }} minute read 
-                    </span>
-                    {% endif %} 
+                    {% if number < 1 %} {% else %} | <span class="reading-minutes">
+                        {{ finishedPostWords|round }} minute read
+                        </span>
+                        {% endif %}
                 </p>
 
                 {% if content.post_list_summary_featured_image %}
@@ -74,36 +73,36 @@
                                     <a href="{{ content.blog_post_author.facebook }}" target="_blank"
                                         class="hs-author-social-link accentColor1">
                                         {% icon
-                                            extra_classes='social-links__icon',
-                                            name='facebook-f',
-                                            purpose='semantic',
-                                            style='SOLID',
-                                            title='Facebook'
-                                          %}
+                                        extra_classes='social-links__icon',
+                                        name='facebook-f',
+                                        purpose='semantic',
+                                        style='SOLID',
+                                        title='Facebook'
+                                        %}
                                     </a>
                                     {% endif %}
                                     {% if content.blog_post_author.linkedin %}
                                     <a href="{{ content.blog_post_author.linkedin }}" target="_blank"
                                         class="hs-author-social-link accentColor1">
                                         {% icon
-                                            extra_classes='social-links__icon',
-                                            name='linkedin-in',
-                                            purpose='semantic',
-                                            style='SOLID',
-                                            title='Facebook'
-                                          %}
+                                        extra_classes='social-links__icon',
+                                        name='linkedin-in',
+                                        purpose='semantic',
+                                        style='SOLID',
+                                        title='Facebook'
+                                        %}
                                     </a>
                                     {% endif %}
                                     {% if content.blog_post_author.twitter %}
                                     <a href="{{ content.blog_post_author.twitter }}" target="_blank"
                                         class="hs-author-social-link accentColor1">
                                         {% icon
-                                            extra_classes='social-links__icon',
-                                            name='twitter',
-                                            purpose='semantic',
-                                            style='SOLID',
-                                            title='Facebook'
-                                          %}
+                                        extra_classes='social-links__icon',
+                                        name='twitter',
+                                        purpose='semantic',
+                                        style='SOLID',
+                                        title='Facebook'
+                                        %}
                                     </a>
                                     {% endif %}
                                 </div>

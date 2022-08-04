@@ -3,43 +3,40 @@
 
 <div id="hs-hero-{{ name }}" class="hs-hero">
 
-<!--- desktop image -->
-{% if module.background.background_image.src %}
- {% set sizeAttrs = 'width="{{ module.background.background_image.width }}" height="{{ module.background.background_image.height }}"' %}
- {% if module.background.background_image.size_type == 'auto' %}
-   {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
- {% elif module.background.background_image.size_type == 'auto_custom_max' %}
-   {% set sizeAttrs = 'width="{{ module.background.background_image.max_width }}" height="{{ module.background.background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
- {% endif %}
-  {% set loadingAttr = module.background.background_image.loading != 'disabled' ? 'loading="{{ module.background.background_image.loading }}"' : '' %}
- <img class="desktop" src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-{% endif %}
+  <!--- desktop image -->
+  {% if module.background.background_image.src %}
+  {% set sizeAttrs = 'width="{{ module.background.background_image.width }}" height="{{ module.background.background_image.height }}"' %}
+  {% if module.background.background_image.size_type == 'auto' %}
+    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+  {% elif module.background.background_image.size_type == 'auto_custom_max' %}
+    {% set sizeAttrs = 'width="{{ module.background.background_image.max_width }}" height="{{ module.background.background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+  {% endif %}
+    {% set loadingAttr = module.background.background_image.loading != 'disabled' ? 'loading="{{ module.background.background_image.loading }}"' : '' %}
+  <img class="desktop" src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  {% endif %}
 
-<!--- mobile image -->
-{% if module.background.background_image_mobile.src %}
-{% set sizeAttrs = 'width="{{ module.background.background_image_mobile.width }}" height="{{ module.background.background_image_mobile.height }}"' %}
-{% if module.background.background_image_mobile.size_type == 'auto' %}
- {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-{% elif module.background.background_image_mobile.size_type == 'auto_custom_max' %}
- {% set sizeAttrs = 'width="{{ module.background.background_image_mobile.max_width }}" height="{{ module.background.background_image_mobile.max_height }}" style="max-width: 100%; height: auto;"' %}
-{% endif %}
-{% set loadingAttr = module.background.background_image_mobile.loading != 'disabled' ? 'loading="{{ module.background.background_image_mobile.loading }}"' : '' %}
- <img class="mobile" src="{{ module.background.background_image_mobile.src }}" alt="{{ module.background.background_image_mobile.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-{% endif %}
+  <!--- mobile image -->
+  {% if module.background.background_image_mobile.src %}
+  {% set sizeAttrs = 'width="{{ module.background.background_image_mobile.width }}" height="{{ module.background.background_image_mobile.height }}"' %}
+  {% if module.background.background_image_mobile.size_type == 'auto' %}
+  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+  {% elif module.background.background_image_mobile.size_type == 'auto_custom_max' %}
+  {% set sizeAttrs = 'width="{{ module.background.background_image_mobile.max_width }}" height="{{ module.background.background_image_mobile.max_height }}" style="max-width: 100%; height: auto;"' %}
+  {% endif %}
+  {% set loadingAttr = module.background.background_image_mobile.loading != 'disabled' ? 'loading="{{ module.background.background_image_mobile.loading }}"' : '' %}
+  <img class="mobile" src="{{ module.background.background_image_mobile.src }}" alt="{{ module.background.background_image_mobile.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  {% endif %}
 
-<div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">
- <main style="max-width:{{ module.settings.title_max_width }}px;width:100%;">
-    {% menu 
-      id="{{ menu_id }}", 
-      root_type="{{ module.root_type }}", 
-      flyouts="{{ module.flyouts }}", 
-      max_levels="{{ module.max_levels }}", 
-      flow="{{ module.flow }}"
-    %}
-   <h1 style="color:{{ module.settings.text_color.color }}">{{ module.heading }}</h1>
- </main>
-
-</div>
+  <div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">
+      {% menu 
+        id="{{ menu_id }}", 
+        root_type="{{ module.root_type }}", 
+        flyouts="{{ module.flyouts }}", 
+        max_levels="{{ module.max_levels }}", 
+        flow="{{ module.flow }}"
+      %}
+    <h1>{{ module.heading }}</h1>
+  </div>
 </div>
 {% require_css %}
 <style>

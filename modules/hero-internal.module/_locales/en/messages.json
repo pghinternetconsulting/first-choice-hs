@@ -1,4 +1,74 @@
 {
+  "background.background_image.default.alt" : {
+    "message" : "hero",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image.default.src" : {
+    "message" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.default.alt" : {
+    "message" : "hero-mobile",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.default.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.default.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.default.src" : {
+    "message" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero-mobile.png",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background.background_image_mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "flow.choices.horizontal" : {
     "message" : "Horizontal",
     "description" : "",
@@ -34,6 +104,31 @@
     "description" : "",
     "placeholders" : null
   },
+  "heading.default" : {
+    "message" : "Service Parent Title",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "id.help_text" : {
     "message" : "The menu tree is the page structure which generates the items in the menu. A single menu tree can be used with multiple menus. You can create multiple menus for complex website structures. Menus are created and managed in your Content Settings",
     "description" : "",
@@ -42,6 +137,31 @@
   "id.label" : {
     "message" : "Menu",
     "description" : "",
+    "placeholders" : null
+  },
+  "image_bg.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.label" : {
+    "message" : "Imagen",
+    "description" : null,
+    "placeholders" : null
+  },
+  "image_bg.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "max_levels.choices.1" : {
@@ -110,7 +230,7 @@
     "placeholders" : null
   },
   "name" : {
-    "message" : "breadcrumbs",
+    "message" : "hero-internal",
     "description" : "",
     "placeholders" : null
   },
@@ -147,6 +267,36 @@
   "root_type.placeholder" : {
     "message" : "Search",
     "description" : "",
+    "placeholders" : null
+  },
+  "title.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Texto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.validation_regex" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   }
 }

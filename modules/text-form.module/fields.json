@@ -26,6 +26,17 @@
   "locked" : false,
   "type" : "richtext"
 }, {
+  "id" : "9cabfb82-6bef-283a-2dd7-bb50371d8938",
+  "name" : "form_title",
+  "display_width" : null,
+  "label" : "Form Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
   "id" : "157be1c9-3be9-0e62-56d2-a3659efc1fd3",
   "name" : "form",
   "display_width" : null,
@@ -211,6 +222,11 @@
   "type" : "group",
   "default" : [ {
     "social_account" : "facebook-f",
+    "custom_icon" : {
+      "name" : "arrow-alt-circle-up",
+      "type" : "SOLID",
+      "unicode" : "f35b"
+    },
     "social_link" : {
       "no_follow" : false,
       "open_in_new_tab" : true,
@@ -225,6 +241,11 @@
     }
   }, {
     "social_account" : "linkedin-in",
+    "custom_icon" : {
+      "name" : "arrow-alt-circle-up",
+      "type" : "SOLID",
+      "unicode" : "f35b"
+    },
     "social_link" : {
       "no_follow" : false,
       "open_in_new_tab" : true,
@@ -239,6 +260,11 @@
     }
   }, {
     "social_account" : "twitter",
+    "custom_icon" : {
+      "name" : "arrow-alt-circle-up",
+      "type" : "SOLID",
+      "unicode" : "f35b"
+    },
     "social_link" : {
       "no_follow" : false,
       "open_in_new_tab" : true,
@@ -253,6 +279,11 @@
     }
   }, {
     "social_account" : "instagram",
+    "custom_icon" : {
+      "name" : "arrow-alt-circle-up",
+      "type" : "SOLID",
+      "unicode" : "f35b"
+    },
     "social_link" : {
       "no_follow" : false,
       "open_in_new_tab" : true,

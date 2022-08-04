@@ -14,7 +14,7 @@
   "master_language" : "en",
   "icon" : "fontawesome-5.14.0:Angle%20Double%20Right:SOLID",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 79382756103,
+  "module_id" : 79981424450,
   "label" : "Hero Internal",
   "is_available_for_new_content" : true
 }

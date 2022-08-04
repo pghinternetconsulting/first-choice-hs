@@ -18,7 +18,21 @@
 <footer>
   <div class="footer-row content-wrapper">
     <div class="footer-col">
-      {% module "site_logo" path="@hubspot/logo" %}
+      <div class="footer-logo-desktop">
+        {% module "site_logo" path="@hubspot/logo" %}
+      </div>
+      <div class="footer-logo-mobile">
+        {% module "footer_logo_dark"
+          path="@hubspot/linked_image",
+          img={
+            "alt": "First Choice Logo",
+            "loading": "disabled",
+            "max_width": 220,
+            "size_type": "auto_custom_max",
+            "src": get_asset_url("../images/black-logo.png")
+          }
+        %}
+      </div>
       <div class="words footer-col-mobile">{% module "words" path="@hubspot/rich_text" label="Words" %}</div>
       <div class="footer-col-desktop">
         <h4><a href="/contact-us/">Contact Us</a></h4>

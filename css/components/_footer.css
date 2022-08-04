@@ -1,4 +1,4 @@
-.footer-logos{
+.footer-logos {
   background-color: rgba(242, 242, 242, 1);
   padding-top: 40px;
   padding-bottom: 40px;
@@ -13,7 +13,7 @@ footer .footer-row {
   padding-top: 58px;
   padding-bottom: 30px;
 }
-footer .footer-col img{
+footer .footer-col img {
   max-width: 220px;
 }
 footer .footer-row > div {
@@ -21,18 +21,18 @@ footer .footer-row > div {
   padding-left: 17px;
   padding-right: 17px;
 }
-footer .footer-row > div:not(:last-child){
-  border-right: 1px solid #77BF45;
+footer .footer-row > div:not(:last-child) {
+  border-right: 1px solid #77bf45;
 }
-footer .footer-row > div:not(:first-child){
+footer .footer-row > div:not(:first-child) {
   padding-left: 25px;
 }
 
-footer .contact-info a{
+footer .contact-info a {
   transition: ease all 0.3s;
 }
-footer .contact-info a:hover{
-  color: #77BF45;
+footer .contact-info a:hover {
+  color: #77bf45;
 }
 footer .contact-info > div {
   display: flex;
@@ -49,10 +49,12 @@ footer .footer-menu ul li {
   padding: 0px !important;
   display: block !important;
 }
-footer .footer-menu ul li a, footer .footer-menu ul li span {
+footer .footer-menu ul li a,
+footer .footer-menu ul li span {
   transition: ease all 0.3s;
 }
-footer #hs_cos_wrapper_address, footer #hs_cos_wrapper_phone {
+footer #hs_cos_wrapper_address,
+footer #hs_cos_wrapper_phone {
   line-height: 1.1;
 }
 footer .menu__item--depth-1 > span,
@@ -60,11 +62,10 @@ footer .menu__item--depth-1 > a {
   padding-left: 0px;
   padding-right: 0px;
 }
-footer .menu__item--depth-1 > .menu__link--active-link:after{
+footer .menu__item--depth-1 > .menu__link--active-link:after {
   content: unset !important;
 }
 footer .menu__submenu {
-  display: block !important;
   width: auto !important;
 }
 footer .menu__submenu--level-2 > .menu__item:first-child:before {
@@ -91,63 +92,91 @@ footer .menu__submenu .menu__link {
   transition: ease all 0.3s;
 }
 /* Footer */
-footer .menu__wrapper > li{
+footer .menu__wrapper > li {
   margin-bottom: 10px !important;
 }
-.footer-col h4{
+.footer-col h4 {
   margin-top: 40px;
 }
-.footer-col h4 a{
-  font-family: 'Roboto';
+.footer-col h4 a {
+  font-family: "Roboto";
   transition: ease all 0.3s;
 }
-.footer-col h4 a, footer .menu__item--depth-1 > a, footer .menu__item--depth-1 > span, .footer-col-mobile h4, .footer-col-mobile h4 a{
+.footer-col h4 a,
+footer .menu__item--depth-1 > a,
+footer .menu__item--depth-1 > span,
+.footer-col-mobile h4,
+.footer-col-mobile h4 a {
   font-weight: bold;
-  color: #77BF45;
+  color: #77bf45;
   text-transform: uppercase;
   font-size: 17px;
   letter-spacing: 1px;
 }
-footer button.menu__child-toggle{
+footer button.menu__child-toggle {
   display: none !important;
 }
-footer .menu__item--depth-2 span, footer .menu__item--depth-2 a{
+footer .menu__item--depth-2 span,
+footer .menu__item--depth-2 a {
   text-transform: capitalize;
   font-size: 16px;
   color: #ffffff !important;
 }
-footer .menu__item--depth-1 > span:hover, footer .menu__item--depth-1 > a:hover, .footer-col h4 a:hover, .copyright a:hover{
+footer .menu__item--depth-1 > span:hover,
+footer .menu__item--depth-1 > a:hover,
+.footer-col h4 a:hover,
+.copyright a:hover {
   color: #ffffff !important;
 }
-footer .menu__item--depth-2 span:hover, footer .menu__item--depth-2 :hover{
-  color: #77BF45 !important;
+footer .menu__item--depth-2 span:hover,
+footer .menu__item--depth-2 :hover {
+  color: #77bf45 !important;
 }
-footer .words span{
+footer .words span {
   font-size: 28px;
-  font-family: 'Roboto Light';
   color: #ffffff;
+  font-weight: 300;
 }
-footer .copyright{
+footer .copyright {
   margin-top: 40px;
   font-size: 12px;
   color: #ffffff;
 }
-footer .copyright a{
-  color: #77BF45;
+footer .copyright a {
+  color: #77bf45;
   transition: ease all 0.3s;
 }
-footer .contact-info{
+footer .contact-info {
   color: #ffffff;
   font-size: 16px;
 }
-footer .social-buttons{
+footer .social-buttons {
   margin-top: 40px;
 }
-.footer-col-mobile{
+.footer-col-mobile {
   display: none;
 }
-
+@media screen and (min-width: 992px) {
+  footer .menu__submenu {
+    display: block !important;
+  }
+  .footer-logo-mobile {
+    display: none;
+  }
+}
 @media screen and (max-width: 991px) {
+  .footer-logo-desktop {
+    display: none;
+  }
+
+  .footer-logo-mobile img {
+    width: 51px;
+  }
+
+  footer .menu__submenu {
+    display: none !important;
+  }
+
   footer .footer-col .dropdown_list {
     display: block;
     height: auto;
@@ -164,7 +193,7 @@ footer .social-buttons{
     align-items: center;
   }
 
-  footer .menu__item--depth-1{
+  footer .menu__item--depth-1 {
     border-top: none !important;
   }
 
@@ -172,19 +201,19 @@ footer .social-buttons{
     width: 100% !important;
   }
 
-  footer .menu__item--depth-1>.menu__link {
+  footer .menu__item--depth-1 > .menu__link {
     padding: 0px !important;
   }
 
-  footer .menu__submenu--level-2{
+  footer .menu__submenu--level-2 {
     padding-top: 10px;
   }
 
-  footer .footer-row > div{
+  footer .footer-row > div {
     border-right: none !important;
   }
 
-  footer #hs_cos_wrapper_site_logo{
+  footer #hs_cos_wrapper_site_logo {
     margin-top: 10px;
   }
 
@@ -210,28 +239,28 @@ footer .social-buttons{
     order: 1;
   }
 
-  .footer-col-mobile{
+  .footer-col-mobile {
     display: block;
   }
 
-  .footer-col-desktop{
+  .footer-col-desktop {
     display: none;
   }
 
-  .footer-col h4{
+  .footer-col h4 {
     margin-top: 0px;
   }
 
-  .words{
+  .words {
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  footer .social-buttons{
+  footer .social-buttons {
     margin-top: 0px;
   }
 
-  footer .footer-row>div:not(:first-child){
+  footer .footer-row > div:not(:first-child) {
     padding-left: 17px !important;
   }
 
@@ -257,16 +286,16 @@ footer .social-buttons{
   }
 
   footer .menu__item--depth-1 a.menu__link {
-	text-align: left;
-	padding: 0;
+    text-align: left;
+    padding: 0;
   }
 
   footer .menu__child-toggle {
-	  display: none;
+    display: none;
   }
 
   footer .menu__item--has-submenu .menu__submenu {
-	  margin-top: 0;
+    margin-top: 0;
   }
 
   footer .contact-info a,

@@ -1,19 +1,50 @@
-.partners-logos {
+.partners-logos .partner-inner a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.partners-logos .partner-inner a img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: ease all 0.3s;
+}
+.partners-logos .partner-inner a:hover img {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+@media screen and (min-width: 992px) {
+  .partners-logos {
+    flex-flow: row;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 1300px;
+    max-width: 1320px;
     margin: 0 auto;
+  }
+} 
+@media screen and (max-width: 991px) {
+  .partners-logos {
+    text-align: center;
+  }
 }
-
-.partners-logos a {
-    display: inline-block;
-    margin-bottom: 10px;
+/* Slick */
+.slick-slide .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #77bf45 !important;
 }
-
-.partners-logos h4{
-    font-size: 28px;
-    font-weight: 100;
-    font-family: 'Roboto Light';
+.slick-slide .slick-dots li button:before {
+  opacity: 100 !important;
+  color: #333 !important;
+  font-size: 8px !important;
+}
+.sc img {
+  width: auto;
+  margin: 0 auto; /* it centers any block level element */
+}
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+.slick-slide {
+  padding: 10px;
 }

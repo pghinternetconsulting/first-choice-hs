@@ -1,28 +1,28 @@
 <!--
   templateType: search_results_page
   isAvailableForNewContent: true
-  label: Boilerplate - search results
-  screenshotPath: ../../images/template-previews/search-results.png
+  label: Search Results
 -->
-{% set template_css = "../../css/templates/system.css" %}
-{% extends "../layouts/base.html" %}
-{# pageTitle is used on system templates for setting a value for the title tag #}
-{% set pageTitle = "Search results" %}
+{% extends '../layouts/base.html' %}
+{% set template_css = '../../css/utilities/_search_results.css' %}
 
 {% block body %}
-<section class="content-wrapper">
-  <div class="systems-page systems-page--search-results">
-    {% module_block module "search_results_content"
-      label="Search results heading",
-      path="@hubspot/rich_text"
-    %}
-      {% module_attribute "html" %}
-        <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
-      {% end_module_attribute %}
-    {% end_module_block %}
-    {% module "search_results"
-      path="@hubspot/search_results"
-    %}
+<main class="body-container-wrapper">
+  <div class="hs-hero">
+    <!--- desktop image -->
+    <img class="desktop" src="https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png" alt="hero" width="1920" height="934">
+    <!--- mobile image -->
+    <img class="mobile" src="https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero-mobile.png" alt="hero-mobile" width="585" height="639">
+    <div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">
+      <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
+    </div>
   </div>
-</section>
+  <section class="content-wrapper">
+    <div class="systems-page search-result">
+      {% module 'search_results' 
+        path='../../modules/search_results' display_featured_images='true' 
+      %}
+    </div> 
+  </section>
+</main>
 {% endblock body %}

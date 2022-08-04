@@ -32,8 +32,10 @@
     <main style="max-width:{{ module.settings.title_max_width }}px">
       <h1 style="color:{{ module.settings.text_color.color }}">{{ module.heading }}</h1>
       <div class="text-above">{{ module.text_above }}</div>
-      <div class="hero-cta">{% cta guid="{{ module.cta }}" %}</div>
-      <div style="color:{{ module.settings.text_color.color }}">{{ module.main_content }}</div>
+      <div class="hero-button"><a class="button" href="{{ module.button_url.href }}">{{ module.button_text }}</a></div>
+      {% if module.link_url.href %}
+      <div class="hero-phone"><a href="{{ module.link_url.href }}">{{ module.link_text }}</a></div> 
+      {% endif %}
     </main>
 
   </div>
