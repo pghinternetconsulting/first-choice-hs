@@ -673,7 +673,7 @@ body:not(.hs-content-id-78640669571) {
     content: unset !important;
   }
 }
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .header li a,
   .header li span {
     font-size: 1rem;
@@ -711,5 +711,33 @@ body:not(.hs-content-id-78640669571) {
   }
   body:not(.hs-content-id-78640669571) {
     padding-top: 85px;
+  }
+}
+
+/* SEARCH ICON */
+@media screen and (min-width: 991px) {
+  .hs-search-field__bar button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    background-color: transparent;
+    border: 0;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0;
+  }
+
+  .hs-search-field__bar button:hover,
+  .hs-search-field__bar button:active,
+  .hs-search-field__bar button:focus {
+    background-color: transparent !important;
+  }
+  .hs-search-field__bar button svg {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hs-search-field__bar button {
+    display: none !important;
   }
 }
