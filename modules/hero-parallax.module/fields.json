@@ -12,11 +12,17 @@
   "default" : "Flexible & Measurable Inbound Strategies"
 }, {
   "id" : "3bc10a4c-61f2-8f4a-3be8-db8b837b6e9c",
-  "name" : "text_above",
+  "name" : "subheading",
   "display_width" : null,
-  "label" : "Text Above",
+  "label" : "Subheading",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
   "validation_regex" : "",
   "allow_new_line" : false,
   "show_emoji_picker" : false,

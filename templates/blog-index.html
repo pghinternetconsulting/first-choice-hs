@@ -12,22 +12,40 @@
 
     {# Top section #}
 
-    <div class="blog-top-bg blog-case-studies--top"> 
-      <div class="content-wrapper">
-        <div class="row-fluid d-md-flex">
-          <div class="span12">
-            {% module "breadcrumbs" 
-              path="/first-theme-hs/modules/breadcrumbs",
-              offset=0,
-              width=12,
-              renamed_from_id=79382493240
-            %}
-            <h1 class="blog-title">Blog</h1> 
-          </div>
-        </div>
-      </div>
-    </div>
-    {# end top section #}
+    {% module 'blog-heading'
+      path="../modules/hero-internal",
+      offset=0,
+      width=12,
+      background={
+        "background_image" : {
+          "alt" : "hero",
+          "height" : 934,
+          "loading" : "lazy",
+          "max_height" : 934,
+          "max_width" : 1920,
+          "size_type" : "auto",
+          "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png",
+          "width" : 1920
+        },
+        "background_image_mobile" : {
+          "alt" : "hero-mobile",
+          "height" : 639,
+          "loading" : "lazy",
+          "max_height" : 639,
+          "max_width" : 585,
+          "size_type" : "auto",
+          "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero-mobile.png",
+          "width" : 585
+        }
+      },
+      heading="Blog",
+      renamed_from_id=79382493240,
+      settings={
+        "title_max_width" : 1520
+      }
+    %}
+
+    {# end top section #} 
 
     <div class="content-wrapper">
 

@@ -1,3 +1,10 @@
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
 var hsResultsPage = function(_resultsClass) {
   function buildResultsPage(_instance) {
     var resultTemplate = _instance.querySelector(
@@ -32,9 +39,11 @@ var hsResultsPage = function(_resultsClass) {
       }
       newResult.querySelector('.hs-search-results__title').innerHTML = title;
       newResult.querySelector('.hs-search-results__title').href = url;
+      newResult.querySelector('.hs-search-results__link').href = url;
       newResult.querySelector(
         '.hs-search-results__description'
-      ).innerHTML = description;
+      ).innerHTML = truncateString(description, 300);
+      console.log(description);
       if (typeof featuredImage !== 'undefined' && isFeaturedImageEnabled()) {
         newResult.querySelector(
           '.hs-search-results__featured-image > img'

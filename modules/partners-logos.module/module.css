@@ -21,6 +21,12 @@
     max-width: 1320px;
     margin: 0 auto;
   }
+  .slick-slide{
+    width: auto !important;
+  }
+  .slick-track{
+    width: 100% !important;
+  }
 } 
 @media screen and (max-width: 991px) {
   .partners-logos {

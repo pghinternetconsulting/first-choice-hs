@@ -31,7 +31,11 @@
   <div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">
     <main style="max-width:{{ module.settings.title_max_width }}px">
       <h1 style="color:{{ module.settings.text_color.color }}">{{ module.heading }}</h1>
-      <div class="text-above">{{ module.text_above }}</div>
+      <div class="hero-subheading">
+        {% for item in module.subheading %}
+          <h3 {% if loop.first %}class="show"{% endif %}>{{ item }}</h3>
+        {% endfor %}
+      </div>
       <div class="hero-button"><a class="button" href="{{ module.button_url.href }}">{{ module.button_text }}</a></div>
       {% if module.link_url.href %}
       <div class="hero-phone"><a href="{{ module.link_url.href }}">{{ module.link_text }}</a></div> 

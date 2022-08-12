@@ -64,12 +64,12 @@
 .employment-body .hs-breadcrumb-menu li span {
   color: #000000;
 }
-.employment-form h2 {
+.employment-form h2{
   color: #ffffff;
   margin-top: 90px;
 }
-h1.employment-title {
-  color: #575757 !important;
+.employment-title span {
+  color: #575757;
 }
 .text-form-breadcrumbs {
   margin-top: 25px;

@@ -40,6 +40,10 @@
   text-transform: none;
 }
 
+.hs-hero h3{
+  color: #ffffff;
+}
+
 .hs-hero__content h2 {
   font-size: 20px;
   font-weight: 400;

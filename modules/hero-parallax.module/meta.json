@@ -1,5 +1,8 @@
 {
   "global" : false,
+  "js_render_options" : {
+    "defer" : true
+  },
   "host_template_types" : [ "PAGE" ],
   "module_id" : 78645985685,
   "js_assets" : [ {

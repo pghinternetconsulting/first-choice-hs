@@ -13,7 +13,11 @@
 %}
 
   {% dnd_section
-    background_color="rgba(87, 87, 87, 1)",
+    background_image={
+      "background_position" : "MIDDLE_CENTER",
+      "background_size" : "cover",
+      "image_url" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png"
+    },
     padding={
       "default" : {
         "top" : "0px"
@@ -40,11 +44,21 @@
           width=12
         %}
           {% module_attribute "html" %}
-            <h1 style="margin-top: 0px; line-height: 1;">About us</h1>
-            <p style="font-size: 21px; color: #ffffff; line-height: 1; font-family: Roboto; font-weight: 400; margin-bottom: 30px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&nbsp;</p>
-            <h2 style="margin-top: 80px; color: #ffffff;">Our purpose</h2>
-            <p style="color: #ffffff;">First Choice Safety Solutions works to unite a business’s culture, people, services, and products under a safety partnership that generates safer behavior and practices company-wide.</p>
+            <h4 class="hero-h4">Lorem ipsum</h4>
+            <h1 class="hero-h1">About us</h1>
+            <p class="hero-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&nbsp;</p>
+            <h2 class="white">Our purpose</h2>
+            <p class="white">First Choice Safety Solutions works to unite a business’s culture, people, services, and products under a safety partnership that generates safer behavior and practices company-wide.</p>
           {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/button",
+          offset=0,
+          width=12,
+          button_text="Contact Us"
+        %}
         {% end_dnd_module %}
       {% end_dnd_row %}
     {% end_dnd_column %}
