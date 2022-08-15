@@ -33,7 +33,7 @@
       <h1 style="color:{{ module.settings.text_color.color }}">{{ module.heading }}</h1>
       <div class="hero-subheading">
         {% for item in module.subheading %}
-          <h3 {% if loop.first %}class="show"{% endif %}>{{ item }}</h3>
+          <h3 style="display: none;"{% if loop.first %}class="show"{% endif %}>{{ item }}</h3>
         {% endfor %}
       </div>
       <div class="hero-button"><a class="button" href="{{ module.button_url.href }}">{{ module.button_text }}</a></div>

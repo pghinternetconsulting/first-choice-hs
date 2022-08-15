@@ -160,6 +160,28 @@
   font-size: 12px;
   margin-top: 8px;
 }
+/* Employment Form */
+.employment-form{
+  padding-left: 13.2%;
+}
+.employment-form form{
+  margin-right: 0px !important;
+}
+.employment-form fieldset{
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.employment-form fieldset > div{
+  width: 100%;
+}
+.employment-form .form-columns-2 > div:first-child{
+  margin-right: 5px;
+}
+.employment-form .form-columns-2 > div:last-child{
+  margin-left: 5px;
+}
 @media screen and (min-width: 1380px) {
   .employment-post {
     padding: 0 1rem;
@@ -217,6 +239,16 @@
   .employment-post input[type="text"],
   .employment-post input[type="email"] {
     width: 100% !important;
+  }
+  .employment-form fieldset{
+    flex-flow: column;
+  }
+  .employment-form .form-columns-2 > div{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .employment-form form{
+    margin-bottom: 80px;
   }
 }
 

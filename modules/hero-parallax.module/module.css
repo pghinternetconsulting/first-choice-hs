@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.hs-hero .show{
+  display: block !important;
+}
+
 .hs-hero img {
   object-fit: cover;
   width: 100%;
@@ -34,6 +38,11 @@
 
 .hs-hero__content--right {
   text-align: right;
+}
+
+.hs-hero .hero-subheading{
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hs-hero h1 {
