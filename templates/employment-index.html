@@ -1,0 +1,102 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Employment Index
+-->
+{% extends './layouts/base.html' %}
+{% set template_css = '../../css/templates/employment-listing.css' %}
+
+{% block body %}
+<main class="body-container-wrapper employment">
+  <div class="body-container body-container--employment-index">
+
+    {# Top section #}
+    <div class="employment-header">
+      {% module "header"
+        path="/first-theme-hs/modules/hero-internal",
+        heading="Employment Parent",
+        renamed_from_id=79382493240
+      %}
+
+      <div class="employment-subheader">
+        <div class="employment-subheader-inner">
+          {% module_block module "subheader"
+            path="@hubspot/rich_text",
+            label="Subheader"
+          %}
+            {% module_attribute "html" %}
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>One main focus of our company is providing health and safety compliance services during facility construction, dismantling, re-powering and maintenance projects. This includes the following: development of health and safety programs, policies and procedures; surveillance of contractor construction activities; conducting of safety meetings; permit support; licensing support; accident investigation; regulatory interface; confined space rescue services; emergency response.</p>
+            {% end_module_attribute %}
+          {% end_module_block  %}
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <section class="employment-index">
+        {% if contents %}
+          {% for content in contents %}
+          <article class="employment-index__post">
+            <div class="employment-index__post-content">
+              <h2>{{ content.name }}</h2>
+              <div class="employment-excerpt">{{ content.post_list_content|safe|striptags|truncatehtml(200, '...' , false) }}</div>
+              <div class="employment-button"><a class="button" href="{{ content.absolute_url }}">Apply Now</a></div>
+            </div>
+          </article>
+          {% endfor %}
+        {% else %}
+          <div class="nojob-listed">
+            No listed jobs available
+          </div>
+        {% endif %}
+      </section>
+
+      {# employment pagination #}
+      {% if contents.total_page_count > 1 %}
+      <div class="blog-pagination">
+        {% set page_list = [-2, -1, 0, 1, 2] %}
+        {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+        {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+        {% elif current_page_num == 2 %}{% set offset = 1 %}
+        {% elif current_page_num == 1 %}{% set offset = 2 %}
+        {% else %}{% set offset = 0 %}{% endif %}
+
+        <a class="blog-pagination__link blog-pagination__prev-link {{ 'blog-pagination__prev-link--disabled' if !last_page_num }}"
+          href="{{ blog_page_link(last_page_num) }}">
+          {% icon
+          name='chevron-left',
+          no_wrapper=True,
+          purpose='decorative',
+          style='SOLID',
+          width='13'
+          %}
+          Prev
+        </a>
+        {% for page in page_list %}
+        {% set this_page = current_page_num + page + offset %}
+        {% if this_page > 0 and this_page <= contents.total_page_count %} <a
+          class="blog-pagination__link blog-pagination__number-link {{ 'blog-pagination__link--active' if this_page == current_page_num }}"
+          href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+          {% endif %}
+          {% endfor %}
+          <a class="blog-pagination__link blog-pagination__next-link {{ 'blog-pagination__next-link--disabled' if !next_page_num }}"
+            href="{{ blog_page_link(current_page_num + 1) }}">
+            Next
+            {% icon
+            name='chevron-right',
+            no_wrapper=True,
+            purpose='decorative',
+            style='SOLID',
+            width='13'
+            %}
+          </a>
+      </div>
+      {% endif %}
+      {# End employment pagination #}
+
+    </div>
+
+  </div>
+</main>
+{% endblock body %}
