@@ -7,30 +7,30 @@
     <div class="row-fluid">
       <div class="span12">
         {% module "logos"
-          path="/first-theme-hs/modules/partners-logos",
-          offset=0,
-          width=12
+        path="/first-theme-hs/modules/partners-logos",
+        offset=0,
+        width=12
         %}
       </div>
     </div>
   </div>
 </div>
 <footer>
-  <div class="footer-row content-wrapper">
+  <div class="footer-row content-wrapper hs-search-hidden">
     <div class="footer-col">
       <div class="footer-logo-desktop">
         {% module "site_logo" path="@hubspot/logo" %}
       </div>
       <div class="footer-logo-mobile">
         {% module "footer_logo_dark"
-          path="@hubspot/linked_image",
-          img={
-            "alt": "First Choice Logo",
-            "loading": "disabled",
-            "max_width": 220,
-            "size_type": "auto_custom_max",
-            "src": get_asset_url("../images/black-logo.png")
-          }
+        path="@hubspot/linked_image",
+        img={
+        "alt": "First Choice Logo",
+        "loading": "disabled",
+        "max_width": 220,
+        "size_type": "auto_custom_max",
+        "src": get_asset_url("../images/black-logo.png")
+        }
         %}
       </div>
       <div class="words footer-col-mobile">{% module "words" path="@hubspot/rich_text" label="Words" %}</div>
@@ -40,7 +40,9 @@
           <div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="11.445" height="11.445" viewBox="0 0 11.445 11.445">
-                <path id="Icon_awesome-phone" data-name="Icon awesome-phone" d="M11.028.549,8.7.013a.54.54,0,0,0-.615.311l-1.073,2.5a.535.535,0,0,0,.154.626L8.525,4.562A8.284,8.284,0,0,1,4.564,8.523L3.455,7.168a.536.536,0,0,0-.626-.154L.326,8.087A.543.543,0,0,0,.013,8.7l.536,2.325a.536.536,0,0,0,.523.416A10.371,10.371,0,0,0,11.444,1.072.536.536,0,0,0,11.028.549Z" transform="translate(0.001 0.001)" fill="#fff"/>
+                <path id="Icon_awesome-phone" data-name="Icon awesome-phone"
+                  d="M11.028.549,8.7.013a.54.54,0,0,0-.615.311l-1.073,2.5a.535.535,0,0,0,.154.626L8.525,4.562A8.284,8.284,0,0,1,4.564,8.523L3.455,7.168a.536.536,0,0,0-.626-.154L.326,8.087A.543.543,0,0,0,.013,8.7l.536,2.325a.536.536,0,0,0,.523.416A10.371,10.371,0,0,0,11.444,1.072.536.536,0,0,0,11.028.549Z"
+                  transform="translate(0.001 0.001)" fill="#fff" />
               </svg>
             </div>
             {% module "phone" path="@hubspot/rich_text" label="Phone" %}
@@ -48,13 +50,16 @@
           <div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" width="9.178" height="13.111" viewBox="0 0 9.178 13.111">
-                <path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.089,3A4.586,4.586,0,0,0,7.5,7.589c0,3.442,4.589,8.522,4.589,8.522s4.589-5.081,4.589-8.522A4.586,4.586,0,0,0,12.089,3Zm0,6.228a1.639,1.639,0,1,1,1.639-1.639A1.64,1.64,0,0,1,12.089,9.228Z" transform="translate(-7.5 -3)" fill="#fff"/>
+                <path id="Icon_material-location-on" data-name="Icon material-location-on"
+                  d="M12.089,3A4.586,4.586,0,0,0,7.5,7.589c0,3.442,4.589,8.522,4.589,8.522s4.589-5.081,4.589-8.522A4.586,4.586,0,0,0,12.089,3Zm0,6.228a1.639,1.639,0,1,1,1.639-1.639A1.64,1.64,0,0,1,12.089,9.228Z"
+                  transform="translate(-7.5 -3)" fill="#fff" />
               </svg>
             </div>
             {% module "address" path="@hubspot/rich_text" label="Address" %}
           </div>
         </div>
-        <div class="social-buttons">{% module 'social-icons' path='../../modules/social-follow' extra_classes="footer-social-icons" label="Social Links" %}</div>
+        <div class="social-buttons">{% module 'social-icons' path='../../modules/social-follow'
+          extra_classes="footer-social-icons" label="Social Links" %}</div>
       </div>
     </div>
     <div class="footer-col">
@@ -64,12 +69,14 @@
       {% module 'menu-footer-2' path='../../modules/menu' extra_classes="footer-menu" label="Menu 2" %}
     </div>
     <div class="footer-col footer-col-mobile">
-      <h4><a href="/contact-us/">Contact Us</a></h4> 
+      <h4><a href="/contact-us/">Contact Us</a></h4>
       <div class="contact-info">
         <div>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="11.445" height="11.445" viewBox="0 0 11.445 11.445">
-              <path id="Icon_awesome-phone" data-name="Icon awesome-phone" d="M11.028.549,8.7.013a.54.54,0,0,0-.615.311l-1.073,2.5a.535.535,0,0,0,.154.626L8.525,4.562A8.284,8.284,0,0,1,4.564,8.523L3.455,7.168a.536.536,0,0,0-.626-.154L.326,8.087A.543.543,0,0,0,.013,8.7l.536,2.325a.536.536,0,0,0,.523.416A10.371,10.371,0,0,0,11.444,1.072.536.536,0,0,0,11.028.549Z" transform="translate(0.001 0.001)" fill="#fff"/>
+              <path id="Icon_awesome-phone" data-name="Icon awesome-phone"
+                d="M11.028.549,8.7.013a.54.54,0,0,0-.615.311l-1.073,2.5a.535.535,0,0,0,.154.626L8.525,4.562A8.284,8.284,0,0,1,4.564,8.523L3.455,7.168a.536.536,0,0,0-.626-.154L.326,8.087A.543.543,0,0,0,.013,8.7l.536,2.325a.536.536,0,0,0,.523.416A10.371,10.371,0,0,0,11.444,1.072.536.536,0,0,0,11.028.549Z"
+                transform="translate(0.001 0.001)" fill="#fff" />
             </svg>
           </div>
           {% module "phone" path="@hubspot/rich_text" label="Phone" %}
@@ -77,17 +84,21 @@
         <div>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="9.178" height="13.111" viewBox="0 0 9.178 13.111">
-              <path id="Icon_material-location-on" data-name="Icon material-location-on" d="M12.089,3A4.586,4.586,0,0,0,7.5,7.589c0,3.442,4.589,8.522,4.589,8.522s4.589-5.081,4.589-8.522A4.586,4.586,0,0,0,12.089,3Zm0,6.228a1.639,1.639,0,1,1,1.639-1.639A1.64,1.64,0,0,1,12.089,9.228Z" transform="translate(-7.5 -3)" fill="#fff"/>
+              <path id="Icon_material-location-on" data-name="Icon material-location-on"
+                d="M12.089,3A4.586,4.586,0,0,0,7.5,7.589c0,3.442,4.589,8.522,4.589,8.522s4.589-5.081,4.589-8.522A4.586,4.586,0,0,0,12.089,3Zm0,6.228a1.639,1.639,0,1,1,1.639-1.639A1.64,1.64,0,0,1,12.089,9.228Z"
+                transform="translate(-7.5 -3)" fill="#fff" />
             </svg>
           </div>
           {% module "address" path="@hubspot/rich_text" label="Address" %}
         </div>
       </div>
-      <div class="social-buttons">{% module 'social-icons' path='../../modules/social-follow' extra_classes="footer-social-icons" label="Social Links" %}</div>
+      <div class="social-buttons">{% module 'social-icons' path='../../modules/social-follow'
+        extra_classes="footer-social-icons" label="Social Links" %}</div>
     </div>
     <div class="footer-col">
       <div class="words footer-col-desktop">{% module "words" path="@hubspot/rich_text" label="Words" %}</div>
-      <div class="copyright">© {{ year }} First Choice Safety Solutions, LLC<br><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms & Conditions</a></div>
+      <div class="copyright">© {{ year }} First Choice Safety Solutions, LLC<br><a href="/privacy-policy/">Privacy
+          Policy</a> | <a href="/terms-and-conditions/">Terms & Conditions</a></div>
     </div>
   </div>
 </footer>
