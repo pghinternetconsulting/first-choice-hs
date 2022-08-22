@@ -27,6 +27,7 @@
 
   .header__column {
     position: relative;
+    margin-top: 5px;
   }
 
   .header__row-1 {
@@ -68,13 +69,13 @@
   display: flex;
   height: auto;
   margin-right: auto;
-  max-width: 220px;
+  max-width: 220px !important;
   overflow: hidden;
 }
 
 @media (max-width: 991px) {
   .header__logo {
-    margin: 0 auto;
+    margin-left: 0px;
     width: 100%;
     padding-left: 20px !important;
   }
@@ -297,7 +298,7 @@
 
 @media screen and (max-width: 991px) {
   .body-container--home {
-    margin-top: 85px;
+    margin-top: 75px;
   }
 
   .header-home {
@@ -575,14 +576,16 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
   .h-logo-dark {
   display: block;
 }
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky
-  .header,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky
-  .header {
-  background-color: #fff !important;
-  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-  padding-top: 15px;
-  padding-bottom: 15px;
+@media (min-width: 992px) {
+  div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky
+    .header,
+  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky
+    .header {
+    background-color: #fff !important;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky
   .hs-search-field__input,
@@ -672,6 +675,12 @@ body:not(.hs-content-id-78640669571) {
   .menu__submenu--level-2 > .menu__item:first-child:before {
     content: unset !important;
   }
+  .header-home li a .hs-highlight-title {
+    color: #333 !important;
+  }
+  .header-home li a .hs-highlight-title:hover {
+    color: #4b9343 !important;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header li a,
@@ -710,7 +719,7 @@ body:not(.hs-content-id-78640669571) {
     padding: 0px;
   }
   body:not(.hs-content-id-78640669571) {
-    padding-top: 85px;
+    padding-top: 70px;
   }
 }
 
@@ -739,5 +748,19 @@ body:not(.hs-content-id-78640669571) {
 @media screen and (max-width: 991px) {
   .hs-search-field__bar button {
     display: none !important;
+  }
+}
+
+/* SUBMENU */
+@media screen and (min-width: 992px) {
+  .menu__submenu {
+    width: 370px !important;
+  }
+
+  .menu__submenu li a {
+    font-size: 14px !important;
+  }
+  .menu__submenu .menu__link {
+    padding: 0.2rem 1.05rem !important;
   }
 }

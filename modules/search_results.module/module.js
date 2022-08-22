@@ -86,7 +86,7 @@ var hsResultsPage = function(_resultsClass) {
       });
     }
     function httpRequest(term, offset) {
-      var SEARCH_URL = '/_hcms/search?limit=9&property=title&',
+      var SEARCH_URL = '/_hcms/search?',
         requestUrl = SEARCH_URL + searchParams + '&analytics=true',
         request = new XMLHttpRequest();
 
