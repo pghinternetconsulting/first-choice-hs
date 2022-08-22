@@ -6,8 +6,12 @@
   text-align: center;
 }
 
+.error-page h1 {
+  color: #111 !important;
+}
+
 .error-page:before {
-  color: #F3F6F9;
+  color: #f3f6f9;
   content: attr(data-error);
   font-size: 40vw;
   font-weight: bold;
@@ -44,10 +48,10 @@
 }
 
 .systems-page .success {
-  background-color: #CDE3CC;
-  border: 1.5px solid #4F7D24;
+  background-color: #cde3cc;
+  border: 1.5px solid #4f7d24;
   border-radius: 6px;
-  color: #4F7D24;
+  color: #4f7d24;
   display: inline-block;
   margin: 1.4rem 0;
   padding: 0.1rem 0.7rem;
@@ -58,7 +62,7 @@
   max-width: 100%;
 }
 
-.systems-page form input[type='submit'] {
+.systems-page form input[type="submit"] {
   margin: 0.7rem 0;
   display: block;
 }
@@ -81,7 +85,7 @@
 
 /* Password prompt */
 
-.password-prompt input[type=password] {
+.password-prompt input[type="password"] {
   height: auto !important;
   margin-bottom: 1.4rem;
 }
@@ -103,7 +107,7 @@
   padding-bottom: 0 !important;
 }
 
-.backup-unsubscribe input[type=email] {
+.backup-unsubscribe input[type="email"] {
   font-size: 0.875rem !important;
   margin-bottom: 1.4rem;
   padding: 0.7rem !important;
@@ -122,7 +126,7 @@
 
 /* Membership pages */
 
-#hs-membership-form a[class*='show-password'] {
+#hs-membership-form a[class*="show-password"] {
   font-size: 0.75rem;
 }
 
