@@ -1,0 +1,89 @@
+[ {
+  "id" : "c8239fa1-6f98-c36b-0839-35500907c80b",
+  "name" : "team_member",
+  "display_width" : null,
+  "label" : "Team Member",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "49344f88-e579-c71e-8c2e-def6cc7bb6a8",
+    "name" : "team_photo",
+    "display_width" : null,
+    "label" : "Team Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20291.png",
+      "alt" : "Team name",
+      "loading" : "lazy",
+      "width" : 250,
+      "height" : 250,
+      "max_width" : 250,
+      "max_height" : 250
+    }
+  }, {
+    "id" : "e9ce9801-7ff2-5149-7668-568d774710ee",
+    "name" : "team_name",
+    "display_width" : null,
+    "label" : "Team Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Team Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Team Name"
+  }, {
+    "id" : "c42cd48a-bb6b-8832-6a9b-879cbd7e52e6",
+    "name" : "position",
+    "display_width" : null,
+    "label" : "Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Position",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Position"
+  }, {
+    "id" : "19a21458-d928-a186-5cdc-35583c1f7f15",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat nisl in enim fermentum placerat et in erat. Sed rhoncus nunc felis, id sagittis dui hendrerit quis. Nunc mollis feugiat nisi. Morbi feugiat vestibulum risus et luctus. In nec magna in nulla accumsan mattis dignissim at neque.&nbsp;</span>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "team_photo" : {
+      "size_type" : "auto",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20291.png",
+      "alt" : "Team name",
+      "loading" : "lazy",
+      "width" : 250,
+      "height" : 250,
+      "max_width" : 250,
+      "max_height" : 250
+    },
+    "team_name" : "Team Name",
+    "position" : "Position",
+    "description" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat nisl in enim fermentum placerat et in erat. Sed rhoncus nunc felis, id sagittis dui hendrerit quis. Nunc mollis feugiat nisi. Morbi feugiat vestibulum risus et luctus. In nec magna in nulla accumsan mattis dignissim at neque.&nbsp;</span>"
+  }
+} ]
