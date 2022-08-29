@@ -41,18 +41,40 @@
                         cssClass: "custom-form",
                         submitButtonClass: 'button',
                         onFormReady: function($form){
+                            // find the dropdown field
                             var mySelect = $form.find('.hs-position select');
+
+                            // this is the title of the position you are visiting slugified.
+                            const positionSlugify = "{{ content.name | striptags | lower | replace(' ', '-') }}";
+
+                            // removing any other option that could be manually added.
+                            const $select = document.querySelector('.hs-position select');
+                            for (let i = $select.options.length; i >= 0; i--) {
+                                $select.remove(i); 
+                            }
+
+                            // build options for selector.
+                            // key would be name
+                            // value would be the option value
                             const myOptions = {
                                 {% for rec_post in rec_posts %}
-                                    '{{ rec_post.name }}' : '{{ rec_post.name }}'{% if not loop.last %},{% endif %}
+                                    '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', '-')}}'{% if not loop.last %},{% endif %}
                                 {% endfor %}
                             };
+
+                            // create options and append them to the selector
                             Object.keys(myOptions).forEach(key => {
                                 var opt = document.createElement('option');
                                 opt.value = myOptions[key];
                                 opt.innerHTML = key;
                                 mySelect[0].appendChild(opt);
                             });
+
+                            // find the selector in the page and select the option
+                            // trigger on change event for hubspot scripts
+                            const $selectwithValues = document.querySelector('.hs-position select');
+                            $selectwithValues.value = positionSlugify;
+                            $selectwithValues.dispatchEvent(new Event('change')); 
                         }
                     });
                     </script>

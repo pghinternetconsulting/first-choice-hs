@@ -24,8 +24,8 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20291.png",
-      "alt" : "Team name",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/team-photo.png",
+      "alt" : "team-photo",
       "loading" : "lazy",
       "width" : 250,
       "height" : 250,
@@ -66,7 +66,7 @@
     "required" : false,
     "locked" : false,
     "type" : "richtext",
-    "default" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat nisl in enim fermentum placerat et in erat. Sed rhoncus nunc felis, id sagittis dui hendrerit quis. Nunc mollis feugiat nisi. Morbi feugiat vestibulum risus et luctus. In nec magna in nulla accumsan mattis dignissim at neque.&nbsp;</span>"
+    "default" : ""
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -74,8 +74,8 @@
   "default" : {
     "team_photo" : {
       "size_type" : "auto",
-      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20291.png",
-      "alt" : "Team name",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/team-photo.png",
+      "alt" : "team-photo",
       "loading" : "lazy",
       "width" : 250,
       "height" : 250,
@@ -84,6 +84,6 @@
     },
     "team_name" : "Team Name",
     "position" : "Position",
-    "description" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat nisl in enim fermentum placerat et in erat. Sed rhoncus nunc felis, id sagittis dui hendrerit quis. Nunc mollis feugiat nisi. Morbi feugiat vestibulum risus et luctus. In nec magna in nulla accumsan mattis dignissim at neque.&nbsp;</span>"
+    "description" : ""
   }
 } ]

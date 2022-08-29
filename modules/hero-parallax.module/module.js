@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
             count = 0;
             setTimeout(function(){
               count = 0;
+              $(element).css('opacity', '1');
               $(element + ' span').each(function () {
                 if(method == 'fade'){
                   $(this).delay(0 + in_speed * count).animate({ opacity: '1' }, 200);
@@ -30,6 +31,7 @@ jQuery(document).ready(function($){
                 }
                 count++;
               });
+              $(element).delay(4200).animate({ opacity: '0' }, 400);
             },delay);
         };
     
