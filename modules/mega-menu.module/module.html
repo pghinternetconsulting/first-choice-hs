@@ -1,25 +1,25 @@
 {% macro defaultItemClasses(level) %}
- {{
- {
-   "class": "no-submenu megamenu--item-{{level}}"
- }|xmlattr
- }}
+{{
+{
+"class": "no-submenu megamenu--item-{{level}}"
+}|xmlattr
+}}
 {% endmacro %}
 
 {% macro childClasses(level) %}
- {{
- {
-   "class": "has-submenu megamenu--item-{{level}}"
- }|xmlattr
- }}
+{{
+{
+"class": "has-submenu megamenu--item-{{level}}"
+}|xmlattr
+}}
 {% endmacro %}
 
 {% macro activeNode() %}
- {{
- {"class": "menu-link active-item",
- "aria-current": "page"}|xmlattr
+{{
+{"class": "menu-link active-item",
+"aria-current": "page"}|xmlattr
 
- }}
+}}
 {% endmacro %}
 
 {% macro linkTarget() %}
@@ -30,73 +30,74 @@
 
 {% macro link(node, highlightSentence, cta ) %}
 
-	<li {{ childClasses(node.level) if node.children else defaultItemClasses(node.level) }}>
-	<a class="megamenu--item-link" href="{{ node.url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if node.linkTarget }}>{{ node.label }}</a>
+<li {{ childClasses(node.level) if node.children else defaultItemClasses(node.level) }}>
+  <a class="megamenu--item-link" href="{{ node.url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
+    node.linkTarget }}>{{ node.label }}</a>
 
-	{% if node.children %}
-		<div class="megamenu--submenu">
-			<div class="megamenu--submenu--hightlight">
-				<p>{{ highlightSentence }}</p> 
-				{% cta guid="{{ cta }}" %}
-			</div>
-			<div class="megamenu--submenu-menu-wrapper">
-				{{ renderNavigation(node) }}
-			</div>
-		</div>
+  {% if node.children %}
+  <div class="megamenu--submenu">
+    <!-- <div class="megamenu--submenu--hightlight">
+      <p>{{ highlightSentence }}</p>
+      {% cta guid="{{ cta }}" %}
+    </div> -->
+    <div class="megamenu--submenu-menu-wrapper">
+      {{ renderNavigation(node) }}
+    </div>
+  </div>
 
-	{% endif %}
-	</li>
+  {% endif %}
+</li>
 {% endmacro %}
 
 {% macro renderNavigation(menuTree) %}
 
-  {% set level = level + 1 %}
+{% set level = level + 1 %}
 
-  <ul class="megamenu--submenu-menu level-{{ level }}" aria-hidden="{{ level != 1 }}">
-    {% for node in menuTree.children %}
-      {{ link(node) }}
-    {% endfor %}
-  </ul>
+<ul class="megamenu--submenu-menu level-{{ level }}" aria-hidden="{{ level != 1 }}">
+  {% for node in menuTree.children %}
+  {{ link(node) }}
+  {% endfor %}
+</ul>
 {% endmacro %}
 
 
 
-<ul class="megamenu"> 
+<ul class="megamenu">
 
-{% for item in module.menu_item %}
+  {% for item in module.menu_item %}
 
-	{% for node in menu(item.mega_menu).children %}
-		{{ link(node, item.highlight_sentence, item.cta_field ) }}		
-	{% endfor %}
+  {% for node in menu(item.mega_menu).children %}
+  {{ link(node, item.highlight_sentence, item.cta_field ) }}
+  {% endfor %}
 
-{% endfor %}
+  {% endfor %}
 
 </ul>
 
 
 
 {% macro defaultMobileItemClasses() %}
- {{
- {
-   "class": "no-submenu mobile-menu--menu-item"
- }|xmlattr
- }}
+{{
+{
+"class": "no-submenu mobile-menu--menu-item"
+}|xmlattr
+}}
 {% endmacro %}
 
 {% macro childMobileClasses() %}
- {{
- {
-   "class": "has-submenu mobile-menu--menu-item"
- }|xmlattr
- }}
+{{
+{
+"class": "has-submenu mobile-menu--menu-item"
+}|xmlattr
+}}
 {% endmacro %}
 
 {% macro activeMobileNode() %}
- {{
- {"class": "mobile-menu--menu-link active-item",
- "aria-current": "page"}|xmlattr
+{{
+{"class": "mobile-menu--menu-link active-item",
+"aria-current": "page"}|xmlattr
 
- }}
+}}
 {% endmacro %}
 
 {% macro linkMobileTarget() %}
@@ -108,14 +109,16 @@
 {% macro linkMobile(node) %}
 
 <li {{ childMobileClasses() if node.children else defaultMobileItemClasses() }}>
-  <a class="mobile-menu--menu-link" href="{{ node.url }}" {{ activeMobileNode() if node.activeNode }} {{ linkMobileTarget() if node.linkMobileTarget }}>{{ node.label }}</a>
+  <a class="mobile-menu--menu-link" href="{{ node.url }}" {{ activeMobileNode() if node.activeNode }} {{
+    linkMobileTarget() if node.linkMobileTarget }}>{{ node.label }}</a>
 
   {% if node.children %}
   <input type="checkbox" id="{{ node.label }}" class="submenu-toggle">
   <label class="mobile-menu--item-plus-icon" for="{{ node.label }}">
-	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-		<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-	</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-plus"
+      viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </svg>
   </label>
   {{ renderMobileNavigation(node) }}
   {% endif %}
@@ -124,16 +127,16 @@
 
 {% macro renderMobileNavigation(menuTree) %}
 
-  {% set level = level + 1 %}
-  {% set class = ( level == 1 ) ? 'mobile-menu--menu' : 'mobile-menu--submenu' %}
+{% set level = level + 1 %}
+{% set class = ( level == 1 ) ? 'mobile-menu--menu' : 'mobile-menu--submenu' %}
 
-  <ul class="{{ class }} level-{{ level }}" aria-hidden="{{ level != 1 }}">
-    {% for node in menuTree.children %}
-      {{ linkMobile(node) }}
-    {% endfor %}
-  </ul>
+<ul class="{{ class }} level-{{ level }}" aria-hidden="{{ level != 1 }}">
+  {% for node in menuTree.children %}
+  {{ linkMobile(node) }}
+  {% endfor %}
+</ul>
 {% endmacro %}
 
 <nav class="mobile-menu">
-	{{ renderMobileNavigation(menu(module.mobile_menu)) }}
+  {{ renderMobileNavigation(menu(module.mobile_menu)) }}
 </nav>
