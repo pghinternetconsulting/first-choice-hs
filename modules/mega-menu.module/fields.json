@@ -1,0 +1,70 @@
+[ {
+  "id" : "e820073a-f3a5-58e6-1003-37551ac7eca0",
+  "name" : "menu_item",
+  "display_width" : null,
+  "label" : "Desktop Menu",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "d58cf8f6-bfa3-1cd0-9144-115b9b893dc4",
+    "name" : "mega_menu",
+    "display_width" : null,
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "default" : 83813296199
+  }, {
+    "id" : "73ef2262-5c9a-5177-c181-e122589aae6a",
+    "name" : "highlight_sentence",
+    "display_width" : null,
+    "label" : "Highlight Sentence",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "I am looking for a strategic partner to help me generate more converting traffic to my website."
+  }, {
+    "id" : "bcc9adfb-b9e6-d583-8ed6-7eb6e5754e5f",
+    "name" : "cta_field",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "mega_menu" : 83813296199,
+    "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+  }, {
+    "mega_menu" : 83813296199,
+    "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+  }, {
+    "mega_menu" : 83813296199,
+    "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+  } ]
+}, {
+  "id" : "ad83fc71-eebc-362e-a27a-61b4afd97f5e",
+  "name" : "mobile_menu",
+  "display_width" : null,
+  "label" : "Mobile Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 2558357706
+} ]

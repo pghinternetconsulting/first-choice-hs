@@ -2,14 +2,14 @@
   templateType: global_partial
   label: Website header
 -->
-<header class="header header-internal hs-search-hidden">
+<header class="header header-home hs-search-hidden">
 
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip
   over the site navigation. More information on the navigation skipper can be found here:
   https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
   <a href="#main-content" class="header__skip">Skip to content</a>
   {# Main header #}
-  <div class="header__container content-wrapper">
+  <div class="header__container content-wrapper hs-search-hidden">
 
     {# Header navigation column #}
 
@@ -18,16 +18,19 @@
       {# Header logo column #}
 
       <div class="header__logo header__logo--main">
-        {% module "site_logo_dark"
-        path="@hubspot/linked_image",
-        img={
-        "alt": "First Choice Logo",
-        "loading": "disabled",
-        "max_width": 220,
-        "size_type": "auto_custom_max",
-        "src": get_asset_url("../images/black-logo.png")
-        }
-        %}
+        <div class="h-logo-light">{% module "site_logo_light" path="@hubspot/logo" %}</div>
+        <div class="h-logo-dark">
+          {% module "site_logo_dark"
+          path="@hubspot/linked_image",
+          img={
+          "alt": "First Choice Logo",
+          "loading": "disabled",
+          "max_width": 220,
+          "size_type": "auto_custom_max",
+          "src": get_asset_url("../images/black-logo.png")
+          }
+          %}
+        </div>
       </div>
 
       {# Header navigation row two #}
@@ -51,7 +54,7 @@
           </div>
           {# end mobile hamburguer #}
         </div>
-        <div class="header__navigation header--element">
+        <div class="header__navigation header--element hs-search-hidden">
           {% module "navigation-primary"
           path="../../modules/menu",
           label="Primary navigation"
@@ -77,12 +80,10 @@
         {% endif %}
         <div class="header__search header--element">
           {% module "site_search"
-          path="../../modules/search_input",
+          path="@hubspot/search_input",
           label="",
           field_label="",
-          placeholder="",
-          content_types="{ "website_pages": true, "landing_pages": false, "blog_posts": false, "knowledge_articles":
-          false }"
+          placeholder=""
           %}
         </div>
       </div>
