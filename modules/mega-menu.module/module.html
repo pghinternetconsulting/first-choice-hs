@@ -1,31 +1,17 @@
 {% macro defaultItemClasses(level) %}
-{{
-{
-"class": "no-submenu megamenu--item-{{level}}"
-}|xmlattr
-}}
+  {{ { "class": "no-submenu megamenu--item-{{level}}" }|xmlattr }}
 {% endmacro %}
 
 {% macro childClasses(level) %}
-{{
-{
-"class": "has-submenu megamenu--item-{{level}}"
-}|xmlattr
-}}
+  {{ { "class": "has-submenu megamenu--item-{{level}}" }|xmlattr }}
 {% endmacro %}
 
 {% macro activeNode() %}
-{{
-{"class": "menu-link active-item",
-"aria-current": "page"}|xmlattr
-
-}}
+  {{ {"class": "menu-link active-item", "aria-current": "page"}|xmlattr }}
 {% endmacro %}
 
 {% macro linkTarget() %}
-{{
-{"target": "_blank"}|xmlattr
-}}
+  {{ {"target": "_blank"}|xmlattr }}
 {% endmacro %}
 
 {% macro link(node, highlightSentence, cta ) %}
@@ -34,31 +20,43 @@
   <a class="megamenu--item-link" href="{{ node.url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
     node.linkTarget }}>{{ node.label }}</a>
 
-  {% if node.children %}
-  <div class="megamenu--submenu">
-    <!-- <div class="megamenu--submenu--hightlight">
-      <p>{{ highlightSentence }}</p>
-      {% cta guid="{{ cta }}" %}
-    </div> -->
-    <div class="megamenu--submenu-menu-wrapper">
-      {{ renderNavigation(node) }}
+  {% if node.children and node.level == 1 %}
+    <div class="megamenu--submenu">
+      <!-- <div class="megamenu--submenu--hightlight">
+        <p>{{ highlightSentence }}</p>
+        {% cta guid="{{ cta }}" %}
+      </div> -->
+      <div class="megamenu--submenu-menu-wrapper">
+        {{ renderNavigation(node) }}
+      </div>
     </div>
-  </div>
-
+  {% else %}
+    {{ renderNavigation(node) }}
   {% endif %}
 </li>
 {% endmacro %}
 
 {% macro renderNavigation(menuTree) %}
 
-{% set level = level + 1 %}
+  {% set level = level + 1 %}
 
-<ul class="megamenu--submenu-menu level-{{ level }}" aria-hidden="{{ level != 1 }}">
+  {# check if children are also submenus or just list items #}
+  {% set columns = {columns : 0} %}
   {% for node in menuTree.children %}
-  {{ link(node) }}
+    {% if node.children %}
+      {% do columns.update({columns: columns.columns + 1 }) %}
+    {% endif %}
   {% endfor %}
-</ul>
+
+  
+
+  <ul class="megamenu--submenu-menu level-{{ level }} has-submenus-{{ columns.columns != 0 }}" aria-hidden="{{ level != 1 }}">
+    {% for node in menuTree.children %}
+      {{ link(node) }}
+    {% endfor %}
+  </ul>
 {% endmacro %}
+
 
 
 
@@ -66,9 +64,9 @@
 
   {% for item in module.menu_item %}
 
-  {% for node in menu(item.mega_menu).children %}
-  {{ link(node, item.highlight_sentence, item.cta_field ) }}
-  {% endfor %}
+    {% for node in menu(item.mega_menu).children %}
+      {{ link(node, item.highlight_sentence, item.cta_field ) }}
+    {% endfor %}
 
   {% endfor %}
 

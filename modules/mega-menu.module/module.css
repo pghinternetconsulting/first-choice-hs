@@ -37,13 +37,13 @@
   }
 
   /* Mega submenu */
-  .megamenu--item-1:hover .megamenu--submenu {
+  .megamenu--item-1:hover > .megamenu--submenu {
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
   }
 
-  .megamenu--submenu {
+  .megamenu--item-1 > .megamenu--submenu {
     display: flex;
     opacity: 0;
     visibility: hidden;
@@ -87,16 +87,26 @@
     align-items: center;
     background: black;
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: calc((100% - 1240px) / 2);
+    padding: 20px;
     width: 100%;
   }
 
-  .megamenu--submenu-menu {
+  /* padding only if highlight is active */
+  .megamenu--submenu--hightlight + .megamenu--submenu-menu-wrapper {
+    padding-right: calc((100% - 1240px) / 2);
+  }
+
+  /* have two columns only if simple list item on first level */
+  .megamenu--submenu-menu.level-1.has-submenus-false {
     column-count: 2;
     list-style: none;
+  }
+
+  /* this is for the mega menus that have multiple submenus */
+  .megamenu--submenu-menu.level-1.has-submenus-true {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .megamenu--submenu-menu a {
