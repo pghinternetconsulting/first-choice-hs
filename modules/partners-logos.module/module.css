@@ -20,14 +20,18 @@
     justify-content: space-evenly;
     max-width: 1320px;
     margin: 0 auto;
+    align-items: center;
   }
-  .slick-slide{
+  .slick-slide {
     width: auto !important;
   }
-  .slick-track{
+  .slick-track {
     width: 100% !important;
   }
-} 
+  .partners-logos h3 {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 991px) {
   .partners-logos {
     text-align: center;
