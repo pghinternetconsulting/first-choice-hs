@@ -608,6 +608,8 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
 .header-home li span {
   color: #ffffff;
 }
+
+/* MENU TEXT BLACK ON SCROLL */
 div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky
   li
   a,
