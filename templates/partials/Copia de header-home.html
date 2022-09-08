@@ -1,0 +1,95 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<header class="header header-home hs-search-hidden">
+
+  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip
+  over the site navigation. More information on the navigation skipper can be found here:
+  https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+  <a href="#main-content" class="header__skip">Skip to content</a>
+  {# Main header #}
+  <div class="header__container content-wrapper hs-search-hidden">
+
+    {# Header navigation column #}
+
+    <div class="header__column">
+
+      {# Header logo column #}
+
+      <div class="header__logo header__logo--main">
+        <div class="h-logo-light">{% module "site_logo_light" path="@hubspot/logo" %}</div>
+        <div class="h-logo-dark">
+          {% module "site_logo_dark"
+          path="@hubspot/linked_image",
+          img={
+          "alt": "First Choice Logo",
+          "loading": "disabled",
+          "max_width": 220,
+          "size_type": "auto_custom_max",
+          "src": get_asset_url("../images/black-logo.png")
+          }
+          %}
+        </div>
+      </div>
+
+      {# Header navigation row two #}
+
+      <div class="header__row-2">
+        <div class="header--toggle header__search--toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21.702" height="21.702" viewBox="0 0 21.702 21.702"
+            class="mobile-search-icon">
+            <path data-name="Icon map-search"
+              d="M17.32,14.432a8.583,8.583,0,1,0-2.889,2.887l5.823,5.823,2.888-2.889ZM10,15.3a5.295,5.295,0,1,1,5.3-5.292A5.3,5.3,0,0,1,10,15.3Z"
+              transform="translate(-1.44 -1.44)" fill="#fff" />
+          </svg>
+        </div>
+        <div class="header--toggle header__navigation--toggle">
+          {# mobile hamburguer #}
+          <div id="nav-icon" class="dropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          {# end mobile hamburguer #}
+        </div>
+        <div class="header__navigation header--element hs-search-hidden">
+          {% module "navigation-primary"
+          path="../../modules/menu",
+          label="Primary navigation"
+          %}
+        </div>
+      </div>
+
+      {# Header navigation row one #}
+
+      <div class="header__row-1">
+        {% if content.translated_content.values()|selectattr("published")|length or is_listing_view and
+        group.translations %}
+        <div class="header__language-switcher header--element">
+          <div class="header__language-switcher--label">
+            {% module "language-switcher"
+            path="@hubspot/language_switcher",
+            label="Language switcher",
+            display_mode="localized"
+            %}
+            <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+          </div>
+        </div>
+        {% endif %}
+        <div class="header__search header--element">
+          {% module "site_search"
+          path="@hubspot/search_input",
+          label="",
+          field_label="",
+          placeholder=""
+          %}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>

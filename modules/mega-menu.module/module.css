@@ -164,13 +164,6 @@
     display: none;
   }
 
-  .mobile-menu {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    transition: 0.5s;
-  }
-
   .mobile-menu.open {
     opacity: 1;
     visibility: visible;
@@ -178,7 +171,6 @@
   }
 
   .mobile-menu {
-    background: black;
     position: absolute;
     left: 0;
     right: 0;
