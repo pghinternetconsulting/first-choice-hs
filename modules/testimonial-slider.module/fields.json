@@ -1,0 +1,71 @@
+[ {
+  "id" : "c0b161a0-a897-d6b1-517f-a51c8e84c0db",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Some Words <span>From our Clients</span>"
+}, {
+  "id" : "aadb0afa-609d-c823-1f50-6bd8579182de",
+  "name" : "testimonials",
+  "display_width" : null,
+  "label" : "Testimonials",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "20d40344-bf1b-7b39-6a98-745bfd438150",
+    "name" : "testimonial",
+    "display_width" : null,
+    "label" : "Testimonial",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "“DojoNetworks™ has allowed us to provide our residents with reliable high speed internet and TV. With their help, we are able to provide these amenities at no additional cost to our resident making it a true investment into our business. Their service had worked well and our residents have been very happy with their service and support.”"
+  }, {
+    "id" : "0ce3070a-2903-9738-45c9-9bdd1fb29a6e",
+    "name" : "author",
+    "display_width" : null,
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Jessica Aikey | Property Manager"
+  }, {
+    "id" : "54bda726-0664-fd72-781b-6697d5bf23d7",
+    "name" : "from",
+    "display_width" : null,
+    "label" : "From",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Westside Village"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "testimonial" : "“DojoNetworks™ has allowed us to provide our residents with reliable high speed internet and TV. With their help, we are able to provide these amenities at no additional cost to our resident making it a true investment into our business. Their service had worked well and our residents have been very happy with their service and support.”",
+    "author" : "Jessica Aikey | Property Manager",
+    "from" : "Westside Village"
+  }
+} ]
