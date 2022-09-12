@@ -34,7 +34,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "“DojoNetworks™ has allowed us to provide our residents with reliable high speed internet and TV. With their help, we are able to provide these amenities at no additional cost to our resident making it a true investment into our business. Their service had worked well and our residents have been very happy with their service and support.”"
+    "default" : "“First Choice sit amet, consectetur adipiscing elit. Morbi non consectetur mauris, non semper nibh. Quisque eleifend convallis sapien, vel vehicula nulla rutrum vitae. Nulla facilisi. Cras id porta ipsum. Vivamus pellentesque diam mattis, gravida dolor eget, consectetur nulla.”"
   }, {
     "id" : "0ce3070a-2903-9738-45c9-9bdd1fb29a6e",
     "name" : "author",
@@ -64,8 +64,8 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "testimonial" : "“DojoNetworks™ has allowed us to provide our residents with reliable high speed internet and TV. With their help, we are able to provide these amenities at no additional cost to our resident making it a true investment into our business. Their service had worked well and our residents have been very happy with their service and support.”",
-    "author" : "Jessica Aikey | Property Manager",
+    "testimonial" : "“First Choice sit amet, consectetur adipiscing elit. Morbi non consectetur mauris, non semper nibh. Quisque eleifend convallis sapien, vel vehicula nulla rutrum vitae. Nulla facilisi. Cras id porta ipsum. Vivamus pellentesque diam mattis, gravida dolor eget, consectetur nulla.”",
+    "author" : "Jessica First | Property Manager",
     "from" : "Westside Village"
   }
 } ]
