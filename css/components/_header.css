@@ -85,8 +85,23 @@
   .header__search--toggle {
     margin: 0px !important;
   }
+  .header__navigation{
+    overflow: auto;
+  }
   .header__row-2 {
     padding-right: 20px !important;
+  }
+  .header__search--toggle{
+    background-image: none !important;
+  }
+  .header__search--toggle path{
+    fill: #000 !important;
+  }
+  .mobile-search-icon{
+    display: block !important;
+  }
+  .header__search--toggle.open path{
+    fill: transparent !important;
   }
 }
 
@@ -438,7 +453,7 @@
     min-height: 60px;
     position: absolute;
     right: 0;
-    top: 79px;
+    top: 65px;
     z-index: 999;
   }
 
@@ -756,6 +771,9 @@ body:not(.hs-content-id-78640669571) {
 @media screen and (max-width: 991px) {
   .hs-search-field__bar button {
     display: none !important;
+  }
+  .header li a, .header li span{
+    padding: 0.5rem 1rem;
   }
 }
 
