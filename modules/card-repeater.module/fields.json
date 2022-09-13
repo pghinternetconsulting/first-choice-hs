@@ -1,0 +1,100 @@
+[ {
+  "id" : "c8239fa1-6f98-c36b-0839-35500907c80b",
+  "name" : "card_repeater",
+  "display_width" : null,
+  "label" : "Card Repeat",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "49344f88-e579-c71e-8c2e-def6cc7bb6a8",
+    "name" : "card_photo",
+    "display_width" : null,
+    "label" : "Card Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/team-photo.png",
+      "alt" : "card-photo",
+      "loading" : "lazy",
+      "width" : 250,
+      "height" : 250,
+      "max_width" : 250,
+      "max_height" : 250
+    }
+  }, {
+    "id" : "b0fe6937-191a-79ea-4776-15fb8d9a2179",
+    "name" : "card_title",
+    "display_width" : null,
+    "label" : "Card Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "19a21458-d928-a186-5cdc-35583c1f7f15",
+    "name" : "card_description",
+    "display_width" : null,
+    "label" : "Card Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : ""
+  }, {
+    "id" : "34d023a1-59b3-1f61-23e8-ca849dd79674",
+    "name" : "card_link",
+    "display_width" : null,
+    "label" : "Card Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "card_photo" : {
+      "size_type" : "auto",
+      "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/team-photo.png",
+      "alt" : "card-photo",
+      "loading" : "lazy",
+      "width" : 250,
+      "height" : 250,
+      "max_width" : 250,
+      "max_height" : 250
+    },
+    "card_description" : "",
+    "card_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

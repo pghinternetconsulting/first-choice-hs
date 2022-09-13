@@ -1,0 +1,37 @@
+<div class="card-repeater">
+	{% for item in module.card_repeater %}
+	<div class="card-info">
+		<div class="card-photo">
+    {% if item.card_photo.src %}
+		{% set sizeAttrs = 'width="{{ item.card_photo.width }}" height="{{ item.card_photo.height }}"' %}
+		{% if item.card_photo.size_type == 'auto' %}
+			{% set sizeAttrs = 'width="{{ item.card_photo.width }}" height="{{ item.card_photo.height }}" style="max-width: 100%; height: auto;"' %}
+		{% elif item.card_photo.size_type == 'auto_custom_max' %}
+			{% set sizeAttrs = 'width="{{ item.card_photo.max_width }}" height="{{ item.card_photo.max_height }}" style="max-width: 100%; height: auto;"' %}
+		{% endif %}
+		 {% set loadingAttr = item.card_photo.loading != 'disabled' ? 'loading="{{ item.card_photo.loading }}"' : '' %}
+       {% set href = item.card_link.url.href %}
+	{% if item.card_link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+	{% endif %}
+	<a href="{{ href }}"
+		{% if item.card_link.open_in_new_tab %}target="_blank"{% endif %}
+		{% if item.card_link.rel %}rel="{{ item.card_link.rel }}"{% endif %}
+		>
+			<img src="{{ item.card_photo.src }}" alt="{{ item.card_photo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+	</a>
+      
+	
+	{% endif %}
+    </div>
+		<div class="card-title">
+			<h3>{% inline_text field="card_title" value="{{ item.card_title }}" %}</h3>
+		</div>
+	
+		<div class="card-description">
+
+			{% inline_rich_text field="card_description" value="{{ item.card_description }}" %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
