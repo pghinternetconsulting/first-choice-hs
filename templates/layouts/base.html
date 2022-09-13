@@ -15,7 +15,6 @@
   {% if template_css %}
   {{ require_css(get_asset_url(template_css)) }}
   {% endif %}
-  {{ require_css(get_asset_url("../../css/bootstrap.min.css")) }}
   {{ require_css(get_asset_url("../../css/theme-overrides.css")) }}
   {{ require_css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css') }}
   {{ require_css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css') }}
@@ -42,7 +41,6 @@
   </div>
   {{ require_js(get_asset_url('/first-theme-hs/js/jquery.min.js'), { position: 'footer', defer:true }) }}
   {{ require_js(get_asset_url('/first-theme-hs/js/jquery-migrate.min.js'), { position: 'footer', defer:true }) }}
-  {{ require_js(get_asset_url('/first-theme-hs/js/bootstrap.min.js'), { position: 'footer', defer:true }) }}
   {{ require_js(get_asset_url('/first-theme-hs/js/slick.min.js'), { position: 'footer', defer:true }) }}
   {{ require_js(get_asset_url('/first-theme-hs/js/sticky-header.js'), { position: 'footer', defer:true }) }}
   {{ require_js(get_asset_url('/first-theme-hs/js/hamburguer.js'), { position: 'footer', defer:true }) }}

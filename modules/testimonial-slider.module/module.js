@@ -1,5 +1,11 @@
 jQuery(document).ready( function($) {
-    $('#testimonials').carousel({
-    	interval: 4000
+	$('.testimonial-slider').slick({
+		arrows: false,
+		dots:true,
+		autoplay: true,
+		autoplaySpeed: 4000
 	});
 });
+
+
+		  

@@ -6,6 +6,7 @@
 }
 .card-info {
   width: 20%;
+  padding: 10px;
 }
 .card-photo {
   text-align: center;
@@ -13,13 +14,13 @@
 .card-photo img {
   width: 200px;
 }
-.card-title h3 {
+.card-title h3 > div {
   font-family: Roboto, sans-serif;
   font-style: normal;
   text-decoration: none;
   color: #343a40;
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 200;
   margin-bottom: 0px;
   text-align: center;
 }

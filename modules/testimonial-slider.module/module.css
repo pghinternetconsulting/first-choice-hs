@@ -1,131 +1,42 @@
-.testimonial-heading{
-    color: #6796BF;
-    font-size: 50px;
-    font-weight: 100;
-    font-family: 'Raleway';
-    max-width: 214px;
-    line-height: 1.1;
+.testimonial-grid {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
 }
-.testimonial-heading span{
+
+.testimonial-heading {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 100 !important;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  .testimonial-grid {
     display: block;
-    color: #A7CF38;
-}
-.testimonials{
-    display: flex;
-    flex-flow: row;
-}
-.row .jc{
-    justify-content: space-between;
     align-items: center;
+  }
+  .testimonial-heading {
+    margin-bottom: 30px;
+  }
 }
-.fake-element{
-    width: 1px;
-    height: 100%;
+.testimonial-slider .slick-dots li.slick-active button:before {
+  color: #111;
 }
-.testimonials .carousel-inner{
-    width: 90%;
+
+.testimonial-slider .slick-dots li button:before {
+  color: #fff;
 }
-.testimonials .carousel-inner .item .carousel-caption{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 310px;
+
+.testimonial-slider [data-hs-cos-field="testimonial"] {
+  color: #fff;
+  font-weight: 100 !important;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
-.testimonials .slider-pills{
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.testimonials .carousel-indicators {
-    position: static !important;
-    left: unset !important;
-    width: auto !important;
-    margin-left: 0px !important;
-    bottom: unset !important;
-}
-.testimonials .carousel-indicators li{
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    width: 8px !important;
-    height: 8px !important;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-.testimonials .carousel-indicators li.active{
-    background-color: #A7CF38;
-    border: none !important;
-}
-.testimonials .caption-container{
-    text-align: left;
-}
-.testimonials .caption-container > div, .testimonials .caption-container > p{
-    color: #ffffff;
-}
-.testimonials .caption-container > div{
-    font-size: 19px;
-    font-weight: 400px;
-    font-family: 'Raleway';
-}
-.testimonials .caption-container > p{
-    font-family: 'Raleway';
-    font-size: 12px;
-    text-transform: uppercase;
-}
-.testimonials .caption-container .t-author{
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 50px;
-}
-.testimonials .carousel-caption{
-    position: static !important;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    height: 100%;
-}
-.testimonials .t-from{
-    margin-bottom: 0px;
-}
-@media screen and (max-width: 1023px){
-    .vertical-line, .fake-element{
-        display: none;
-    }
-    .testimonial-heading{
-        max-width: 100%;
-    }
-    .testimonials{
-        flex-flow: column;
-    }
-    .testimonials .carousel-indicators li{
-        display: inline-block;
-        margin-left: 2px;
-        margin-right: 2px;
-    }
-    .row .jc{
-        align-items: flex-start;
-    }
-    .carousel-caption .content-wrapper{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .testimonials .carousel-inner{
-        width: 100%;
-    }
-    .testimonials .carousel-inner .item .carousel-caption{
-        min-height: unset;
-    }
-    .testimonials .carousel-indicators{
-        margin-bottom: 0px;
-    }
-    .testimonials .slider-pills{
-        width: 100%;
-        justify-content: center;
-        margin-top: 30px;
-    }
-    .testimonials .caption-container .t-author{
-        margin-top: 30px;
-    }
+.testimonial-slider [data-hs-cos-field="author"],
+.testimonial-slider [data-hs-cos-field="from"] {
+  color: #f2f2f2;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  font-size: 12px;
 }
