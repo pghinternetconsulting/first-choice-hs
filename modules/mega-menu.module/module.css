@@ -12,7 +12,16 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    height: 100%;
+  }
+
+  .menu-flyout--item-1 .megamenu--submenu-menu-wrapper{
+    position: relative;
+    width: auto !important; 
+  }
+
+  .menu-flyout--item-1 .megamenu--submenu{
+    left: auto !important;
+    right: auto !important;
   }
 
   .megamenu--item-1 > a {
@@ -179,6 +188,7 @@
     left: 0;
     right: 0;
     z-index: 9;
+    top: 30px;
   }
 
   .mobile-menu ul {

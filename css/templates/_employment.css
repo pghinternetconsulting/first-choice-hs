@@ -56,7 +56,6 @@
   flex: 4.4;
 }
 .employment-post .employment-form {
-  justify-content: center;
   display: flex;
   flex: 5.6;
   flex-flow: column;
@@ -70,6 +69,9 @@
 }
 .employment-title span {
   color: #575757;
+}
+.employment-title #hs_cos_wrapper_name{
+  color: #000000;
 }
 .text-form-breadcrumbs {
   margin-top: 25px;
@@ -95,7 +97,6 @@
 
 /* Form Styles */
 .text-form-form {
-  align-self: center;
   width: 100%;
 }
 .text-form-form .form-title {

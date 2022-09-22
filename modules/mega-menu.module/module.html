@@ -2,8 +2,12 @@
   {{ { "class": "no-submenu megamenu--item-{{level}}" }|xmlattr }}
 {% endmacro %}
 
-{% macro childClasses(level) %}
-  {{ { "class": "has-submenu megamenu--item-{{level}}" }|xmlattr }}
+{% macro childClasses(level, menu_type) %}
+  {% if menu_type != 'menu' %}
+    {{ { "class": "has-submenu  megamenu--item-{{level}} " }|xmlattr }}
+  {% else %}
+    {{ { "class": "has-submenu  megamenu--item-{{level}} menu-flyout--item-{{level}} " }|xmlattr }}
+  {% endif %}
 {% endmacro %}
 
 {% macro activeNode() %}
@@ -14,10 +18,9 @@
   {{ {"target": "_blank"}|xmlattr }}
 {% endmacro %}
 
-{% macro link(node, highlightSentence, cta ) %}
-
-<li {{ childClasses(node.level) if node.children else defaultItemClasses(node.level) }}>
-  <a class="megamenu--item-link" href="{{ node.url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
+{% macro link(node, highlightSentence, cta, item ) %}
+<li {{ childClasses(node.level, item.menu_type) if node.children else defaultItemClasses(node.level) }}>
+  <a class="megamenu--item-link {{ item.menu_type }}" href="{{ node.url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
     node.linkTarget }}>{{ node.label }}</a>
 
   {% if node.children and node.level == 1 %}
@@ -26,7 +29,7 @@
         <p>{{ highlightSentence }}</p>
         {% cta guid="{{ cta }}" %}
       </div> -->
-      <div class="megamenu--submenu-menu-wrapper">
+      <div class="megamenu--submenu-menu-wrapper"> 
         {{ renderNavigation(node) }}
       </div>
     </div>
@@ -63,9 +66,8 @@
 <ul class="megamenu">
 
   {% for item in module.menu_item %}
-
     {% for node in menu(item.mega_menu).children %}
-      {{ link(node, item.highlight_sentence, item.cta_field ) }}
+      {{ link(node, item.highlight_sentence, item.cta_field, item) }}
     {% endfor %}
 
   {% endfor %}

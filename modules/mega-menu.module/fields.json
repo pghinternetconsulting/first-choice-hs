@@ -41,6 +41,17 @@
     "locked" : false,
     "type" : "cta",
     "default" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+  }, {
+    "id" : "d7be977f-a570-f8c3-9f39-aed1a410bd3b",
+    "name" : "menu_type",
+    "display_width" : null,
+    "label" : "Menu Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Menu" ] ],
+    "type" : "choice",
+    "default" : "megamenu"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -48,15 +59,18 @@
   "default" : [ {
     "mega_menu" : 83813296199,
     "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
-    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068",
+    "menu_type" : "megamenu"
   }, {
     "mega_menu" : 83813296199,
     "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
-    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068",
+    "menu_type" : "megamenu"
   }, {
     "mega_menu" : 83813296199,
     "highlight_sentence" : "I am looking for a strategic partner to help me generate more converting traffic to my website.",
-    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068"
+    "cta_field" : "c0d3e14e-20e8-4da8-bc45-c7b691a09068",
+    "menu_type" : "megamenu"
   } ]
 }, {
   "id" : "ad83fc71-eebc-362e-a27a-61b4afd97f5e",
