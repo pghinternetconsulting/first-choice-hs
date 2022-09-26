@@ -49,7 +49,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Menu" ] ],
+    "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Flyout" ] ],
     "type" : "choice",
     "default" : "megamenu"
   } ],
