@@ -13,22 +13,26 @@
     {# Top section #}
     <div class="employment-header">
       {% module "header"
-        path="/first-theme-hs/modules/hero-internal",
-        heading="Employment Parent",
-        renamed_from_id=79382493240
+      path="/first-theme-hs/modules/hero-internal",
+      heading="Employment Parent",
+      renamed_from_id=79382493240
       %}
 
       <div class="employment-subheader">
         <div class="employment-subheader-inner">
           {% module_block module "subheader"
-            path="@hubspot/rich_text",
-            label="Subheader"
+          path="@hubspot/rich_text",
+          label="Subheader"
           %}
-            {% module_attribute "html" %}
-              <h2>Lorem ipsum dolor sit amet</h2>
-              <p>One main focus of our company is providing health and safety compliance services during facility construction, dismantling, re-powering and maintenance projects. This includes the following: development of health and safety programs, policies and procedures; surveillance of contractor construction activities; conducting of safety meetings; permit support; licensing support; accident investigation; regulatory interface; confined space rescue services; emergency response.</p>
-            {% end_module_attribute %}
-          {% end_module_block  %}
+          {% module_attribute "html" %}
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>One main focus of our company is providing health and safety compliance services during facility
+            construction, dismantling, re-powering and maintenance projects. This includes the following: development of
+            health and safety programs, policies and procedures; surveillance of contractor construction activities;
+            conducting of safety meetings; permit support; licensing support; accident investigation; regulatory
+            interface; confined space rescue services; emergency response.</p>
+          {% end_module_attribute %}
+          {% end_module_block %}
         </div>
       </div>
     </div>
@@ -36,19 +40,20 @@
     <div class="content-wrapper">
       <section class="employment-index">
         {% if contents %}
-          {% for content in contents %}
-          <article class="employment-index__post">
-            <div class="employment-index__post-content">
-              <h2>{{ content.name }}</h2>
-              <div class="employment-excerpt">{{ content.post_list_content|safe|striptags|truncatehtml(200, '...' , false) }}</div>
-              <div class="employment-button"><a class="button" href="{{ content.absolute_url }}">Apply Now</a></div>
-            </div>
-          </article>
-          {% endfor %}
-        {% else %}
-          <div class="nojob-listed">
-            No listed jobs available
+        {% for content in contents %}
+        <article class="employment-index__post">
+          <div class="employment-index__post-content">
+            <h2>{{ content.name }}</h2>
+            <div class="employment-excerpt">{{ content.meta_description|safe|striptags|truncatehtml(200, '...' , false)
+              }}</div>
+            <div class="employment-button"><a class="button" href="{{ content.absolute_url }}">Apply Now</a></div>
           </div>
+        </article>
+        {% endfor %}
+        {% else %}
+        <div class="nojob-listed">
+          No listed jobs available
+        </div>
         {% endif %}
       </section>
 
