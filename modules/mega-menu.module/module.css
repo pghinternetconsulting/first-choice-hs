@@ -123,9 +123,15 @@
   /* this is for the mega menus that have multiple submenus */
   .megamenu--submenu-menu.level-1.has-submenus-true {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     padding: 0px;
+  }
+
+  .megamenu--submenu-menu.level-1.has-submenus-true > li:not(:last-child) {
+    border-right: #d6d6d6 1px solid;
+    width: 30%;
+    padding-right: 30px;
   }
 
   .megamenu--submenu-menu a {
@@ -147,15 +153,18 @@
   font-weight: 600 !important;
   color: #4b9244 !important;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .megamenu--submenu-menu.level-2 > li > a {
-  font-size: 14px;
+  font-size: 16px;
   color: #111 !important;
+  letter-spacing: 0px;
 }
 
 .megamenu--submenu-menu.level-2 > li > a:hover {
-  font-size: 14px;
+  font-size: 16px;
   color: #4b9244 !important;
 }
 
@@ -212,6 +221,20 @@
     font-weight: 300;
     display: block;
     padding: 10px 0;
+  }
+
+  .mobile-menu--menu.level-1 > li a {
+    border-bottom: 1px solid #bababa;
+  }
+
+  .mobile-menu--submenu.level-2 > li a {
+    border-bottom: 1px solid #bababa;
+  }
+
+  .mobile-menu--submenu.level-3 > li a {
+    font-weight: 200;
+    letter-spacing: normal;
+    font-size: 14px;
   }
 
   .submenu-toggle {
