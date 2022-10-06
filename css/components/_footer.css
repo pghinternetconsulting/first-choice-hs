@@ -88,6 +88,10 @@ footer .menu__submenu .menu__link:focus {
   background-color: unset !important;
   padding: 0px !important;
 }
+
+footer .menu__link:focus {
+  color: #77bf45 !important;
+}
 footer .menu__submenu .menu__link {
   transition: ease all 0.3s;
 }
