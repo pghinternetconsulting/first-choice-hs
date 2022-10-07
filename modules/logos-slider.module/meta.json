@@ -1,6 +1,9 @@
 {
   "global" : false,
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 60960406669,
+  "module_id" : 87353009812,
+  "js_render_options" : {
+    "defer" : true
+  },
   "is_available_for_new_content" : true
-}
+} 
