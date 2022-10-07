@@ -1,0 +1,62 @@
+[ {
+  "id" : "22c82b63-bf00-1f78-5bf6-c99fabda2e74",
+  "name" : "Logos",
+  "display_width" : null,
+  "label" : "Logos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "4404c52f-d298-14dd-b5dc-6b7ce2d2bd2f",
+    "name" : "company_logo",
+    "display_width" : null,
+    "label" : "Company Logo",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "2b02090d-159d-8a77-b2c2-c8c1fe161c6f",
+    "name" : "logo_link",
+    "display_width" : null,
+    "label" : "Logo Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "type" : "EXTERNAL",
+      "href" : "",
+      "content_id" : null
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "company_logo" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "logo_link" : {
+      "type" : "EXTERNAL",
+      "href" : "",
+      "content_id" : null
+    }
+  }
+} ]

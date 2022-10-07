@@ -1,0 +1,14 @@
+{{ require_css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css') }}
+{{ require_css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css') }}
+
+{{ require_js("https://code.jquery.com/jquery-1.11.0.min.js", "footer") }}
+{{ require_js("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", "footer") }}
+
+<div class="slick-logo">
+{% for item in module.Logos %}
+<div>
+  <a href="{{ item.logo_link.href }}" target="_blank">	<img src="{{ item.company_logo.src }}" alt="{{ item.company_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}></a>
+</div>
+	
+{% endfor %}
+   </div>

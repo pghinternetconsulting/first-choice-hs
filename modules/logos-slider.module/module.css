@@ -1,0 +1,17 @@
+.slick-logo .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #ebb733 !important;
+}
+
+.slick-logo .slick-dots li button:before {
+    opacity: 100 !important;
+    color: #333 !important;
+  font-size: 8px !important;
+}
+
+.slick-logo img {
+filter: grayscale(1);
+}
+.slick-logo img:hover {
+filter: grayscale(0);
+}
