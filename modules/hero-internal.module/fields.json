@@ -19,6 +19,8 @@
   "display" : "select",
   "placeholder" : "Search",
   "choices" : [ [ "site_root", "Static - Always show top-level pages in menu" ], [ "top_parent", "Dynamic by section - Show pages in menu that are related to section being viewed" ], [ "parent", "Dynamic by page - Show pages in menu that are related to page being viewed" ], [ "breadcrumb", "Breadcrumb style path menu (uses horizontal flow)" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
   "type" : "choice",
   "default" : "breadcrumb"
 }, {
@@ -32,6 +34,8 @@
   "display" : "select",
   "placeholder" : "Search",
   "choices" : [ [ "1", "1" ], [ "2", "2" ], [ "3", "3" ], [ "4", "4" ], [ "5", "5" ], [ "6", "6" ], [ "7", "7" ], [ "8", "8" ], [ "9", "9" ], [ "10", "10" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
   "type" : "choice",
   "default" : "5"
 }, {
@@ -45,6 +49,8 @@
   "display" : "select",
   "placeholder" : "Search",
   "choices" : [ [ "horizontal", "Horizontal" ], [ "vertical", "Vertical" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
   "type" : "choice",
   "default" : "horizontal"
 }, {
@@ -238,6 +244,8 @@
     "display" : "select",
     "placeholder" : "Search",
     "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice"
   } ],
   "tab" : "CONTENT",

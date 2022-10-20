@@ -50,6 +50,8 @@
     "locked" : false,
     "display" : "select",
     "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Flyout" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice",
     "default" : "megamenu"
   } ],

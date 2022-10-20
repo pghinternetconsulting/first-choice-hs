@@ -233,6 +233,8 @@
     "display" : "select",
     "placeholder" : "Search",
     "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice"
   } ],
   "tab" : "CONTENT",

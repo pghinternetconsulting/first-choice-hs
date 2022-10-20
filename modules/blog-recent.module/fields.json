@@ -27,6 +27,8 @@
   "locked" : false,
   "display" : "select",
   "choices" : [ [ "list", "List" ], [ "card", "Card" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
   "type" : "choice",
   "default" : "card"
 }, {
@@ -38,6 +40,8 @@
   "locked" : false,
   "display" : "select",
   "choices" : [ [ "#ffffff", "Light" ], [ "#0A1816", "Dark" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
   "type" : "choice",
   "default" : "#ffffff"
 }, {
@@ -120,7 +124,9 @@
   "validation_regex" : "",
   "visibility" : {
     "controlling_field" : "button",
+    "controlling_field_path" : null,
     "controlling_value_regex" : "true",
+    "property" : null,
     "operator" : "EQUAL",
     "access" : null,
     "hidden_subfields" : null
@@ -199,7 +205,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "featured_image",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -244,7 +252,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "tags",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -297,7 +307,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "title",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -350,7 +362,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "author",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -444,7 +458,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "publish_date",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -497,7 +513,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "description",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -518,7 +536,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
+          "controlling_field_path" : null,
           "controlling_value_regex" : null,
+          "property" : null,
           "operator" : null,
           "access" : null,
           "hidden_subfields" : {
@@ -586,7 +606,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "button",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "true",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -728,7 +750,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
+          "controlling_field_path" : null,
           "controlling_value_regex" : null,
+          "property" : null,
           "operator" : null,
           "access" : null,
           "hidden_subfields" : {

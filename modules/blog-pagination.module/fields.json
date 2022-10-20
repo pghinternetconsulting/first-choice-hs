@@ -18,7 +18,9 @@
   "validation_regex" : "",
   "visibility" : {
     "controlling_field" : "show_previous_and_next_links",
+    "controlling_field_path" : null,
     "controlling_value_regex" : "true",
+    "property" : null,
     "operator" : "EQUAL",
     "access" : null,
     "hidden_subfields" : null
@@ -37,7 +39,9 @@
   "validation_regex" : "",
   "visibility" : {
     "controlling_field" : "show_previous_and_next_links",
+    "controlling_field_path" : null,
     "controlling_value_regex" : "true",
+    "property" : null,
     "operator" : "EQUAL",
     "access" : null,
     "hidden_subfields" : null
@@ -66,7 +70,9 @@
   "validation_regex" : "",
   "visibility" : {
     "controlling_field" : "show_first_and_last_links",
+    "controlling_field_path" : null,
     "controlling_value_regex" : "true",
+    "property" : null,
     "operator" : "EQUAL",
     "access" : null,
     "hidden_subfields" : null
@@ -85,7 +91,9 @@
   "validation_regex" : "",
   "visibility" : {
     "controlling_field" : "show_first_and_last_links",
+    "controlling_field_path" : null,
     "controlling_value_regex" : "true",
+    "property" : null,
     "operator" : "EQUAL",
     "access" : null,
     "hidden_subfields" : null
@@ -153,7 +161,9 @@
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
+        "controlling_field_path" : null,
         "controlling_value_regex" : null,
+        "property" : null,
         "operator" : null,
         "access" : null,
         "hidden_subfields" : {

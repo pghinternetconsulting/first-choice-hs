@@ -47,7 +47,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
+      "controlling_field_path" : null,
       "controlling_value_regex" : null,
+      "property" : null,
       "operator" : "NOT_EMPTY",
       "access" : {
         "operator" : "HAS_ALL",
@@ -87,7 +89,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
+      "controlling_field_path" : null,
       "controlling_value_regex" : null,
+      "property" : null,
       "operator" : null,
       "access" : {
         "operator" : "HAS_ALL",

@@ -44,7 +44,9 @@
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
+        "controlling_field_path" : null,
         "controlling_value_regex" : null,
+        "property" : null,
         "operator" : null,
         "access" : null,
         "hidden_subfields" : {
@@ -83,7 +85,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
+          "controlling_field_path" : null,
           "controlling_value_regex" : null,
+          "property" : null,
           "operator" : null,
           "access" : null,
           "hidden_subfields" : {

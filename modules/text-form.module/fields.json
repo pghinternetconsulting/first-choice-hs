@@ -76,6 +76,8 @@
     "display" : "select",
     "placeholder" : "Search",
     "choices" : [ [ "site_root", "Static - Always show top-level pages in menu" ], [ "top_parent", "Dynamic by section - Show pages in menu that are related to section being viewed" ], [ "parent", "Dynamic by page - Show pages in menu that are related to page being viewed" ], [ "breadcrumb", "Breadcrumb style path menu (uses horizontal flow)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice",
     "default" : "breadcrumb"
   }, {
@@ -89,6 +91,8 @@
     "display" : "select",
     "placeholder" : "Search",
     "choices" : [ [ "1", "1" ], [ "2", "2" ], [ "3", "3" ], [ "4", "4" ], [ "5", "5" ], [ "6", "6" ], [ "7", "7" ], [ "8", "8" ], [ "9", "9" ], [ "10", "10" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice",
     "default" : "5"
   }, {
@@ -102,6 +106,8 @@
     "display" : "select",
     "placeholder" : "Search",
     "choices" : [ [ "horizontal", "Horizontal" ], [ "vertical", "Vertical" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice",
     "default" : "horizontal"
   }, {
@@ -148,6 +154,8 @@
     "locked" : false,
     "display" : "select",
     "choices" : [ [ "facebook-f", "Facebook" ], [ "twitter", "Twitter" ], [ "instagram", "Instagram" ], [ "linkedin-in", "LinkedIn" ], [ "youtube", "YouTube" ], [ "pinterest-p", "Pinterest" ], [ "envelope", "Email" ], [ "link", "Website" ], [ "whatsapp", "Whatsapp" ], [ "custom_icon", "Custom icon" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
     "type" : "choice",
     "default" : "facebook-f"
   }, {
@@ -159,7 +167,9 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : "social_account",
+      "controlling_field_path" : null,
       "controlling_value_regex" : "custom_icon",
+      "property" : null,
       "operator" : "EQUAL",
       "access" : null,
       "hidden_subfields" : null
@@ -320,7 +330,9 @@
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
+        "controlling_field_path" : null,
         "controlling_value_regex" : null,
+        "property" : null,
         "operator" : null,
         "access" : null,
         "hidden_subfields" : {

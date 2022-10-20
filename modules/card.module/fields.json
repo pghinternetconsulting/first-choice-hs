@@ -119,6 +119,8 @@
         "locked" : false,
         "display" : "radio",
         "choices" : [ [ "none", "None" ], [ "color", "Color" ], [ "gradient", "Gradient" ], [ "image", "Image" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
         "type" : "choice",
         "default" : "none"
       }, {
@@ -130,7 +132,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : "styles.card.background.background_type",
+          "controlling_field_path" : null,
           "controlling_value_regex" : "color",
+          "property" : null,
           "operator" : "EQUAL",
           "access" : null,
           "hidden_subfields" : null
@@ -149,7 +153,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : "styles.card.background.background_type",
+          "controlling_field_path" : null,
           "controlling_value_regex" : "gradient",
+          "property" : null,
           "operator" : "EQUAL",
           "access" : null,
           "hidden_subfields" : null
@@ -165,7 +171,9 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : "styles.card.background.background_type",
+          "controlling_field_path" : null,
           "controlling_value_regex" : "image",
+          "property" : null,
           "operator" : "EQUAL",
           "access" : null,
           "hidden_subfields" : null
