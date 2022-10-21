@@ -119,6 +119,15 @@
     padding-right: 30px;
   }
 
+  .megamenu--submenu-menu.level-1.has-submenus-true > li:first-child {
+    flex: 0 0 66%;
+  }
+
+  .megamenu--submenu-menu.level-1.has-submenus-true > li:first-child > ul {
+    column-count: 2;
+    column-gap: 60px;
+  }
+
   .megamenu--submenu-menu a {
     color: white;
     font-weight: 300;
