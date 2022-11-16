@@ -120,12 +120,7 @@
   }
 
   .megamenu--submenu-menu.level-1.has-submenus-true > li:first-child {
-    flex: 0 0 66%;
-  }
-
-  .megamenu--submenu-menu.level-1.has-submenus-true > li:first-child > ul {
-    column-count: 2;
-    column-gap: 60px;
+    flex: 0 0 33%;
   }
 
   .megamenu--submenu-menu a {
