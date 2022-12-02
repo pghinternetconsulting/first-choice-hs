@@ -2,6 +2,10 @@ jQuery(document).ready(function($){
     //call the function when ready
     slideShow();
 
+    // call the function after delay when load
+    //setTimeout(slideShow, 2000);
+  
+  
     //Actually define the slideShow()
     function slideShow(){
         split = function (element) {
@@ -31,7 +35,7 @@ jQuery(document).ready(function($){
                 }
                 count++;
               });
-              $(element).delay(4200).animate({ opacity: '0' }, 400);
+              $(element).delay(20000).animate({ opacity: '0' }, 400);
             },delay);
         };
     
@@ -40,7 +44,7 @@ jQuery(document).ready(function($){
         var next = current.next().length ? current.next() : current.siblings().first();
         current.hide().removeClass('show');
         next.addClass('show');
-        textify('.show','fade', 500);
+        textify('.show','fade', 100);
         setTimeout(slideShow, 5000);
     };
 
