@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
           split(element);
           $(element + ' span').css('opacity','0')
           $(element + ' span').css('position','relative');
-          in_speed = 40; // NOTE 1: Here is the speed of the transition of each character, the bigger the number, the slower it moves
+          in_speed = 20; // NOTE 1: Here is the speed of the transition of each character, the bigger the number, the slower it moves
           count = 0;
           setTimeout(function(){
             count = 0;
