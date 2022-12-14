@@ -103,7 +103,7 @@
   margin-bottom: 0px;
 }
 .contact-form {
-  background: #575757;
+  background: #000 !important;
 }
 .contact-form form {
   margin-bottom: 180px;
@@ -198,10 +198,10 @@
 }
 @media screen and (min-width: 992px) {
   .employment-body {
-    background: rgb(87, 87, 87);
+    background: rgb(0, 0, 0);
     background: linear-gradient(
       270deg,
-      rgba(87, 87, 87, 1) 54%,
+      rgba(0, 0, 0, 1) 54%,
       rgba(255, 255, 255, 1) 54%
     );
   }

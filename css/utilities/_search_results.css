@@ -380,3 +380,13 @@ ul.hs-search-results__listing li {
         margin: 10px auto;
     }
 }
+
+.header__search .hs-search-field__suggestions li a {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0px;
+}
+.hs-search-field__suggestions span.hs-search-highlight.hs-highlight-title {
+    font-size: 14px !important;
+    padding: 0px !important;
+}

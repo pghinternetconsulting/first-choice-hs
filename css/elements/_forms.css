@@ -153,3 +153,24 @@ form .hs-button {
 .grecaptcha-badge {
   margin: 0 auto;
 }
+
+/* SAFETY FORM */
+#hsForm_11b46e5b-751c-40e1-bf45-af25e83f2dfa_6448 ul {
+  column-count: 3 !important;
+  margin-bottom: 30px !important;
+}
+
+@media(max-width:1024px){
+  
+  #hsForm_11b46e5b-751c-40e1-bf45-af25e83f2dfa_6448 ul {
+    column-count: 2 !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media(max-width:768px){
+  #hsForm_11b46e5b-751c-40e1-bf45-af25e83f2dfa_6448 ul {
+    column-count: 1 !important;
+    margin-bottom: 30px !important;
+  }
+}

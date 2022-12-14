@@ -102,3 +102,8 @@ body p {
   }
 }
 
+/* HERO BACKGROUND */
+.dnd_area-row-0-background-image{
+  background-color: #444;
+  background-blend-mode: overlay;
+}

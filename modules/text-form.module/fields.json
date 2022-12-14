@@ -333,7 +333,7 @@
         "controlling_field_path" : null,
         "controlling_value_regex" : null,
         "property" : null,
-        "operator" : null,
+        "operator" : "NOT_EMPTY",
         "access" : null,
         "hidden_subfields" : {
           "opacity" : true
@@ -341,9 +341,8 @@
       },
       "type" : "color",
       "default" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#111",
+        "opacity" : 100
       }
     } ],
     "tab" : "STYLE",
@@ -351,9 +350,8 @@
     "type" : "group",
     "default" : {
       "color" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#111",
+        "opacity" : 100
       }
     }
   }, {
@@ -397,9 +395,8 @@
       "locked" : false,
       "type" : "color",
       "default" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#000",
+        "opacity" : 100
       }
     } ],
     "tab" : "STYLE",
@@ -407,9 +404,8 @@
     "type" : "group",
     "default" : {
       "color" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#000",
+        "opacity" : 100
       }
     }
   }, {
@@ -503,17 +499,15 @@
   "default" : {
     "fill" : {
       "color" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#111",
+        "opacity" : 100
       }
     },
     "size" : { },
     "background" : {
       "color" : {
-        "color" : null,
-        "opacity" : null,
-        "show_opacity" : null
+        "color" : "#000",
+        "opacity" : 100
       }
     },
     "corner" : { },

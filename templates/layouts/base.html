@@ -10,6 +10,22 @@
   {% if site_settings.favicon_src %}
   <link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
   <meta name="description" content="{{ page_meta.meta_description }}">
+
+      {% unless content.featured_image %}
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ request.full_url }}">
+      <meta property="og:title" content="{{ page_meta.html_title || pageTitle }}">
+      <meta property="og:description" content="{{ page_meta.meta_description }}">
+      <meta property="og:image" content="https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/1ST-featured-default.webp">
+
+      <!-- Twitter -->
+      <meta property="twitter:card" content="{{ page_meta.meta_description }}">
+      <meta property="twitter:url" content="{{ request.full_url }}">
+      <meta property="twitter:title" content="{{ page_meta.html_title || pageTitle }}">
+      <meta property="twitter:description" content="{{ page_meta.meta_description }}">
+      <meta property="twitter:image" content="https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/1ST-featured-default.webp">
+    {% endunless %}
+
   {{ require_css(get_asset_url("../../css/main.css")) }}
   {# This is intended to be used if a template requires template specific style sheets #}
   {% if template_css %}
