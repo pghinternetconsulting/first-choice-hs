@@ -1,8 +1,9 @@
 <div class="slick-logo">
   {% for item in module.Logos %}
   <div>
-    <a href="{{ item.logo_link.href }}" target="_blank"> <img src="{{ item.company_logo.src }}"
-        alt="{{ item.company_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}></a>
+     <img src="{{ item.company_logo.src }}"
+      alt="{{ item.company_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }} width="200px" height="100" >
+  
   </div>
 
   {% endfor %}

@@ -50,4 +50,7 @@
   .card-photo img {
     width: 180px !important;
   }
+  .card-title h3>div{
+    font-size: 13px;
+  }
 }

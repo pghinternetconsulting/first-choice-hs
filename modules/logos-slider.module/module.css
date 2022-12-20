@@ -8,9 +8,18 @@
   color: #777 !important;
   font-size: 8px !important;
 }
-.slick-slide a img {
+.slick-slide img {
   margin: auto;
+  height: auto !important;
+
 }
+@media(max-width:767px){
+  .slick-slide img {
+   max-width: 150px !important;
+   height: auto !important;
+  }
+}
+
 .slick-logo img {
   filter: grayscale(1);
 }

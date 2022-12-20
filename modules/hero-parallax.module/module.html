@@ -13,7 +13,7 @@
       {% set sizeAttrs = 'width="{{ module.background.background_image.max_width }}" height="{{ module.background.background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
     {% endif %}
      {% set loadingAttr = module.background.background_image.loading != 'disabled' ? 'loading="{{ module.background.background_image.loading }}"' : '' %}
-    <img class="desktop" src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    <img class="desktop" src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}"  {{ sizeAttrs }}>
   {% endif %}
 
   <!--- mobile image -->
@@ -25,7 +25,7 @@
 		{% set sizeAttrs = 'width="{{ module.background.background_image_mobile.max_width }}" height="{{ module.background.background_image_mobile.max_height }}" style="max-width: 100%; height: auto;"' %}
 	{% endif %}
 	 {% set loadingAttr = module.background.background_image_mobile.loading != 'disabled' ? 'loading="{{ module.background.background_image_mobile.loading }}"' : '' %}
-    <img class="mobile" src="{{ module.background.background_image_mobile.src }}" alt="{{ module.background.background_image_mobile.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    <img class="mobile" src="{{ module.background.background_image_mobile.src }}" alt="{{ module.background.background_image_mobile.alt }}" {{ sizeAttrs }}>
   {% endif %}
   
   <div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">

@@ -99,7 +99,7 @@
       "size_type" : "auto",
       "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking.jpg",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "disabled"
     }
   }, {
     "id" : "background.background_image_mobile",
@@ -116,7 +116,7 @@
       "size_type" : "auto",
       "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking-mobile.jpg",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "disabled"
     }
   }, {
     "id" : "3ccac251-ee69-f696-9800-2b814997dd3b",
@@ -152,13 +152,13 @@
       "size_type" : "auto",
       "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking.jpg",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "disabled"
     },
     "background_image_mobile" : {
       "size_type" : "auto",
       "src" : "https://f.hubspotusercontent40.net/hubfs/483844/pic-hero-background-people-walking-mobile.jpg",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "disabled"
     },
     "overlay_color" : {
       "color" : "#252731",

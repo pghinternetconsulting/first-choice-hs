@@ -140,6 +140,7 @@
 
   .hs-hero {
     max-height: 530px;
+    height: 800px;
   }
 
   .hs-hero__content {

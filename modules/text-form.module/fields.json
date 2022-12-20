@@ -341,7 +341,7 @@
       },
       "type" : "color",
       "default" : {
-        "color" : "#111",
+        "color" : "#ffffff",
         "opacity" : 100
       }
     } ],
@@ -350,7 +350,7 @@
     "type" : "group",
     "default" : {
       "color" : {
-        "color" : "#111",
+        "color" : "#ffffff",
         "opacity" : 100
       }
     }
@@ -395,7 +395,7 @@
       "locked" : false,
       "type" : "color",
       "default" : {
-        "color" : "#000",
+        "color" : "#4B9352",
         "opacity" : 100
       }
     } ],
@@ -404,7 +404,7 @@
     "type" : "group",
     "default" : {
       "color" : {
-        "color" : "#000",
+        "color" : "#4B9352",
         "opacity" : 100
       }
     }
@@ -499,14 +499,14 @@
   "default" : {
     "fill" : {
       "color" : {
-        "color" : "#111",
+        "color" : "#ffffff",
         "opacity" : 100
       }
     },
     "size" : { },
     "background" : {
       "color" : {
-        "color" : "#000",
+        "color" : "#4B9352",
         "opacity" : 100
       }
     },
