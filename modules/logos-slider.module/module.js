@@ -7,6 +7,8 @@ jQuery(document).ready(function($) {
     dots: false,
     infinite: true,
     arrows: false,
+    speed: 1200,
+    easing: 'linear',
     responsive: [
       {
           breakpoint: 1300,
