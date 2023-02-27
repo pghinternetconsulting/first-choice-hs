@@ -121,6 +121,7 @@
         "choices" : [ [ "none", "None" ], [ "color", "Color" ], [ "gradient", "Gradient" ], [ "image", "Image" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
+        "preset" : null,
         "type" : "choice",
         "default" : "none"
       }, {

@@ -481,6 +481,7 @@
         "choices" : [ [ "none", "None" ], [ "color", "Background color" ], [ "gradient", "Background gradient" ], [ "image", "Background image" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
+        "preset" : null,
         "type" : "choice",
         "default" : "none"
       }, {

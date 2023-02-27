@@ -21,6 +21,7 @@
   "choices" : [ [ "site_root", "Static - Always show top-level pages in menu" ], [ "top_parent", "Dynamic by section - Show pages in menu that are related to section being viewed" ], [ "parent", "Dynamic by page - Show pages in menu that are related to page being viewed" ], [ "breadcrumb", "Breadcrumb style path menu (uses horizontal flow)" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "breadcrumb"
 }, {
@@ -36,6 +37,7 @@
   "choices" : [ [ "1", "1" ], [ "2", "2" ], [ "3", "3" ], [ "4", "4" ], [ "5", "5" ], [ "6", "6" ], [ "7", "7" ], [ "8", "8" ], [ "9", "9" ], [ "10", "10" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "5"
 }, {
@@ -51,6 +53,7 @@
   "choices" : [ [ "horizontal", "Horizontal" ], [ "vertical", "Vertical" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "horizontal"
 }, {

@@ -22,6 +22,7 @@
     "choices" : [ [ "facebook-f", "Facebook" ], [ "twitter", "Twitter" ], [ "instagram", "Instagram" ], [ "linkedin-in", "LinkedIn" ], [ "youtube", "YouTube" ], [ "pinterest-p", "Pinterest" ], [ "envelope", "Email" ], [ "link", "Website" ], [ "whatsapp", "Whatsapp" ], [ "custom_icon", "Custom icon" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
+    "preset" : null,
     "type" : "choice",
     "default" : "facebook-f"
   }, {

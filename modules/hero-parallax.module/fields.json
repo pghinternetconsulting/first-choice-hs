@@ -235,6 +235,7 @@
     "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
+    "preset" : null,
     "type" : "choice"
   } ],
   "tab" : "CONTENT",

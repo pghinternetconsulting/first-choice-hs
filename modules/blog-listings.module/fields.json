@@ -9,6 +9,7 @@
   "choices" : [ [ "list", "List" ], [ "card", "Card" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "card"
 }, {

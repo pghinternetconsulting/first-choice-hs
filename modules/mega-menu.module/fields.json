@@ -52,6 +52,7 @@
     "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Flyout" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
+    "preset" : null,
     "type" : "choice",
     "default" : "megamenu"
   } ],

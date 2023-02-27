@@ -29,6 +29,7 @@
   "choices" : [ [ "list", "List" ], [ "card", "Card" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "card"
 }, {
@@ -42,6 +43,7 @@
   "choices" : [ [ "#ffffff", "Light" ], [ "#0A1816", "Dark" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
+  "preset" : null,
   "type" : "choice",
   "default" : "#ffffff"
 }, {
