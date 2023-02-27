@@ -1,0 +1,70 @@
+.card-w-hover {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.card-w-hover .card-info {
+	width: 33%;
+	padding: 25px;
+}
+.card-w-hover .card-photo-effect {
+	text-align: center;
+}
+.card-w-hover .card-photo-effect img {
+	width: 100%;
+}
+.card-w-hover .card-title h3 a > div {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	text-decoration: none;
+	color: #4b9343;
+	margin-bottom: 0px;
+	text-align: center;
+	text-transform: none;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+.card-w-hover .card-title h3 a:hover {
+	text-decoration: underline;
+}
+
+.card-w-hover .card-description {
+	font-weight: 300 !important;
+	text-align: center;
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+}
+
+@media (max-width: 1400px) {
+	.card-w-hover .card-info {
+		width: 33%;
+	}
+}
+
+@media (max-width: 768px) {
+	.card-w-hover .card-info {
+		width: 100%;
+	}
+	.card-w-hover .card-repeater {
+		gap: 4% !important;
+	}
+	.card-w-hover .card-photo-effect img {
+		width: 100% !important;
+	}
+	.card-w-hover .card-title h3 > div {
+		font-size: 13px;
+	}
+}
+
+/* OPACITY EFFECT */
+.card-photo-effect a img {
+	opacity: 1;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+.card-photo-effect a:hover img {
+	opacity: 0.5;
+}

@@ -1,111 +1,113 @@
 body p {
-  font-weight: 300 !important;
+	font-weight: 300 !important;
 }
 .h3-custom {
-  font-size: 17px;
-  font-family: "Roboto";
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+	font-size: 17px;
+	font-family: "Roboto";
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 .center {
-  text-align: center;
+	text-align: center;
 }
 .body-container ul:not(.hs-breadcrumb-menu, .inputs-list) {
-  line-height: 2;
-  padding-left: 20px;
+	line-height: 2;
+	padding-left: 20px;
 }
 .mb-5 {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 .mb-10 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .gray-link {
-  color: #343a40 !important;
-  font-weight: 300;
-  transition: ease all 0.3s;
-  cursor: pointer;
+	color: #343a40 !important;
+	font-weight: 300;
+	transition: ease all 0.3s;
+	cursor: pointer;
 }
 .gray-link:hover {
-  font-weight: 300;
-  text-decoration: underline;
+	font-weight: 300;
+	text-decoration: underline;
 }
 .green-link {
-  color: #4b9343 !important;
-  font-weight: 300;
-  transition: ease all 0.3s;
-  cursor: pointer;
+	color: #4b9343 !important;
+	font-weight: 300;
+	transition: ease all 0.3s;
+	cursor: pointer;
 }
 .green-link:hover {
-  font-weight: 300;
-  text-decoration: underline;
+	font-weight: 300;
+	text-decoration: underline;
 }
 .hs-error-msg {
-  color: #f0fc2f !important;
+	color: #f0fc2f !important;
 }
 .hero-h4 {
-  color: #ffffff;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+	color: #ffffff;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
 }
 .hero-h1 {
-  margin-top: 0px;
-  line-height: 1;
+	margin-top: 0px;
+	line-height: 1;
 }
 .hero-content {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-weight: 400 !important;
-  line-height: 25px;
+	color: #ffffff;
+	margin-bottom: 30px;
+	font-weight: 400 !important;
+	line-height: 25px;
 }
 .white {
-  color: #ffffff;
+	color: #ffffff;
 }
 @media screen and (min-width: 480px) {
-  .body-container--service--parent textarea {
-    width: 100% !important;
-  }
-  .body-container--service--parent .hs_message .input {
-    margin-right: 0px !important;
-  }
-  .body-container--service--parent fieldset.form-columns-3 .hs-form-field {
-    width: 33.33% !important;
-  }
-  .body-container--service--parent .form-columns-2 > div:first-child .input {
-    margin-right: 6px !important;
-  }
-  .body-container--service--parent .form-columns-2 > div:last-child .input {
-    margin-right: 0px !important;
-    margin-left: 6px;
-  }
-  .body-container--service--parent .form-columns-3 > div:last-child .input {
-    margin-right: 0px !important;
-    margin-left: 8px;
-  }
-  .body-container--service--parent .form-columns-3 > div:nth-child(2) .input {
-    margin-right: 4px !important;
-    margin-left: 4px;
-  }
+	.body-container--service--parent textarea {
+		width: 100% !important;
+	}
+	.body-container--service--parent .hs_message .input {
+		margin-right: 0px !important;
+	}
+	.body-container--service--parent fieldset.form-columns-3 .hs-form-field {
+		width: 33.33% !important;
+	}
+	.body-container--service--parent .form-columns-2 > div:first-child .input {
+		margin-right: 6px !important;
+	}
+	.body-container--service--parent .form-columns-2 > div:last-child .input {
+		margin-right: 0px !important;
+		margin-left: 6px;
+	}
+	.body-container--service--parent .form-columns-3 > div:last-child .input {
+		margin-right: 0px !important;
+		margin-left: 8px;
+	}
+	.body-container--service--parent .form-columns-3 > div:nth-child(2) .input {
+		margin-right: 4px !important;
+		margin-left: 4px;
+	}
 }
 @media screen and (max-width: 479px) {
-  .body-container--service--parent .input {
-    margin-right: 0px !important;
-  }
-  .body-container--service--parent .input input[type="text"],
-  .body-container--service--parent .input input[type="tel"],
-  .body-container--service--parent .input input[type="email"],
-  .body-container--service--parent .input textarea {
-    width: 100% !important;
-  }
-  form .inputs-list > li {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
+	.body-container--service--parent .input {
+		margin-right: 0px !important;
+	}
+	.body-container--service--parent .input input[type="text"],
+	.body-container--service--parent .input input[type="tel"],
+	.body-container--service--parent .input input[type="email"],
+	.body-container--service--parent .input textarea {
+		width: 100% !important;
+	}
+	form .inputs-list > li {
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
 }
 
 /* HERO BACKGROUND */
-.dnd_area-row-0-background-image{
-  background-color: #444;
-  background-blend-mode: overlay;
+.dnd_area-row-0-background-image {
+	background-color: #444;
+	background-blend-mode: overlay;
 }
+
+/* Image Hover animations */

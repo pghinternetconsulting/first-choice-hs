@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 104300862133,
+  "label" : "Cards with Hover Effect",
+  "is_available_for_new_content" : true
+}
