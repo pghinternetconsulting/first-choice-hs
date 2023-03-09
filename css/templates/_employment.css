@@ -177,6 +177,9 @@
 .employment-form fieldset > div{
   width: 100%;
 }
+.employment-form .hs-form-field{
+  margin-bottom: 0.6rem;
+}
 .employment-form .form-columns-2 > div:first-child{
   margin-right: 5px;
 }
@@ -187,7 +190,7 @@
   .employment-post {
     padding: 0 1rem;
   }
-  .employment-post .employment-form {
+  .employment-post .employment-form { 
     padding-left: 14%;
   }
 }
@@ -204,6 +207,15 @@
       rgba(0, 0, 0, 1) 54%,
       rgba(255, 255, 255, 1) 54%
     );
+  }
+  .employment-form-inner-relative{
+    position: relative; 
+    height: 100%;
+  }
+  .employment-form-inner-sticky{
+    position: sticky; 
+    top: 210px;
+    margin-bottom: 210px;
   }
 }
 @media screen and (max-width: 991px) {

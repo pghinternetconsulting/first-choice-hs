@@ -30,54 +30,58 @@
                 </div>
                 {% set rec_posts = blog_recent_posts("employment", 200) %}
                 <div class="employment-form contact-form">
-                    <h2>Apply for this position</h2>
-                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                    <script>
-                    hbspt.forms.create({
-                        region: "na1",
-                        portalId: "21636115",
-                        formId: "56e8edfc-94f8-4e06-bd22-cd7fbd5833cf",
-                        cssRequired: "",
-                        cssClass: "custom-form",
-                        submitButtonClass: 'button',
-                        onFormReady: function($form){
-                            // find the dropdown field
-                            var mySelect = $form.find('.hs-position select');
+                    <div class="employment-form-inner-relative">
+                        <div class="employment-form-inner-sticky">
+                            <h2>Apply for this position</h2>
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                            <script>
+                            hbspt.forms.create({
+                                region: "na1",
+                                portalId: "21636115",
+                                formId: "56e8edfc-94f8-4e06-bd22-cd7fbd5833cf",
+                                cssRequired: "",
+                                cssClass: "custom-form",
+                                submitButtonClass: 'button',
+                                onFormReady: function($form){
+                                    // find the dropdown field
+                                    var mySelect = $form.find('.hs-position select');
 
-                            // this is the title of the position you are visiting slugified.
-                            const positionSlugify = "{{ content.name | striptags | lower | replace(' ', '-') }}";
+                                    // this is the title of the position you are visiting slugified.
+                                    const positionSlugify = "{{ content.name | striptags | lower | replace(' ', '-') }}";
 
-                            // removing any other option that could be manually added.
-                            const $select = document.querySelector('.hs-position select');
-                            for (let i = $select.options.length; i >= 0; i--) {
-                                $select.remove(i); 
-                            }
+                                    // removing any other option that could be manually added.
+                                    const $select = document.querySelector('.hs-position select');
+                                    for (let i = $select.options.length; i >= 0; i--) {
+                                        $select.remove(i); 
+                                    }
 
-                            // build options for selector.
-                            // key would be name
-                            // value would be the option value
-                            const myOptions = {
-                                {% for rec_post in rec_posts %}
-                                    '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', '-')}}'{% if not loop.last %},{% endif %}
-                                {% endfor %}
-                            };
+                                    // build options for selector.
+                                    // key would be name
+                                    // value would be the option value
+                                    const myOptions = {
+                                        {% for rec_post in rec_posts %}
+                                            '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', '-')}}'{% if not loop.last %},{% endif %}
+                                        {% endfor %}
+                                    };
 
-                            // create options and append them to the selector
-                            Object.keys(myOptions).forEach(key => {
-                                var opt = document.createElement('option');
-                                opt.value = myOptions[key];
-                                opt.innerHTML = key;
-                                mySelect[0].appendChild(opt);
+                                    // create options and append them to the selector
+                                    Object.keys(myOptions).forEach(key => {
+                                        var opt = document.createElement('option');
+                                        opt.value = myOptions[key];
+                                        opt.innerHTML = key;
+                                        mySelect[0].appendChild(opt);
+                                    });
+
+                                    // find the selector in the page and select the option
+                                    // trigger on change event for hubspot scripts
+                                    const $selectwithValues = document.querySelector('.hs-position select');
+                                    $selectwithValues.value = positionSlugify;
+                                    $selectwithValues.dispatchEvent(new Event('change')); 
+                                }
                             });
-
-                            // find the selector in the page and select the option
-                            // trigger on change event for hubspot scripts
-                            const $selectwithValues = document.querySelector('.hs-position select');
-                            $selectwithValues.value = positionSlugify;
-                            $selectwithValues.dispatchEvent(new Event('change')); 
-                        }
-                    });
-                    </script>
+                            </script>
+                        </div>
+                    </div>
                 </div>
             </article>
         </div>

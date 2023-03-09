@@ -15,10 +15,6 @@
 	float: none;
 }
 
-.hs-breadcrumb-menu li a{
-	font-weight: 700;
-}
-
 .hs-breadcrumb-menu li span{
 	font-weight: 100;
 }
@@ -31,10 +27,6 @@
 
 .hs-breadcrumb-menu li span{
 	color: #ffffff;
-}
-
-.hs-breadcrumb-menu li a{
-	color: #FFF !important;
 }
 
 /* Single Blog Post */
