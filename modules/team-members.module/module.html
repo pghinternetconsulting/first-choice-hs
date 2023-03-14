@@ -1,32 +1,107 @@
 <div class="team-members">
 	{% for item in module.team_member %}
+	{% set memberID = item.team_name %}
+	
 	<div class="team-member-info">
-		<div class="team-photo">{% if item.team_photo.src %}
-			{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}"' %}
-			{% if item.team_photo.size_type == 'auto' %}
-			{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}"
-			style="max-width:
-			100%; height: auto;"' %}
-			{% elif item.team_photo.size_type == 'auto_custom_max' %}
-			{% set sizeAttrs = 'width="{{ item.team_photo.max_width }}" height="{{ item.team_photo.max_height }}"
-			style="max-width: 100%; height: auto;"' %}
-			{% endif %}
-			{% set loadingAttr = item.team_photo.loading != 'disabled' ? 'loading="{{ item.team_photo.loading }}"' : ''
-			%}
-			<img src="{{ item.team_photo.src }}" alt="{{ item.team_name }}" {{ loadingAttr }} {{ sizeAttrs }}>
-			{% endif %}
-		</div>
+		{% if item.biography %}
+		<a data-modal="{{ memberID|lower|replace(' ','-') }}">
+		{% endif %}
+			<div class="team-photo">
+				{% if item.alternate_image.src %}
+				<div class="flip-container">
+					<div class="flipper">
+				{% endif %}
+				{% if item.team_photo.src %}
+					{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}"' %}
+					{% if item.team_photo.size_type == 'auto' %}
+						{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}" style="max-width: 100%; height: auto;"' %}
+					{% elif item.team_photo.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="{{ item.team_photo.max_width }}" height="{{ item.team_photo.max_height }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.team_photo.loading != 'disabled' ? 'loading="{{ item.team_photo.loading }}"' : ''
+					%}
+					<img {% if item.alternate_image.src %}class="front"{% endif %} src="{{ item.team_photo.src }}" alt="{{ item.team_name }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				{% endif %}
+				{% if item.alternate_image.src %}
+					{% set sizeAttrs = 'width="{{ item.alternate_image.width }}" height="{{ item.alternate_image.height }}"' %}
+					{% if item.alternate_image.size_type == 'auto' %}
+						{% set sizeAttrs = 'width="{{ item.alternate_image.width }}" height="{{ item.alternate_image.height }}" style="max-width: 100%; height: auto;"' %}
+					{% elif item.alternate_image.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="{{ item.alternate_image.max_width }}" height="{{ item.alternate_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.alternate_image.loading != 'disabled' ? 'loading="{{ item.alternate_image.loading }}"' : '' %}
+					<img class="back" src="{{ item.alternate_image.src }}" alt="{{ item.alternate_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		{% if item.biography %}
+		</a>
+		{% endif %}
 		<div class="team-name">
 			<h3>{% inline_text field="team_name" value="{{ item.team_name }}" %}</h3>
 		</div>
 		<div class="team-position">
-
 			{% inline_text field="position" value="{{ item.position }}" %}
 		</div>
 		<div class="team-description">
-
 			{% inline_rich_text field="description" value="{{ item.description }}" %}
 		</div>
+		{% if item.biography %}
+		<div class="modal" id="{{ memberID|lower|replace(' ','-') }}">
+			<div class="modal-bg modal-exit"></div>
+			<div class="modal-container">
+				<div class="modal-top">
+					<div class="modal-left">
+						<div class="team-photo">
+							{% if item.team_photo.src %}
+								{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}"' %}
+								{% if item.team_photo.size_type == 'auto' %}
+									{% set sizeAttrs = 'width="{{ item.team_photo.width }}" height="{{ item.team_photo.height }}" style="max-width: 100%; height: auto;"' %}
+								{% elif item.team_photo.size_type == 'auto_custom_max' %}
+									{% set sizeAttrs = 'width="{{ item.team_photo.max_width }}" height="{{ item.team_photo.max_height }}" style="max-width: 100%; height: auto;"' %}
+								{% endif %}
+								{% set loadingAttr = item.team_photo.loading != 'disabled' ? 'loading="{{ item.team_photo.loading }}"' : ''
+								%}
+								<img src="{{ item.team_photo.src }}" alt="{{ item.team_name }}" {{ loadingAttr }} {{ sizeAttrs }}>
+							{% endif %}
+						</div>
+					</div>
+					<div class="modal-right">
+						<div class="team-name">
+							<h3>{% inline_text field="team_name" value="{{ item.team_name }}" %}</h3>
+						</div>
+						<div class="team-position">
+							{{ item.position }}
+						</div>
+						<div class="team-description">
+							{{ item.description }}
+						</div>
+						{% if item.linkedin_url.href %}
+						<div class="team-linkedin">
+							<a href="{{ item.linkedin_url.href }}" title="LinkedIn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="26.783" height="26.783" viewBox="0 0 26.783 26.783">
+									<path id="_002-linkedin" data-name="002-linkedin" d="M13.392,0A13.392,13.392,0,1,0,26.783,13.392,13.393,13.393,0,0,0,13.392,0ZM9.5,20.244H6.239V10.432H9.5ZM7.87,9.092H7.848A1.7,1.7,0,1,1,7.891,5.7a1.7,1.7,0,1,1-.022,3.39ZM21.26,20.244H18V15c0-1.319-.472-2.219-1.652-2.219a1.785,1.785,0,0,0-1.673,1.193,2.233,2.233,0,0,0-.107.8v5.48H11.305s.043-8.892,0-9.812h3.261v1.389a3.238,3.238,0,0,1,2.939-1.62c2.146,0,3.755,1.4,3.755,4.416Zm0,0" fill="#4b9343"/>
+								</svg>								  
+							</a>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+				<div>
+					{% inline_rich_text field="biography" value="{{ item.biography }}" %}
+				</div>
+			  <button class="modal-close modal-exit">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30.707" height="30.707" viewBox="0 0 30.707 30.707">
+					<g id="Group_124" data-name="Group 124" transform="translate(-23476.146 -2995.146)">
+					<line id="Line_28" data-name="Line 28" x1="30" y2="30" transform="translate(23476.5 2995.5)" fill="none" stroke="#000" stroke-width="1"/>
+					<line id="Line_29" data-name="Line 29" x1="30" y1="30" transform="translate(23476.5 2995.5)" fill="none" stroke="#000" stroke-width="1"/>
+					</g>
+				</svg>
+			  </button>
+			</div>
+		  </div>
+		{% endif %}
 	</div>
 	{% endfor %}
 </div>

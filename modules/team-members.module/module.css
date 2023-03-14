@@ -38,6 +38,140 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  a {
+    padding: 30px;
+    background: teal;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+/* Modal */
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.modal-bg {
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+}
+.modal-container {
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  padding: 60px 60px 30px 60px;
+  max-width: 768px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.modal-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  outline: none;
+  appearance: none;
+  color: #000000;
+  background: none;
+  border: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0px;
+  background-color: #ffffff !important;
+}
+.modal-top{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 40px;
+}
+.modal-left{
+  width: 250px;
+  padding-right: 50px;
+}
+.modal-right{
+  width: calc(100% - 250px);
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+}
+.team-linkedin{
+  padding-top: 5px;
+}
+.modal-right > div > h3, .modal-right > div p, .modal-right .team-position{
+  text-align: left;
+}
+.modal-right > div p{
+  margin-bottom: 0px;
+}
+/* end modal */
+
+/* image flip */
+.flip-container {
+  -webkit-perspective: 1000;
+  background: transparent;
+  margin: 0px auto;
+}
+/* flip the picture when hover */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+}
+.flip-container, .front, .back, img {
+  width: 200px;
+  height: 200px;
+}
+/* flip speed */
+.flipper {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+}
+/* hide back  during flip */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front placed above back */
+.front {
+  z-index: 2;
+}
+/* back, initially hidden */
+.back {
+  -webkit-transform: rotateY(180deg);
+}
+/* end image flip */
+
 @media (max-width: 1200px) {
   .team-member-info {
     width: 25%;
