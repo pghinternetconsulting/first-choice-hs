@@ -14,11 +14,11 @@
             <article class="employment-post">
                 <div class="employment-content">
                     <div class="breadcrumbs">
-                        {% module "breadcrumbs" 
-                            path="/first-theme-hs/modules/breadcrumbs",
-                            offset=0,
-                            width=12,
-                            renamed_from_id=79382493240
+                        {% module "breadcrumbs"
+                        path="/first-theme-hs/modules/breadcrumbs",
+                        offset=0,
+                        width=12,
+                        renamed_from_id=79382493240
                         %}
                     </div>
                     <h1 class="employment-title">
@@ -29,12 +29,11 @@
                     </div>
                 </div>
                 {% set rec_posts = blog_recent_posts("employment", 200) %}
-                <div class="employment-form contact-form">
-                    <div class="employment-form-inner-relative">
-                        <div class="employment-form-inner-sticky">
-                            <h2>Apply for this position</h2>
-                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                            <script>
+                <div class="employment__form__wrapper contact-form">
+                    <div class="employment__form">
+                        <h2>Apply for this position</h2>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                        <script>
                             hbspt.forms.create({
                                 region: "na1",
                                 portalId: "21636115",
@@ -42,7 +41,7 @@
                                 cssRequired: "",
                                 cssClass: "custom-form",
                                 submitButtonClass: 'button',
-                                onFormReady: function($form){
+                                onFormReady: function ($form) {
                                     // find the dropdown field
                                     var mySelect = $form.find('.hs-position select');
 
@@ -52,35 +51,34 @@
                                     // removing any other option that could be manually added.
                                     const $select = document.querySelector('.hs-position select');
                                     for (let i = $select.options.length; i >= 0; i--) {
-                                        $select.remove(i); 
+                                        $select.remove(i);
                                     }
 
                                     // build options for selector.
                                     // key would be name
                                     // value would be the option value
                                     const myOptions = {
-                                        {% for rec_post in rec_posts %}
-                                            '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', '-')}}'{% if not loop.last %},{% endif %}
-                                        {% endfor %}
-                                    };
+                                            {% for rec_post in rec_posts %}
+                                    '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', ' - ')}}'{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                };
 
-                                    // create options and append them to the selector
-                                    Object.keys(myOptions).forEach(key => {
-                                        var opt = document.createElement('option');
-                                        opt.value = myOptions[key];
-                                        opt.innerHTML = key;
-                                        mySelect[0].appendChild(opt);
-                                    });
+                                // create options and append them to the selector
+                                Object.keys(myOptions).forEach(key => {
+                                    var opt = document.createElement('option');
+                                    opt.value = myOptions[key];
+                                    opt.innerHTML = key;
+                                    mySelect[0].appendChild(opt);
+                                });
 
-                                    // find the selector in the page and select the option
-                                    // trigger on change event for hubspot scripts
-                                    const $selectwithValues = document.querySelector('.hs-position select');
-                                    $selectwithValues.value = positionSlugify;
-                                    $selectwithValues.dispatchEvent(new Event('change')); 
-                                }
-                            });
-                            </script>
-                        </div>
+                                // find the selector in the page and select the option
+                                // trigger on change event for hubspot scripts
+                                const $selectwithValues = document.querySelector('.hs-position select');
+                                $selectwithValues.value = positionSlugify;
+                                $selectwithValues.dispatchEvent(new Event('change'));
+                            }
+                                });
+                        </script>
                     </div>
                 </div>
             </article>

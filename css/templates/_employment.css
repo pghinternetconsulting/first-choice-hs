@@ -35,6 +35,7 @@
   padding-bottom: 40px;
   margin: 0 auto;
 }
+
 .employment-index__post-content h2 {
   font-family: "Roboto" !important;
   font-weight: 300 !important;
@@ -49,46 +50,48 @@
 
 .employment-post {
   display: flex;
+  gap: 40px
 }
+
 .employment-post .employment-content {
   padding-right: 30px;
   padding-bottom: 40px;
-  flex: 4.4;
+  flex: 1;
 }
-.employment-post .employment-form {
-  display: flex;
-  flex: 5.6;
-  flex-flow: column;
-}
+
 .employment-body .hs-breadcrumb-menu li span {
   color: #000000;
 }
-.employment-form h2{
-  color: #ffffff;
-  margin-top: 90px;
-}
+
 .employment-title span {
   color: #575757;
 }
-.employment-title #hs_cos_wrapper_name{
+
+.employment-title #hs_cos_wrapper_name {
   color: #000000;
 }
+
 .text-form-breadcrumbs {
   margin-top: 25px;
 }
+
 .text-form-breadcrumbs a {
   color: #4b9343;
 }
+
 .text-form-breadcrumbs .hs-breadcrumb-menu {
   overflow: hidden;
 }
+
 .text-form-breadcrumbs .hs-breadcrumb-menu-item {
   padding-left: 0px;
 }
+
 .text-form-breadcrumbs .hs-breadcrumb-menu-divider:before {
   padding-left: 3px !important;
   padding-right: 3px;
 }
+
 .text-form-breadcrumbs a,
 .text-form-breadcrumbs span {
   text-transform: uppercase;
@@ -99,172 +102,216 @@
 .text-form-form {
   width: 100%;
 }
+
 .text-form-form .form-title {
   margin-bottom: 0px;
 }
+
 .contact-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: #000 !important;
 }
-.contact-form form {
-  margin-bottom: 180px;
-  margin-right: -8px;
-}
+
 .contact-form form label {
   color: #ffffff;
   font-size: 17px;
 }
+
 .contact-form form input[type="text"],
 .contact-form form input[type="tel"],
 .contact-form form input[type="email"] {
   border-radius: 5px;
   height: 38px;
 }
+
 .contact-form form textarea {
   width: 100% !important;
   height: 130px;
   border-radius: 5px;
 }
+
 .contact-form select {
   width: 100% !important;
   padding: 0.5rem 0.7rem !important;
   border-radius: 5px;
 }
-.contact-form form > fieldset:last-of-type .hs_accept_storage_data label,
+
+.contact-form form>fieldset:last-of-type .hs_accept_storage_data label,
 .contact-form .hs-error-msg {
   font-size: 12px;
   line-height: 1;
 }
-.contact-form form > fieldset:last-of-type .inputs-list > li {
+
+.contact-form form>fieldset:last-of-type .inputs-list>li {
   margin-top: 0px;
 }
+
 .contact-form form input[type="file"] {
   border: none !important;
   background-color: transparent;
   color: #ffffff;
 }
+
 .contact-form form .hs-form-required {
   color: #ffffff;
 }
+
 .contact-form form .hs_fileupload {
   display: flex;
   flex-flow: column;
 }
+
 .contact-form form .hs_fileupload label {
   order: 1;
 }
+
 .contact-form form .hs_fileupload .input {
   order: 2;
 }
+
 .contact-form form .hs_fileupload legend {
   order: 3;
   color: #ffffff;
   font-size: 12px;
   margin-top: 8px;
 }
+
 /* Employment Form */
-.employment-form{
-  padding-left: 13.2%;
+.employment-post .employment__form__wrapper {
+  flex: 1;
+  flex-flow: column;
+  justify-content: center;
 }
-.employment-form form{
+
+.employment__form {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.employment__form__wrapper h2 {
+  color: #ffffff;
+}
+
+.employment__form__wrapper form {
   margin-right: 0px !important;
 }
-.employment-form fieldset{
+
+.employment__form__wrapper fieldset {
   border: none;
   display: flex;
   justify-content: space-between;
   padding: 0px;
 }
-.employment-form fieldset > div{
+
+.employment__form__wrapper fieldset>div {
   width: 100%;
 }
-.employment-form .hs-form-field{
+
+.employment__form__wrapper .hs-form-field {
   margin-bottom: 0.6rem;
 }
-.employment-form .form-columns-2 > div:first-child{
+
+.employment__form__wrapper .form-columns-2>div:first-child {
   margin-right: 5px;
 }
-.employment-form .form-columns-2 > div:last-child{
+
+.employment__form__wrapper .form-columns-2>div:last-child {
   margin-left: 5px;
 }
+
 @media screen and (min-width: 1380px) {
   .employment-post {
     padding: 0 1rem;
   }
-  .employment-post .employment-form { 
-    padding-left: 14%;
-  }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1539px) {
-  .employment-post .employment-form {
+  .employment-post .employment__form__wrapper {
     padding-left: 3rem;
     padding-right: 2rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .employment-body {
     background: rgb(0, 0, 0);
-    background: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 1) 54%,
-      rgba(255, 255, 255, 1) 54%
-    );
+    background: linear-gradient(270deg,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(255, 255, 255, 1) 50%);
   }
-  .employment-form-inner-relative{
-    position: relative; 
-    height: 100%;
-  }
-  .employment-form-inner-sticky{
-    position: sticky; 
-    top: 210px;
-    margin-bottom: 210px;
+
+  .employment__form__wrapper {
+    position: sticky;
+    top: 118px;
+    height: calc(100vh - 118px);
+    overflow: scroll;
   }
 }
+
 @media screen and (max-width: 991px) {
-  .employment-post .employment-form {
+  .employment-post .employment__form__wrapper {
     padding-left: 1rem;
   }
+
   .employment-post {
     flex-flow: column;
   }
+
   .employment-post .employment-content,
-  .employment-post .employment-form {
+  .employment-post .employment__form__wrapper {
     width: 100%;
   }
-  .employment-post .employment-form {
+
+  .employment-post .employment__form__wrapper {
     padding-right: 1rem;
   }
+
   .employment-body .content-wrapper {
     padding: 0 !important;
   }
+
   .employment-post .employment-content {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
+
 @media screen and (min-width: 480px) {
-  .contact-form form > fieldset.form-columns-1:last-of-type {
+  .contact-form form>fieldset.form-columns-1:last-of-type {
     float: left;
     width: 50%;
   }
+
   .contact-form form .hs_submit {
-    float: right;
     margin-right: 8px;
+    text-align: right;
   }
 }
+
 @media screen and (max-width: 479px) {
+
   .employment-post input[type="tel"],
   .employment-post input[type="text"],
   .employment-post input[type="email"] {
     width: 100% !important;
   }
-  .employment-form fieldset{
+
+  .employment__form__wrapper fieldset {
     flex-flow: column;
   }
-  .employment-form .form-columns-2 > div{
+
+  .employment__form__wrapper .form-columns-2>div {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
-  .employment-form form{
+
+  .employment__form__wrapper form {
     margin-bottom: 80px;
   }
 }
@@ -311,4 +358,3 @@
     margin-top: 10px;
   }
 }
-
