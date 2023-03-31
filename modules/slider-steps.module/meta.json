@@ -1,0 +1,16 @@
+{
+  "global" : false,
+  "js_render_options" : {
+    "defer" : true
+  },
+  "icon" : "fontawesome-5.14.0:Horizontal%20Sliders:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 109018844828,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/glide.js",
+    "name" : "glide.js"
+  } ],
+  "label" : "Step Slider",
+  "is_available_for_new_content" : true
+}

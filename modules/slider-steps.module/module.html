@@ -1,0 +1,49 @@
+<h2 class="slider-steps__heading">{{ module.heading }}</h2>
+<div id="steps" class="slider-steps__glide" data-ride="carousel">
+	<div class="slider-steps__glide__bullets" data-glide-el="controls[nav]">
+		{% for item in module.sliders %}
+		<button class="slider-steps__glide__bullet" data-glide-dir="={{loop.index - 1}}">{{loop.index}}</button>
+		{% endfor %}
+	</div>
+
+	<!-- Wrapper for slides -->
+	<div class="slider-steps__glide__track" data-glide-el="track">
+
+		<div class="slider-steps__glide__slides">
+			{% for item in module.sliders %}
+			<div class="slider-steps__glide__slide">
+				{% if item.background.src %}
+				{% set sizeAttrs = 'width="{{ item.background.width }}" height="{{ item.background.height }}"' %}
+				{% if item.background.size_type == 'auto' %}
+				{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+				{% elif item.background.size_type == 'auto_custom_max' %}
+				{% set sizeAttrs = 'width="{{ item.background.max_width }}" height="{{ item.background.max_height }}"
+				style="max-width: 100%; height: auto;"' %}
+				{% endif %}
+				{% set loadingAttr = item.background.loading != 'disabled' ? 'loading="{{ item.background.loading }}"' :
+				'' %}
+				<img class="slider-steps__glide__slide__image__desktop" src="{{ item.background.src }}"
+					alt="{{ item.background.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				{% endif %}
+				<div class="slider-steps__glide__slide__content">
+					<div class="slider-steps__glide__slide__content__title">
+						{% if item.background.src %}
+						{% set sizeAttrs = 'width="120px" height="120px"' %}
+						{% set loadingAttr = item.background.loading != 'disabled' ? 'loading="{{ item.background.loading }}"' :
+						'' %}
+						<img class="slider-steps__glide__slide__image__mobile" src="{{ item.background.src }}"
+							alt="{{ item.background.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+						{% endif %}
+						<h3>
+							<span class="slider-steps__glide__slide__step">Step {{loop.index}}</span>
+							<span class="slider-steps__glide__slide__headline">{{ item.headline }}</span>
+						</h3>
+					</div>
+					<div class="slider-steps__glide__slide__content__description">{{ item.description }}</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- End Carousel -->

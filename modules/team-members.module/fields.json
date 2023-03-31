@@ -33,6 +33,23 @@
       "max_height" : 250
     }
   }, {
+    "id" : "262d2710-3bf6-c202-ab4c-5449e5339558",
+    "name" : "alternate_image",
+    "display_width" : null,
+    "label" : "Alternate Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
     "id" : "e9ce9801-7ff2-5149-7668-568d774710ee",
     "name" : "team_name",
     "display_width" : null,
@@ -67,6 +84,28 @@
     "locked" : false,
     "type" : "richtext",
     "default" : ""
+  }, {
+    "id" : "4f9ec5ff-302c-c16c-f4b5-c72248d887a6",
+    "name" : "biography",
+    "display_width" : null,
+    "label" : "Biography",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  }, {
+    "id" : "1b87fbe3-7d87-3333-dfba-b7a3a3fad006",
+    "name" : "linkedin_url",
+    "display_width" : null,
+    "label" : "LinkedIn URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -82,8 +121,19 @@
       "max_width" : 250,
       "max_height" : 250
     },
+    "alternate_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
     "team_name" : "Team Name",
     "position" : "Position",
-    "description" : ""
+    "description" : "",
+    "linkedin_url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    }
   }
 } ]

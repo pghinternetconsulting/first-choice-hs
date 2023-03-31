@@ -1,0 +1,155 @@
+[
+  {
+    "id": "c0301388-b3a2-f7fc-292f-0fed3fa124d3",
+    "name": "heading",
+    "display_width": null,
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text"
+  },
+  {
+    "id": "aadb0afa-609d-c823-1f50-6bd8579182de",
+    "name": "sliders",
+    "display_width": null,
+    "label": "Sliders",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": "0ce3070a-2903-9738-45c9-9bdd1fb29a6e",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "efa4b05b-b404-af50-5570-fde89265c6c0",
+        "name": "background",
+        "display_width": null,
+        "label": "Background",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "",
+          "alt": null,
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "0ce3070a-2903-9738-45c9-9bdd1fb29a6e",
+        "name": "headline",
+        "display_width": null,
+        "label": "Headline",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Meeting"
+      },
+      {
+        "id": "20d40344-bf1b-7b39-6a98-745bfd438150",
+        "name": "description",
+        "display_width": null,
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "It all starts with a conversation about how DojoNetworks™ can improve your networks."
+      },
+      {
+        "id": "549e1b11-15ac-cc52-635c-0960ac20c031",
+        "name": "icon_or_image",
+        "display_width": null,
+        "label": "Icon or Image",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          ["icon", "Icon"],
+          ["image", "Image"]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice"
+      },
+      {
+        "id": "f636566c-454b-a2d9-1100-87aeb1a21126",
+        "name": "icon",
+        "display_width": null,
+        "label": "Icon",
+        "required": false,
+        "locked": false,
+        "visibility": {
+          "controlling_field": "549e1b11-15ac-cc52-635c-0960ac20c031",
+          "controlling_field_path": null,
+          "controlling_value_regex": "icon",
+          "property": null,
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "richtext"
+      },
+      {
+        "id": "96efe9c1-2ed7-a32a-7806-c2bb96195eca",
+        "name": "slide_image",
+        "display_width": null,
+        "label": "Slide Image",
+        "required": true,
+        "locked": false,
+        "visibility": {
+          "controlling_field": "549e1b11-15ac-cc52-635c-0960ac20c031",
+          "controlling_field_path": null,
+          "controlling_value_regex": "image",
+          "property": null,
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "responsive": true,
+        "resizable": true,
+        "show_loading": false,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "",
+          "alt": null,
+          "loading": "lazy"
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "type": "group",
+    "default": {
+      "background": {
+        "size_type": "auto",
+        "src": "",
+        "alt": null,
+        "loading": "lazy"
+      },
+      "headline": "Meeting",
+      "description": "It all starts with a conversation about how DojoNetworks™ can improve your networks.",
+      "slide_image": {
+        "size_type": "auto",
+        "src": "",
+        "alt": null,
+        "loading": "lazy"
+      }
+    }
+  }
+]
