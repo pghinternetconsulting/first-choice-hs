@@ -2,7 +2,7 @@ new Glide(".slider-steps__glide", {
   type: "slider",
   startAt: 0,
   perView: 1,
-  autoplay: false,//autoplay: 2000,
+  autoplay: 4000,
   animationDuration: 1000
 }).mount();
 
