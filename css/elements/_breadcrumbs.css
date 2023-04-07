@@ -1,0 +1,39 @@
+.hs-breadcrumb-menu {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hs-breadcrumb-menu-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 10px;
+  padding-top: 0;
+  line-height: 1 !important;
+  padding-left: 0px;
+  float: none;
+}
+
+.hs-breadcrumb-menu li span {
+  font-weight: 100;
+}
+
+.hs-breadcrumb-menu li span,
+.hs-breadcrumb-menu li a {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hs-breadcrumb-menu li a {
+  color: #4b9343;
+}
+
+.dnd_area-row-0-background-image .hs-breadcrumb-menu li span,
+.dnd_area-row-0-background-image .hs-breadcrumb-menu li a {
+  color: #ffffff;
+}
+
+.dnd_area-row-0-background-image .hs-breadcrumb-menu li a {
+  font-weight: 700;
+}

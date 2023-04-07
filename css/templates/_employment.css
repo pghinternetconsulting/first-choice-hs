@@ -59,43 +59,12 @@
   flex: 1;
 }
 
-.employment-body .hs-breadcrumb-menu li span {
-  color: #000000;
-}
-
 .employment-title span {
   color: #575757;
 }
 
 .employment-title #hs_cos_wrapper_name {
   color: #000000;
-}
-
-.text-form-breadcrumbs {
-  margin-top: 25px;
-}
-
-.text-form-breadcrumbs a {
-  color: #4b9343;
-}
-
-.text-form-breadcrumbs .hs-breadcrumb-menu {
-  overflow: hidden;
-}
-
-.text-form-breadcrumbs .hs-breadcrumb-menu-item {
-  padding-left: 0px;
-}
-
-.text-form-breadcrumbs .hs-breadcrumb-menu-divider:before {
-  padding-left: 3px !important;
-  padding-right: 3px;
-}
-
-.text-form-breadcrumbs a,
-.text-form-breadcrumbs span {
-  text-transform: uppercase;
-  font-size: 12px;
 }
 
 /* Form Styles */

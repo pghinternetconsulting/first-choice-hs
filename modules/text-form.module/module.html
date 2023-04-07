@@ -85,10 +85,9 @@
 
 <div class="text-form-container">
 	<div class="content-wrapper">
-        <div class="text-form-row">
-			<div class="text-form-left">
+        <div class="row-fluid">
+			<div class="span6">
 				{% if menu_id != '' %}
-				<div class="text-form-breadcrumbs">
 					{% menu 
 					id="{{ menu_id }}", 
 					root_type="{{ module.breadcrumbs.root_type }}", 
@@ -96,7 +95,6 @@
 					max_levels="{{ module.breadcrumbs.max_levels }}", 
 					flow="{{ module.breadcrumbs.flow }}"
 					%}
-				</div>
 				{% endif %}
 				<div class="text-form-title"><h1>{{ module.title }}</h1></div>
 				<div class="text-form-content">{{ module.content }}</div>
@@ -149,10 +147,10 @@
 				</div>
 				{% endif %}
 			</div>
-			<div class="text-form-right contact-form">
-				<div class="text-form-form">
+			<div class="span6 contact-form">
+				<div class="text-form__form">
 					{% if module.form_title != '' %}
-						<h3>{{ module.form_title }}</h3>
+						<h2>{{ module.form_title }}</h2>
 					{% endif %}
 					{% form
 						form_to_use="{{ module.form.form_id }}"
