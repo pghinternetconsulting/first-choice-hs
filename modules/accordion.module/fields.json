@@ -1,0 +1,52 @@
+[ {
+  "id" : "8acb6658-c0c8-9e1a-d985-4b9d65c9373b",
+  "name" : "item",
+  "display_width" : null,
+  "label" : "Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "e97c5ea4-c628-ca35-f5dc-54788cbecaac",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "e97c5ea4-c628-ca35-f5dc-54788cbecaac",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Example Accordion Title"
+  }, {
+    "id" : "f7d04da8-9c91-9f21-d5d9-24be93f40c7a",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Example accordion descriptions "
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Example Accordion Title",
+    "content" : "Example accordion descriptions "
+  }, {
+    "title" : "Example Accordion Title",
+    "content" : "Example accordion descriptions "
+  }, {
+    "title" : "Example Accordion Title",
+    "content" : "Example accordion descriptions "
+  } ]
+} ]

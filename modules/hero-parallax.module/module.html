@@ -1,35 +1,39 @@
 {###############################################################
-     Pittsburgh Internet Consulting - Parallax Hero Banner 
+  Pittsburgh Internet Consulting - Parallax Hero Banner 
 ################################################################}
 
 <div id="hs-hero-{{ name }}" class="hs-hero">
 
-  <!--- desktop image -->
+  <picture class="hs-hero__picture">
   {% if module.background.background_image.src %}
-    {% set sizeAttrs = 'width="{{ module.background.background_image.width }}" height="{{ module.background.background_image.height }}"' %}
-    {% if module.background.background_image.size_type == 'auto' %}
-      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-    {% elif module.background.background_image.size_type == 'auto_custom_max' %}
-      {% set sizeAttrs = 'width="{{ module.background.background_image.max_width }}" height="{{ module.background.background_image.max_height }}" style="max-width: 100%; height: auto;"' %}
-    {% endif %}
-     {% set loadingAttr = module.background.background_image.loading != 'disabled' ? 'loading="{{ module.background.background_image.loading }}"' : '' %}
-    <img class="desktop" src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}"  {{ sizeAttrs }}>
-  {% endif %}
+  {% set sizeAttrs = 'width="{{ module.background.background_image.width }}" height="{{ module.background.background_image.height }}"' %}
 
-  <!--- mobile image -->
-  {% if module.background.background_image_mobile.src %}
-	{% set sizeAttrs = 'width="{{ module.background.background_image_mobile.width }}" height="{{ module.background.background_image_mobile.height }}"' %}
-	{% if module.background.background_image_mobile.size_type == 'auto' %}
-		{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-	{% elif module.background.background_image_mobile.size_type == 'auto_custom_max' %}
-		{% set sizeAttrs = 'width="{{ module.background.background_image_mobile.max_width }}" height="{{ module.background.background_image_mobile.max_height }}" style="max-width: 100%; height: auto;"' %}
-	{% endif %}
-	 {% set loadingAttr = module.background.background_image_mobile.loading != 'disabled' ? 'loading="{{ module.background.background_image_mobile.loading }}"' : '' %}
-    <img class="mobile" src="{{ module.background.background_image_mobile.src }}" alt="{{ module.background.background_image_mobile.alt }}" {{ sizeAttrs }}>
+    <source media="(min-width:767px)" srcset="{{ module.background.background_image.src }}">
   {% endif %}
-  
-  <div class="hs-hero__content hs-hero__content--{{ module.settings.button_alignment }}">
-    <main style="max-width:{{ module.settings.title_max_width }}px">
+  {% if module.background.background_image_mobile.src %}
+    <source media="(max-width:767px)" srcset="{{ module.background.background_image_mobile.src }}">
+  {% endif%}
+  <img src="{{ module.background.background_image.src }}" alt="{{ module.background.background_image.alt }}" {{ sizeAttrs}} >
+  </picture>
+
+
+  <div class="hs-hero__content__wrapper hs-hero__content--{{ module.settings.button_alignment }}">
+    {% if module.image_field.src %}
+      {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+      {% if module.image_field.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif module.image_field.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+      {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+ 
+      <picture class="hs-hero__content__image">
+        <source media="(min-width:767px)" srcset="{{ module.image_field.src }}">
+        <source media="(max-width:767px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w">
+        <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ sizeAttrs}} >
+      </picture>
+    {% endif %}
+    <div class="hs-hero__content" style="max-width:{{ module.settings.title_max_width }}px">
       <h1 style="color:{{ module.settings.text_color.color }}">{{ module.heading }}</h1>
       <div class="hero-subheading">
         {% for item in module.subheading %}
@@ -40,20 +44,28 @@
       {% if module.link_url.href %}
       <div class="hero-phone"><a href="{{ module.link_url.href }}">{{ module.link_text }}</a></div> 
       {% endif %}
-    </main>
-
+    </div>
   </div>
 </div>
+
 {% require_css %}
 <style>
-  /* Dynamic Background Styles */
-  #hs-hero-{{ name }}.hs-hero:before {
-    background-color: {{ module.background.overlay_color }};
-    opacity: .{{ module.background.overlay_opacity }};
+/* Dynamic Background Styles */
+#hs-hero-{{ name }}.hs-hero:before {
+ background-color: {{ module.background.overlay_color }};
+ opacity: .{{ module.background.overlay_opacity }};
+}
+
+#hs-hero-{{ name }}.hs-hero {
+ color: {{ module.settings.text_color }};
+}
+
+{% if module.settings.full_viewport_height %}
+  @media only screen and (min-width: 768px) {
+    .hs-hero {
+      height: calc(100vh - 110px);
+    }
   }
-  
-  #hs-hero-{{ name }}.hs-hero {
-    color: {{ module.settings.text_color }};
-  }
+{% endif %}
 </style>
 {% end_require_css %}

@@ -127,6 +127,8 @@
   --color-font: {{ body_font.color }};
   --color-light-gray: #f2f2f2;
   --container-width: 1520px;
+  --font-primary: {{ primary_font.font }};
+  --font-secondary: {{ secondary_font.font }};
 }
 
 {###########################################################################}

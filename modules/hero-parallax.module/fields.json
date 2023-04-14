@@ -78,6 +78,23 @@
     "type" : "EXTERNAL"
   }
 }, {
+  "id" : "c0bf3d3e-61ab-c50e-ddbe-285de08168bc",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
   "id" : "f7c5ba7d-d623-6a7c-9749-3f69624857be",
   "name" : "background",
   "display_width" : null,
@@ -237,6 +254,16 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice"
+  }, {
+    "id" : "ef0b9041-ba64-ddc1-ca0e-b732aaec9ae5",
+    "name" : "full_viewport_height",
+    "display_width" : null,
+    "label" : "Full Viewport Height",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -248,6 +275,7 @@
     },
     "title_max_width" : 860,
     "text_size" : 20,
-    "size" : 100
+    "size" : 100,
+    "full_viewport_height" : true
   }
 } ]

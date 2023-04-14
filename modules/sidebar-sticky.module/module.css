@@ -1,0 +1,22 @@
+.sidebar-sticky ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-sticky a {
+    color: var(--color-font) !important;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+}
+
+.sidebar-sticky a:hover {
+    color: var(--color-primary) !important;
+}
+
+@media (min-width: 768px) {
+    .sidebar-sticky__column {
+        position: sticky;
+        top: 150px;
+    }
+}
