@@ -1,0 +1,45 @@
+<img class="training__image" alt="{{ dynamic_page_hubdb_row.name }} Image" src="{{ dynamic_page_hubdb_row.image.url }}" width="724" height="379"
+    loading="lazy" />
+
+<div class="row-fluid training__thumbs__wrapper">
+    {% if dynamic_page_hubdb_row.image.url != null %}
+    <div class="span3">
+        <img class="training__thumbs" alt="{{ dynamic_page_hubdb_row.name }} Image"
+            src="{{ dynamic_page_hubdb_row.image.url }}" w
+            data-src="{{ dynamic_page_hubdb_row.image.url }}" w
+            dth="130" height="68" loading="lazy" />
+    </div>
+    {% endif %}
+    {% if dynamic_page_hubdb_row.image_2.url != null %}
+    <div class="span3">
+        <img class="training__thumbs" alt="{{ dynamic_page_hubdb_row.name }} Image"
+            src="{{ dynamic_page_hubdb_row.image_2.url }}"
+            data-src="{{ dynamic_page_hubdb_row.image_2.url }}"
+            width="130" height="68" loading="lazy" />
+    </div>
+    {% endif %}
+    {% if dynamic_page_hubdb_row.image_2.url != null %}
+    <div class="span3">
+        <img class="training__thumbs" alt="{{ dynamic_page_hubdb_row.name }} Image"
+            src="{{ dynamic_page_hubdb_row.image_3.url }}"
+            data-src="{{ dynamic_page_hubdb_row.image_3.url }}"
+            width="130" height="68" loading="lazy" />
+    </div>
+    {% endif %}
+    {% if dynamic_page_hubdb_row.image_3.url != null %}
+    <div class="span3">
+        <img class="training__thumbs" alt="{{ dynamic_page_hubdb_row.name }} Image"
+            src="{{ dynamic_page_hubdb_row.image_4.url }}"
+            data-src="{{ dynamic_page_hubdb_row.image_4.url }}"
+            width="130" height="68" loading="lazy" />
+    </div>
+    {% endif %}
+    {% if dynamic_page_hubdb_row.image_4.url != null %}
+    <div class="span3">
+        <img class="training__thumbs" alt="{{ dynamic_page_hubdb_row.name }} Image"
+            src="{{ dynamic_page_hubdb_row.image_5.url }}"
+            data-src="{{ dynamic_page_hubdb_row.image_5.url }}"
+            width="130" height="68" loading="lazy" />
+    </div>
+    {% endif %}
+</div>

@@ -1,0 +1,45 @@
+.training-listing__item__wrapper {
+    margin-bottom: 60px;
+}
+
+.training-listing__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.training-listing__item .button-wrapper {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.training-listing__item img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.training-listing .content-wrapper > .row-fluid:not(.row-fluid--breadcrumbs) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.training-listing h1 {
+    color: var(--color-font);
+    margin: 0.2em 0 0.5em;
+}
+
+@media (min-width: 768px) {
+    .training-listing .content-wrapper > .row-fluid:not(.row-fluid--breadcrumbs) {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .training-listing .row-fluid {
+        display: flex;
+    }
+}
+
+.training-listing__topics {
+    background-color: var(--color-light-gray);
+}

@@ -1,0 +1,15 @@
+.training__thumbs {
+    cursor: pointer;
+    height: auto;
+    max-width: 100%;
+}
+
+.training__image {
+    height: auto;
+    max-width: 100%; 
+}
+
+.training__thumbs__wrapper {
+    display: flex;
+}
+

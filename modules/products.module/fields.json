@@ -8,5 +8,6 @@
   "validation_regex" : "",
   "allow_new_line" : false,
   "show_emoji_picker" : false,
-  "type" : "text"
+  "type" : "text",
+  "default" : "mission-1"
 } ]

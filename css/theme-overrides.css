@@ -218,6 +218,7 @@ h4,
   color: {{ h4_font.color }};
   font-size: {{ h4_font.size ~ h4_font.size_unit }};
   text-transform: {{ h4_text_transform }};
+  letter-spacing: 0.04em;
 }
 
 h5,
