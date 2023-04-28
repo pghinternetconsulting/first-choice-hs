@@ -1,0 +1,60 @@
+.events__calendar {
+    margin-top: 1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events__calendar .event {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.3em;
+    width: 100%;
+}
+
+.events__calendar .event p {
+    margin-bottom: 0;
+}
+
+.event__month {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1em;
+    margin-top: 3em;
+}
+
+.event__month p {
+    margin-bottom: 0.5em;
+}
+
+.event__month hr {
+    border-bottom: 1px solid var(--color-light-gray);
+    width: 100%;
+}
+
+.event__date {
+    display: flex;
+}
+
+.event__date__divider {
+    margin: 10px;
+} 
+
+.event__start-date__day__day,
+.event__end-date__day__day {
+    font-size: 14px;
+    text-transform: uppercase; 
+}
+
+.event__start-date__day,
+.event__end-date__day {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.event__hours {
+    display: flex;
+    gap: 5px;
+}

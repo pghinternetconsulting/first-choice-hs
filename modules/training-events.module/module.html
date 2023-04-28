@@ -1,0 +1,36 @@
+
+<h2 id="calendar" class="center">Upcoming {{ dynamic_page_hubdb_row.name }} Events</h2>
+<div class="events__calendar" data-api-term="{{ dynamic_page_hubdb_row.name }}">
+    <template class="event__template">
+        <div class="event__month">
+            <p class="event__start-date__month">Month</p>
+            <p class="event__start-date__year">Year</p>  
+            <hr>
+        </div>
+        <div class="event">
+            <div class="event__date">
+                <div class="event__start-date__day__wrapper center">
+                    <p class="event__start-date__day__day">Day</p>
+                    <p class="event__start-date__day">Day</p>
+                </div>
+                <div class="event__date__divider">-</div>
+                <div class="event__end-date__day__wrapper center">
+                    <p class="event__end-date__day__day">Day</p>
+                    <p class="event__end-date__day">Day</p>
+                </div>
+            </div>
+        
+            <div class="event__hours">
+                <p class="event__date__start-hour">Hour</p> 
+                <p>-</p>
+                <p class="event__date__end-hour">Hour</p>
+            </div>
+
+            <p class="event__end-date__year">Year</p>
+            <p class="event__end-date__month">Month</p>
+
+            <p class="event__price">Price</p>
+            <a class="event__link button" href="#">Get Tickets</a>
+        </div>
+    </template>
+</div>

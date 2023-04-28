@@ -1,7 +1,7 @@
 {
-  "global" : true,
-  "smart_type" : "NOT_SMART",
+  "global" : false,
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 113162745678,
+  "module_id" : 113292501685,
+  "label" : "Training Events",
   "is_available_for_new_content" : true
 }
