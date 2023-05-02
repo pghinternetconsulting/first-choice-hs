@@ -154,6 +154,8 @@
 
 html {
   font-size: {{ body_font.size ~ body_font.size_unit }};
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
 }
 
 body {

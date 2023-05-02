@@ -1,0 +1,1046 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page - First Page
+  screenshotPath: ../images/template-previews/landing-page-n1.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--landing-page"
+%}
+
+  {# Hero banner #}
+
+  {% dnd_section
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    },
+    full_width=true
+  %}
+    {% dnd_column
+      offset=0,
+      width=12,
+      padding={
+        "default" : {
+          "left" : "0px",
+          "right" : "0px"
+        }
+      }
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/hero-parallax",
+          offset=0,
+          width=12,
+          background={
+            "background_image" : {
+              "alt" : "hero",
+              "height" : 934,
+              "loading" : "lazy",
+              "max_height" : 934,
+              "max_width" : 1920,
+              "size_type" : "auto",
+              "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero.png",
+              "width" : 1920
+            },
+            "background_image_mobile" : {
+              "alt" : "hero-mobile",
+              "height" : 639,
+              "loading" : "lazy",
+              "max_height" : 639,
+              "max_width" : 585,
+              "size_type" : "auto",
+              "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/hero-mobile.png",
+              "width" : 585
+            }
+          },
+          button_text="Lorem Ipsum",
+          heading="Keep Everyone Safe During Shutdowns",
+          image_field={
+            "alt" : "Maintenance Manager",
+            "height" : 577,
+            "loading" : "lazy",
+            "max_height" : 577,
+            "max_width" : 839,
+            "size_type" : "auto",
+            "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/1st-maintenance-manager-hero-featured.webp",
+            "width" : 839
+          },
+          settings={
+            "full_viewport_height" : false,
+            "size" : 150,
+            "text_size" : 16,
+            "title_max_width" : 1520
+          },
+          subheading=[ "Planned or unplanned, you need a trusted partner for outages, watching your deadlines and budget", "Planned or unplanned, you need a trusted partner for outages, watching your deadlines and budget" ]
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+
+  {% dnd_section
+    background_color="rgba(248, 250, 252, 1)"
+  %}
+    {% dnd_module
+      path="@hubspot/rich_text",
+      offset=0,
+      width=12
+    %}
+      {% module_attribute "html" %}
+        <h2 style="text-align: center;">Elevator Pitch Title</h2>
+        <p style="text-align: center;">Obviously, the cost is one of your top concerns when dealing with an outage, but you also need to be safe. You need a safety solution partner like First Choice Safety that strives to keep your team working, and has the flexibility and resources to staff any project you throw at us when you need us.<br><br>Our number one goal is to ensure your project is handled safely and completed on time. Our team also offers the professionalism, dedication, and attention to detail necessary to build great working relationships with everyone on site.</p>
+      {% end_module_attribute %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section
+    full_width=false
+  %}
+    {% dnd_column
+      offset=0,
+      width=3
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/sidebar-sticky",
+          offset=0,
+          width=12,
+          simplemenu_field=[ {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Safety Professionals",
+            "linkUrl" : "#saftey-professionals",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Processes and Planning",
+            "linkUrl" : "#processes-planning",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Environment Assesment",
+            "linkUrl" : "#environment-assesment",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Training",
+            "linkUrl" : "#training",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Products",
+            "linkUrl" : "#products",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "FAQs",
+            "linkUrl" : "#faqs",
+            "type" : "URL_LINK"
+          }, {
+            "children" : [ ],
+            "isPublished" : false,
+            "linkLabel" : "Resources",
+            "linkUrl" : "#resources",
+            "type" : "URL_LINK"
+          } ]
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% dnd_column
+      offset=3,
+      width=9
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="@hubspot/rich_text",
+          offset=0,
+          width=12
+        %}
+          {% module_attribute "html" %}
+            <a id="saftey-professionals" data-hs-anchor="true"></a>
+            <h2 style="text-align: center;">What Safety Professionals do you need?</h2>
+            <h3 style="text-align: center;">First Class experienced team to meet your needs</h3>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=4
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/linked_image",
+              offset=0,
+              width=12,
+              horizontal_alignment="CENTER",
+              img={
+                "alt" : "Rectangle 288",
+                "height" : 247,
+                "loading" : "lazy",
+                "max_height" : 247,
+                "max_width" : 472,
+                "size_type" : "auto_custom_max",
+                "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                "width" : 472
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column
+          offset=4,
+          width=4
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/linked_image",
+              offset=0,
+              width=12,
+              horizontal_alignment="CENTER",
+              img={
+                "alt" : "Rectangle 288",
+                "height" : 247,
+                "loading" : "lazy",
+                "max_height" : 247,
+                "max_width" : 472,
+                "size_type" : "auto_custom_max",
+                "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                "width" : 472
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column
+          offset=8,
+          width=4
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/linked_image",
+              offset=0,
+              width=12,
+              horizontal_alignment="CENTER",
+              img={
+                "alt" : "Rectangle 288",
+                "height" : 247,
+                "loading" : "lazy",
+                "max_height" : 247,
+                "max_width" : 472,
+                "size_type" : "auto_custom_max",
+                "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                "width" : 472
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <a id="processes-planning" data-hs-anchor="true"></a>
+                <h2 style="text-align: center;">Do you need help with your processes?</h2>
+                <h3 style="text-align: center;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</h3>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column
+              offset=0,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=4,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=8,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <a id="environment-assesment" data-hs-anchor="true"></a>
+                <h2 style="text-align: center;">Environment Assessment&nbsp;</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column
+              offset=0,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=4,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=8,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <a id="training" data-hs-anchor="true"></a>
+                <h2 style="text-align: center;">Are you struggling with training?&nbsp;</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column
+              offset=0,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=4,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=8,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h2 style="text-align: center;">Developing a Safety Culture</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column
+              offset=0,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=4,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=8,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <a id="products" data-hs-anchor="true"></a>
+                <h2 style="text-align: center;">Do you need guidance on which products best suit your needs?</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_column
+              offset=0,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=4,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+            {% dnd_column
+              offset=8,
+              width=4
+            %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/linked_image",
+                  offset=0,
+                  width=12,
+                  horizontal_alignment="CENTER",
+                  img={
+                    "alt" : "Rectangle 288",
+                    "height" : 247,
+                    "loading" : "lazy",
+                    "max_height" : 247,
+                    "max_width" : 472,
+                    "size_type" : "auto_custom_max",
+                    "src" : "https://21636115.fs1.hubspotusercontent-na1.net/hubfs/21636115/Rectangle%20288.png",
+                    "width" : 472
+                  }
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module
+                  path="@hubspot/rich_text",
+                  offset=0,
+                  width=12
+                %}
+                  {% module_attribute "html" %}
+                    <h3 style="font-size: 28px; font-family: 'Roboto Light'; font-weight: 400; margin-bottom: 10px; text-align: left;">Confined Space Rescue Services</h3>
+                    <p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h2 style="text-align: center;">Do you need guidance on which products best suit your needs?</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <h3 style="text-align: center;">Other Managers were interested in:</h3>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/first-theme-hs/modules/products",
+          offset=0,
+          width=12
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+          offset=0,
+          width=12,
+          padding={
+            "default" : {
+              "top" : "100px"
+            }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="@hubspot/rich_text",
+              offset=0,
+              width=12
+            %}
+              {% module_attribute "html" %}
+                <a id="faqs" data-hs-anchor="true"></a>
+                <h2 style="text-align: center;">FAQs</h2>
+              {% end_module_attribute %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% dnd_row %}
+            {% dnd_module
+              path="/first-theme-hs/modules/accordion",
+              offset=0,
+              width=12
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+ 
+
+{% end_dnd_area %}
+{% endblock body %}

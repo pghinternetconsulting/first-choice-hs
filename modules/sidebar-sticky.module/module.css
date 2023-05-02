@@ -20,3 +20,16 @@
         top: 150px;
     }
 }
+
+.sidebar-sticky__section a[data-hs-anchor="true"] {
+    display: block;
+    padding-top: 140px;
+    margin-top: -140px;
+}
+
+@media (max-width: 768px) {
+    .sidebar-sticky__section a[data-hs-anchor="true"] {
+        padding-top: 6em;
+        margin-top: -6em;
+    }
+}
