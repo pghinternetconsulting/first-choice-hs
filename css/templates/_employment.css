@@ -221,6 +221,10 @@
     height: calc(100vh - 118px);
     overflow: scroll;
   }
+
+  .employment__form__wrapper::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) {
