@@ -10,6 +10,7 @@
     text-transform: uppercase;
 }
 
+.sidebar-sticky a.active, 
 .sidebar-sticky a:hover {
     color: var(--color-primary) !important;
 }
