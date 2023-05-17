@@ -89,8 +89,7 @@
       "controlling_value_regex" : "icon",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "type" : "richtext"
   }, {
@@ -106,8 +105,7 @@
       "controlling_value_regex" : "image",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "responsive" : true,
     "resizable" : true,

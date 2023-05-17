@@ -137,8 +137,7 @@
           "controlling_value_regex" : "color",
           "property" : null,
           "operator" : "EQUAL",
-          "access" : null,
-          "hidden_subfields" : null
+          "access" : null
         },
         "type" : "color",
         "default" : {
@@ -158,8 +157,7 @@
           "controlling_value_regex" : "gradient",
           "property" : null,
           "operator" : "EQUAL",
-          "access" : null,
-          "hidden_subfields" : null
+          "access" : null
         },
         "type" : "gradient",
         "default" : { }
@@ -176,8 +174,7 @@
           "controlling_value_regex" : "image",
           "property" : null,
           "operator" : "EQUAL",
-          "access" : null,
-          "hidden_subfields" : null
+          "access" : null
         },
         "type" : "backgroundimage",
         "default" : {

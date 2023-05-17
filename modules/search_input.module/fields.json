@@ -54,8 +54,7 @@
       "access" : {
         "operator" : "HAS_ALL",
         "scopes" : [ "sitepages-access" ]
-      },
-      "hidden_subfields" : null
+      }
     },
     "display" : "checkbox",
     "type" : "boolean",
@@ -96,8 +95,7 @@
       "access" : {
         "operator" : "HAS_ALL",
         "scopes" : [ "service-knowledge-access" ]
-      },
-      "hidden_subfields" : null
+      }
     },
     "display" : "checkbox",
     "type" : "boolean",

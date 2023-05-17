@@ -96,8 +96,7 @@
     "controlling_value_regex" : "true",
     "property" : null,
     "operator" : "EQUAL",
-    "access" : null,
-    "hidden_subfields" : null
+    "access" : null
   },
   "allow_new_line" : false,
   "show_emoji_picker" : false,
@@ -171,8 +170,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.featured_image.corner",
@@ -214,8 +212,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.tags.text",
@@ -257,8 +254,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.title.text",
@@ -300,8 +296,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.author.image",
@@ -377,8 +372,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.publish_date.text",
@@ -420,8 +414,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.description.text",
@@ -485,8 +478,7 @@
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
+      "access" : null
     },
     "children" : [ {
       "id" : "styles.button.text",
