@@ -126,10 +126,12 @@
   --color-tertiary: #77bf45;
   --color-font: {{ body_font.color }};
   --color-light-gray: #f2f2f2;
+  --color-background-light: #f2f2f2;
   --container-width: 1520px;
   --font-primary: {{ primary_font.font }};
   --font-secondary: {{ secondary_font.font }};
 }
+
 
 {###########################################################################}
 {##################   2. Containers / Grid / DND areas   ###################}
@@ -552,7 +554,8 @@ tfoot td {
 
 .blog-post,
 .blog-header__inner,
-.blog-related-posts {
+.blog-related-posts,
+.blog__sidebar {
   padding: {{ theme.spacing.vertical_spacing ~ 'px' }} 0;
 }
 
@@ -710,3 +713,5 @@ tfoot td {
   color: {{ h3_font.color }};
   font-size: {{ h3_font.size ~ h3_font.size_unit }};
 }
+
+

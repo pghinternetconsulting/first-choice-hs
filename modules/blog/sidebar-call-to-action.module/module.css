@@ -1,0 +1,22 @@
+.sidebar-cta {
+	background-color: #111;
+	padding: 30px;
+	color: white;
+}
+
+.sidebar-cta h2 {
+	color: white;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	line-height: 1.2;
+	font-size: 28px;
+}
+
+.sidebar-cta .button {
+	margin-bottom: 1em;
+}
+
+.sidebar-cta img {
+	width: 100%;
+	height: auto;
+}

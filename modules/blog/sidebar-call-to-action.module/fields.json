@@ -1,0 +1,65 @@
+[ {
+  "id" : "54a7b5be-9de8-2fef-8793-02f8e067de6b",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "https://www.agilefleet.com/hubfs/call-center%20agent%20with%20headset%20working.webp",
+    "alt" : "call-center agent with headset working",
+    "loading" : "lazy",
+    "width" : 868,
+    "height" : 440,
+    "max_width" : 868,
+    "max_height" : 440
+  }
+}, {
+  "id" : "8e4c2e18-2a20-1f5e-fd7b-0b9ab268dfc0",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Find out what you can save by requesting a Custom Fleet Savings Assessment."
+}, {
+  "id" : "02563c9d-012c-a433-ad10-37690d5c0afb",
+  "name" : "link_text",
+  "display_width" : null,
+  "label" : "Link Text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Request Your Report"
+}, {
+  "id" : "233d66ab-2243-4d2e-513b-04463e4ade12",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 3767017182
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+} ]

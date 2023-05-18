@@ -1,0 +1,35 @@
+[ {
+  "id" : "54a7b5be-9de8-2fef-8793-02f8e067de6b",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : ""
+  }
+}, {
+  "id" : "8e4c2e18-2a20-1f5e-fd7b-0b9ab268dfc0",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Find out what you can save by requesting a Custom Fleet Savings Assessment."
+}, {
+  "id" : "1f0bcf36-0bfc-cb88-6b7e-31b1ded3ab18",
+  "name" : "cta_button",
+  "display_width" : null,
+  "label" : "CTA Button",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta"
+} ]

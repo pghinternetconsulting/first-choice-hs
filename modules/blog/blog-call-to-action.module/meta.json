@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "BLOG_POST" ],
+  "module_id" : 107543112807,
+  "label" : "Blog Call to Action",
+  "is_available_for_new_content" : true
+}
