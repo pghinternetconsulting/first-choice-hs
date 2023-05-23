@@ -1,3 +1,16 @@
 <div class="sidebar-sticky">
-    {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+    <div class="sidebar-sticky--mobile-label">
+		<p>Do we need a label here?</p>
+	</div>
+	<div class="sidebar-sticky--mobile-trigger hs-menu-item_link"> 
+		<span class="sidebar-sticky--mobile-trigger-text"></span>
+		<label class="sidebar-sticky--mobile-trigger-arrow" for="{{ node.label }}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			</svg>
+		</label>
+	</div>
+    <div class="sidebar-sticky--menu">
+        {% simple_menu menu_tree="{{ module.simplemenu_field }}" %}
+    </div>
 </div>
