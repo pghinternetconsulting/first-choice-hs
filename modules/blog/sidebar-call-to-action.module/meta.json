@@ -2,7 +2,7 @@
   "global" : true,
   "smart_type" : "NOT_SMART",
   "host_template_types" : [ "BLOG_POST" ],
-  "module_id" : 98756921674,
+  "module_id" : 116089515642,
   "label" : "Sidebar Call to Action",
   "is_available_for_new_content" : true
 }
