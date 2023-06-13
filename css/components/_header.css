@@ -164,6 +164,11 @@
   transition: background-color 0.3s;
 }
 
+.header__search .hs-search-field__suggestions li a .hs-search-highlight {
+  color: var(--color-primary) !important;
+  padding: 0;
+}
+
 .header__search .hs-search-field__suggestions #results-for {
   display: none;
 }
