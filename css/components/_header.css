@@ -159,14 +159,18 @@
 
 .header__search .hs-search-field__suggestions li a {
   color: #494a52;
-  padding: 0.35rem 0.7rem;
+  padding: 0.7rem;
   text-decoration: none;
   transition: background-color 0.3s;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .header__search .hs-search-field__suggestions li a .hs-search-highlight {
-  color: var(--color-primary) !important;
   padding: 0;
+  letter-spacing: 0;
+  font-weight: normal;
 }
 
 .header__search .hs-search-field__suggestions #results-for {

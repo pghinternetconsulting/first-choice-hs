@@ -78,11 +78,13 @@
         </div>
         {% endif %}
         <div class="header__search header--element">
-          {% module "site_search"
-          path="@hubspot/search_input",
+          {% module "search"
+          path="../../modules/search_input",
           label="",
           field_label="",
-          placeholder=""
+          placeholder="",
+          content_types="{ "website_pages": true, "landing_pages": false, "blog_posts": false, "knowledge_articles":
+          false }"
           %}
         </div>
       </div>

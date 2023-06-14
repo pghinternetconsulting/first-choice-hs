@@ -63,12 +63,12 @@ var hsSearch = function(_instance) {
       );
       response.results.forEach(function(val, index) {
         items.push(
-          "<li id='result" +
+          "<li data-test='test' id='result" +
             index +
             "'><a href='" +
             val.url +
             "'>" +
-            val.title +
+            val.title.replace(/<[^>]*>/g, '').replace('| First Choice Safety Solutions', '') +
             '</a></li>'
         );
       });
