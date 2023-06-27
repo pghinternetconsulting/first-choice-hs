@@ -31,16 +31,16 @@
                 {% if number < 1 %} {% else %} {{ finishedPostWords|round }} minute read {% endif %} 
             </div>
             {% endif %}
-            <div class="blog-post__meta">
-                <!---<a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">
-                {{ content.blog_post_author.display_name }}
-                </a> --->
+            
+        </div>
+        <div class="blog-post__meta">
+                Author: {{ content.blog_post_author.display_name }}
+              <!--  <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author"></a> -->
                <!--  <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
                 {{ content.publish_date_localized }}
                 </time> -->
                  
             </div>
-        </div>
         {% if content.post_list_summary_featured_image %}
         <div class="hs-featured-image-wrapper">
              <img src="{{ content.post_list_summary_featured_image }}" class="{# hs-featured-image #}">

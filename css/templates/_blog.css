@@ -700,6 +700,7 @@ h2.hs-blog-post-listing__post-title a {
 .blog-post__tags,
 .blog-post__meta {
 	margin-bottom: 0.5em;
+	font-size: 14px;
 }
 
 .blog__search_topics__wrapper {
@@ -998,6 +999,7 @@ article.hs-blog-post-listing__post .hs-blog-post-listing__post-content {
 .minutes-read {
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px !important;
 }
 .minutes-read__style {
 	color: var(--color-body-text);
