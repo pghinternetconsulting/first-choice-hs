@@ -1,6 +1,8 @@
 {
   "global" : false,
+  "icon" : "fontawesome-5.14.0:Audible",
   "host_template_types" : [ "PAGE" ],
   "module_id" : 111017456991,
+  "label" : "Accordion",
   "is_available_for_new_content" : true
 }

@@ -24,29 +24,22 @@
     "type" : "text",
     "default" : "Example Accordion Title"
   }, {
-    "id" : "f7d04da8-9c91-9f21-d5d9-24be93f40c7a",
+    "id" : "4ffd276e-b1bc-b7ae-81f1-d76393575ae0",
     "name" : "content",
     "display_width" : null,
     "label" : "Content",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Example accordion descriptions "
+    "type" : "richtext"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
   "default" : [ {
-    "title" : "Example Accordion Title",
-    "content" : "Example accordion descriptions "
+    "title" : "Example Accordion Title"
   }, {
-    "title" : "Example Accordion Title",
-    "content" : "Example accordion descriptions "
+    "title" : "Example Accordion Title"
   }, {
-    "title" : "Example Accordion Title",
-    "content" : "Example accordion descriptions "
+    "title" : "Example Accordion Title"
   } ]
 } ]
