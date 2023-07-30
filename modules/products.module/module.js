@@ -4,6 +4,7 @@ var hsResultsPage = function (_resultsClass) {
       resultsSection = _instance;
 
     searchPath = _instance.getAttribute("data-api-term");
+    firstUrl =  'https://shop.firstchoicesafetysolutions.com/'
     //console.log(resultTemplate);
     //console.log(searchPath);
 
@@ -48,7 +49,7 @@ var hsResultsPage = function (_resultsClass) {
         "<p>Try rewording your query, or browse through our site.</p></div>";
     }
     function httpRequest(term, offset) {
-      var requestUrl = "https://firstpro.wpengine.com/wp-json/v1/products/mission/"+ searchPath,
+      var requestUrl = firstUrl + "/wp-json/v1/products/mission/" + searchPath,
         request = new XMLHttpRequest();
         console.log(requestUrl)
 
