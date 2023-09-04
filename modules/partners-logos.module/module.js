@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) { 
     $(".partner-inner").slick({
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 7,
+        slidesToScroll: 7,
         autoplay: true,
         autoplaySpeed: 3000,
         dots: false,
