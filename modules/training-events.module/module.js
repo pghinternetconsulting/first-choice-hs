@@ -57,15 +57,17 @@ var hsResultsPage = function (_resultsClass) {
   
         resultsSection.appendChild(newResult);
       }
-      function fillResults(results) {
+      function fillResults(results, searchPath) {
         results.forEach(function (result, i) {
-          console.log(result)
-          addResult(
-            result.url,
-            result.cost,
-            result.utc_start_date,
-            result.utc_end_date
-          );
+            // console.log(result)
+            if (result.title == searchPath) {
+            addResult(
+              result.url,
+              result.cost,
+              result.utc_start_date,
+              result.utc_end_date
+            );
+          }
         });
       }
       function emptyResults(searchedTerm) {
@@ -75,7 +77,7 @@ var hsResultsPage = function (_resultsClass) {
           '"</p></div>' 
       }
       function httpRequest(term, offset) {
-        var requestUrl = firstUrl + "/wp-json/tribe/events/v1/events/?search="+ encodeURIComponent(searchPath),
+        var requestUrl = firstUrl + "/wp-json/tribe/events/v1/events/?search="+ encodeURIComponent(searchPath);
           request = new XMLHttpRequest();
           console.log(requestUrl)
   
@@ -83,10 +85,11 @@ var hsResultsPage = function (_resultsClass) {
         request.onload = function () {
           if (request.status >= 200 && request.status < 400) {
             var data = JSON.parse(request.responseText);
-            console.log(data);
+            // console.log(data);
+            // console.log('DIEGO');
             if (data.total > 0) {
-              console.log(data);
-              fillResults(data.events);
+              // console.log(data);
+              fillResults(data.events, searchPath);
             } else {
               emptyResults(data.searchTerm);
             }
