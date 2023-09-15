@@ -62,14 +62,14 @@ var hsResultsPage = function (_resultsClass) {
       newResult.querySelector(".event__date__end-hour").innerHTML =
         date_end_timeString;
 
-      if (date_start.getFullYear() == date_end.getFullYear()) {
-        newResult.querySelector(".event__end-date__year").remove();
-      }
       if (
         date_start.toLocaleString("en-US", { month: "short" }) ==
-        date_end.toLocaleString("en-US", { month: "short" })
+          date_end.toLocaleString("en-US", { month: "short" }) &&
+        date_start.getFullYear() == date_end.getFullYear()
       ) {
+        newResult.querySelector(".event__month__divider").remove();
         newResult.querySelector(".event__end-date__month").remove();
+        newResult.querySelector(".event__end-date__year").remove();
       }
       if (date_start.getDate() == date_end.getDate()) {
         newResult.querySelector(".event__date__divider").remove();
