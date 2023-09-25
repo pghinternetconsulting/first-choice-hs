@@ -5,6 +5,7 @@
   screenshotPath: ../images/template-previews/contact-us.png
 -->
 {% extends "./layouts/base.html" %}
+{{ require_js(get_asset_url('/first-theme-hs/js/pic-check-ip-location.js'), { position: 'footer', defer:true }) }}
 
 {% block body %}
 {% dnd_area "dnd_area"
