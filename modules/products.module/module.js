@@ -13,6 +13,7 @@ var hsResultsPage = function (_resultsClass) {
       newResult.querySelector(".product__title").innerHTML = title;
       newResult.querySelector(".product__title").href = link;
       newResult.querySelector(".product__link").href = link;
+      newResult.querySelector(".product__link.button").href = link;
       newResult.querySelector(".product__price").innerHTML = price;
 
 
