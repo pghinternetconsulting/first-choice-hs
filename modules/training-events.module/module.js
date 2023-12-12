@@ -6,9 +6,6 @@ var hsResultsPage = function (_resultsClass) {
     searchPath = _instance.getAttribute("data-api-term");
     firstUrl = "https://shop.firstchoicesafetysolutions.com/";
 
-    //console.log(resultTemplate);
-    //console.log(searchPath);
-
     function addResult(url, price, start, end) {
       const date_start = new Date(start);
       const date_start_timeString = `${date_start.getHours()}:${
@@ -29,14 +26,15 @@ var hsResultsPage = function (_resultsClass) {
       ];
       var existing_months = existing_months.map((element) => element.outerText);
 
-      console.log(existing_months);
-
       if (
         existing_months.includes(
           date_start.toLocaleString("en-US", { month: "short" })
         )
       ) {
-        newResult.querySelector(".event__month").remove();
+        newResult.querySelector(".event__start-date__year").innerHTML =
+          date_start.getFullYear();
+        newResult.querySelector(".event__start-date__month").innerHTML =
+          date_start.toLocaleString("en-US", { month: "short" });
       } else {
         newResult.querySelector(".event__start-date__year").innerHTML =
           date_start.getFullYear();
