@@ -43,3 +43,26 @@
 .training-listing__topics {
     background-color: var(--color-light-gray);
 }
+
+@media screen and (max-width: 499px){
+    .event{
+        flex-flow: column;
+    }
+    .event > div, .event > p, .event > a{
+        margin-bottom: 10px !important;
+        font-weight: bold !important;
+    }
+    .event p{
+        font-weight: bold !important;
+    }
+    .event__month hr{
+        display: none;
+    }
+    .event__month{
+        margin-bottom: 0px !important; 
+        justify-content: center;
+    }
+    .event__month p{
+        font-weight: bold;
+    }
+}
