@@ -1,5 +1,6 @@
 {
   "global" : false,
+  "content_types" : [ "BLOG_POST" ],
   "host_template_types" : [ "BLOG_POST" ],
   "module_id" : 116083946157,
   "label" : "Blog Call to Action",

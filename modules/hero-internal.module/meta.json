@@ -11,6 +11,7 @@
   } ],
   "extra_classes" : "widget-type-menu",
   "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "master_language" : "en",
   "icon" : "fontawesome-5.14.0:Angle%20Double%20Right:SOLID",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],

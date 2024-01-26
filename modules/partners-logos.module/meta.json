@@ -1,5 +1,6 @@
 {
   "global" : true,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "smart_type" : "NOT_SMART",
   "js_render_options" : {
     "defer" : true
