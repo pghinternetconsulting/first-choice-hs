@@ -48,6 +48,8 @@
                                     // this is the title of the position you are visiting slugified.
                                     const positionSlugify = "{{ content.name | striptags | lower | replace(' ', '-') }}";
 
+                                    console.log(positionSlugify)
+
                                     // removing any other option that could be manually added.
                                     const $select = document.querySelector('.hs-position select');
                                     for (let i = $select.options.length; i >= 0; i--) {
@@ -59,7 +61,7 @@
                                     // value would be the option value
                                     const myOptions = {
                                             {% for rec_post in rec_posts %}
-                                    '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', ' - ')}}'{% if not loop.last %}, {% endif %}
+                                    '{{ rec_post.name }}' : '{{ rec_post.name | lower | replace(' ', '-')}}'{% if not loop.last %}, {% endif %}
                                     {% endfor %}
                                 };
 
