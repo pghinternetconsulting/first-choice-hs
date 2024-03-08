@@ -1,0 +1,158 @@
+{% macro defaultItemClasses(level) %}
+  {{ { "class": "no-submenu megamenu--item-{{level}}" }|xmlattr }}
+{% endmacro %}
+
+{% macro childClasses(level, menu_type) %}
+  {% if menu_type != 'menu' %}
+    {{ { "class": "has-submenu  megamenu--item-{{level}} " }|xmlattr }}
+  {% else %}
+    {{ { "class": "has-submenu  megamenu--item-{{level}} menu-flyout--item-{{level}} " }|xmlattr }}
+  {% endif %}
+{% endmacro %}
+
+{% macro activeNode() %}
+  {{ {"class": "menu-link active-item", "aria-current": "page"}|xmlattr }}
+{% endmacro %}
+
+{% macro linkTarget() %}
+  {{ {"target": "_blank"}|xmlattr }}
+{% endmacro %}
+
+{% macro link(node, highlight, cta, item ) %}
+
+<li {{ childClasses(node.level, item.menu_type) if node.children else defaultItemClasses(node.level) }}>
+
+  {% set link_url = item.menu_type == "simple_link" ? item.simple_link.menu_simple_link.url.href : node.url %}
+  {% set link_text = item.menu_type == "simple_link" ? item.simple_link.link_text  : node.label %}
+
+
+  {% if node.children && item.menu_type != "simple_link" %}
+    <span class="megamenu--item-link {{ item.menu_type }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
+    node.linkTarget }}>{{ node.label }}</span>
+  {% else %}
+  <a class="megamenu--item-link {{ item.menu_type }}" href="{{ link_url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
+    node.linkTarget }}>{{ link_text }}</a>
+  {% endif %}
+
+  {% if item.menu_type != "simple_link"%}
+
+    {% if node.children and node.level == 1  %}
+      <div class="megamenu--submenu megamenu--submenu__columns-{{ item.menu_columns || 1 }}">
+        <div class="megamenu--submenu--hightlight">
+          <p class="megamenu--submenu--hightlight__title">{{ highlight.title }}</p>
+          <p class="megamenu--submenu--hightlight__description">{{ highlight.highlight_sentence}}</p>
+          <a class="megamenu--submenu--hightlight__link" href="{{link_url}}">{{ highlight.link_text}}</a>
+        </div>
+        <div class="megamenu--submenu-menu-wrapper"> 
+          {{ renderNavigation(node) }}
+        </div>
+      </div>
+    {% else %}
+      {{ renderNavigation(node) }}
+    {% endif %}
+    
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% macro renderNavigation(menuTree) %}
+
+  {% set level = level + 1 %}
+
+  {# check if children are also submenus or just list items #}
+  {% set columns = {columns : 0} %}
+  {% for node in menuTree.children %}
+    {% if node.children %}
+      {% do columns.update({columns: columns.columns + 1 }) %}
+    {% endif %}
+  {% endfor %}
+
+  
+
+  <ul class="megamenu--submenu-menu level-{{ level }} megamenu--submenu-menu__columns-{{ item.menu_columns || 1 }} has-submenus-{{ columns.columns != 0 }}" aria-hidden="{{ level != 1 }}">
+    {% for node in menuTree.children %}
+      {{ link(node) }}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+
+
+
+<ul class="megamenu-2">
+
+  {% for item in module.menu_item %}
+    {% for node in menu(item.mega_menu).children %}
+      {{ link(node, item.highlight, item.cta_field, item) }}
+    {% endfor %}
+
+  {% endfor %}
+
+</ul>
+
+
+
+{% macro defaultMobileItemClasses() %}
+{{
+{
+"class": "no-submenu mobile-menu--menu-item"
+}|xmlattr
+}}
+{% endmacro %}
+
+{% macro childMobileClasses() %}
+{{
+{
+"class": "has-submenu mobile-menu--menu-item"
+}|xmlattr
+}}
+{% endmacro %}
+
+{% macro activeMobileNode() %}
+{{
+{"class": "mobile-menu--menu-link active-item",
+"aria-current": "page"}|xmlattr
+
+}}
+{% endmacro %}
+
+{% macro linkMobileTarget() %}
+{{
+{"target": "_blank"}|xmlattr
+}}
+{% endmacro %}
+
+{% macro linkMobile(node) %}
+
+<li {{ childMobileClasses() if node.children else defaultMobileItemClasses() }}>
+  <a class="mobile-menu--menu-link" href="{{ node.url }}" {{ activeMobileNode() if node.activeNode }} {{
+    linkMobileTarget() if node.linkMobileTarget }}>{{ node.label }}</a>
+
+  {% if node.children %}
+  <input type="checkbox" id="{{ node.label }}" class="submenu-toggle">
+  <label class="mobile-menu--item-plus-icon" for="{{ node.label }}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-plus"
+      viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+    </svg>
+  </label>
+  {{ renderMobileNavigation(node) }}
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% macro renderMobileNavigation(menuTree) %}
+
+{% set level = level + 1 %}
+{% set class = ( level == 1 ) ? 'mobile-menu--menu' : 'mobile-menu--submenu' %}
+
+<ul class="{{ class }} level-{{ level }}" aria-hidden="{{ level != 1 }}">
+  {% for node in menuTree.children %}
+  {{ linkMobile(node) }}
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+<nav class="mobile-menu">
+  {{ renderMobileNavigation(menu(module.mobile_menu)) }}
+</nav>

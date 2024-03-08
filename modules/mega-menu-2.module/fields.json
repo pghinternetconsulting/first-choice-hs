@@ -1,0 +1,296 @@
+[ {
+  "id" : "e820073a-f3a5-58e6-1003-37551ac7eca0",
+  "name" : "menu_item",
+  "display_width" : null,
+  "label" : "Desktop Menu",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : 3,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "d7be977f-a570-f8c3-9f39-aed1a410bd3b",
+    "name" : "menu_type",
+    "display_width" : null,
+    "label" : "Menu Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "megamenu", "Meg Menu" ], [ "menu", "Flyout" ], [ "simple_link", "Simple Link" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "megamenu"
+  }, {
+    "id" : "d58cf8f6-bfa3-1cd0-9144-115b9b893dc4",
+    "name" : "mega_menu",
+    "display_width" : null,
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "menu_item.menu_type",
+      "controlling_value_regex" : "simple_link",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
+    "type" : "menu",
+    "default" : 83813296199
+  }, {
+    "id" : "62793ac9-1746-9d07-1f67-c816d2687579",
+    "name" : "simple_link",
+    "display_width" : null,
+    "label" : "Simple Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "menu_item.menu_type",
+      "controlling_value_regex" : "simple_link",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "456232d3-62de-9ad2-6501-5a5be679a803",
+      "name" : "menu_simple_link",
+      "display_width" : null,
+      "label" : "Menu Simple Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "91e25cdf-50fa-7a26-e6c4-37b8b51fee3f",
+      "name" : "link_text",
+      "display_width" : null,
+      "label" : "Link Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "type" : "group",
+    "default" : {
+      "menu_simple_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "19fd74dd-50db-081d-a82a-f348a5f1f41e",
+    "name" : "highlight",
+    "display_width" : null,
+    "label" : "Highlight",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "53b7dd22-ec07-c99f-a604-b8e4b852ce2b",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Workplace Safety Services"
+    }, {
+      "id" : "73ef2262-5c9a-5177-c181-e122589aae6a",
+      "name" : "highlight_sentence",
+      "display_width" : null,
+      "label" : "Highlight Sentence",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "First Choice Safety seamlessly integrates with your team and employs a proven human performance safety observations and coaching strategy to ensure your employees and contractors have the oversight and resources needed to complete any task safely."
+    }, {
+      "id" : "1b80eacd-28be-95e6-441d-c68e678cf046",
+      "name" : "link_text",
+      "display_width" : null,
+      "label" : "Link Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Services Overview"
+    }, {
+      "id" : "8da460c3-0cc6-a3da-d2bb-b15774f67310",
+      "name" : "link_field",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : 84249119078,
+          "href" : null,
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "type" : "group",
+    "default" : {
+      "title" : "Workplace Safety Services",
+      "highlight_sentence" : "First Choice Safety seamlessly integrates with your team and employs a proven human performance safety observations and coaching strategy to ensure your employees and contractors have the oversight and resources needed to complete any task safely.",
+      "link_text" : "Services Overview",
+      "link_field" : {
+        "url" : {
+          "content_id" : 84249119078,
+          "href" : null,
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "5e7338f0-7dfb-5b9e-a5a7-3a38c1024d49",
+    "name" : "menu_columns",
+    "display_width" : null,
+    "label" : "Menu Columns",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "1", "1 column" ], [ "2", "2 columns" ], [ "3", "3 columns" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "menu_type" : "megamenu",
+    "mega_menu" : 83813296199,
+    "simple_link" : {
+      "menu_simple_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "highlight" : {
+      "title" : "Workplace Safety Services",
+      "highlight_sentence" : "First Choice Safety seamlessly integrates with your team and employs a proven human performance safety observations and coaching strategy to ensure your employees and contractors have the oversight and resources needed to complete any task safely.",
+      "link_text" : "Services Overview",
+      "link_field" : {
+        "url" : {
+          "content_id" : 84249119078,
+          "href" : null,
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "menu_type" : "megamenu",
+    "mega_menu" : 83813296199,
+    "simple_link" : {
+      "menu_simple_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "highlight" : {
+      "title" : "Workplace Safety Services",
+      "highlight_sentence" : "First Choice Safety seamlessly integrates with your team and employs a proven human performance safety observations and coaching strategy to ensure your employees and contractors have the oversight and resources needed to complete any task safely.",
+      "link_text" : "Services Overview",
+      "link_field" : {
+        "url" : {
+          "content_id" : 84249119078,
+          "href" : null,
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "menu_type" : "megamenu",
+    "mega_menu" : 83813296199,
+    "simple_link" : {
+      "menu_simple_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "highlight" : {
+      "title" : "Workplace Safety Services",
+      "highlight_sentence" : "First Choice Safety seamlessly integrates with your team and employs a proven human performance safety observations and coaching strategy to ensure your employees and contractors have the oversight and resources needed to complete any task safely.",
+      "link_text" : "Services Overview",
+      "link_field" : {
+        "url" : {
+          "content_id" : 84249119078,
+          "href" : null,
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ]
+}, {
+  "id" : "ad83fc71-eebc-362e-a27a-61b4afd97f5e",
+  "name" : "mobile_menu",
+  "display_width" : null,
+  "label" : "Mobile Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 2558357706
+} ]

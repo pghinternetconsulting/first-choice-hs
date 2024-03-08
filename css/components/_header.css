@@ -12,14 +12,15 @@
   padding: 0 1rem;
 }
 
-.header__row-1,
-.header__row-2 {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-}
-
 @media (max-width: 991px) {
+  .header__row-1,
+  .header__row-2 {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
   .header__container {
     flex-direction: column;
     padding: 1rem 0 0;
@@ -103,7 +104,7 @@
     fill: #000 !important;
   }
 
-  .mobile-search-icon {
+  .header__search--toggle {
     display: block !important;
   }
 
@@ -177,9 +178,13 @@
   display: none;
 }
 
-.mobile-search-icon {
-  display: none;
+@media (min-width: 991px) {
+  .header__search--toggle,
+  .header__navigation--toggle {
+    display: none;
+  }
 }
+
 
 .header__column {
   width: 100% !important;
@@ -662,7 +667,7 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
 
 .header-home .hs-search-field__input,
 .header-internal .hs-search-field__input {
-  width: 317px;
+  width: 220px;
   border-radius: 7px;
   border: none;
   margin-left: 10px;
@@ -674,7 +679,7 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
   justify-content: flex-end;
 }
 
-body:not(.hs-content-id-78640669571, .hs-content-id-111007323013){
+body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717){
   padding-top: 120px;
 }
 
@@ -711,7 +716,8 @@ body:not(.hs-content-id-78640669571, .hs-content-id-111007323013){
     color: #4b9343 !important;
   }
 
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"] header {
+  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"] header,
+  div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] header {
     background-color: transparent !important;
   }
 
@@ -778,7 +784,7 @@ body:not(.hs-content-id-78640669571, .hs-content-id-111007323013){
     padding: 0px;
   }
 
-  body:not(.hs-content-id-78640669571, .hs-content-id-111007323013) {
+  body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) {
     padding-top: 66px;
   }
 }

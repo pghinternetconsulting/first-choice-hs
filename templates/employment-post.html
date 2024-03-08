@@ -48,8 +48,6 @@
                                     // this is the title of the position you are visiting slugified.
                                     const positionSlugify = "{{ content.name | striptags | lower | replace(' ', '-') }}";
 
-                                    console.log(positionSlugify)
-
                                     // removing any other option that could be manually added.
                                     const $select = document.querySelector('.hs-position select');
                                     for (let i = $select.options.length; i >= 0; i--) {
