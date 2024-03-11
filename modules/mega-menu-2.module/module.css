@@ -54,6 +54,18 @@
     border-bottom: 4px solid #4b9343 !important;
   }
 
+  .megamenu--item-1:hover > .megamenu--item-link .megamenu__chevron,
+  .megamenu--item-1 > .megamenu--item-link.active-item .megamenu__chevron {
+    stroke: #4b9343;
+    color: #4b9343;
+  }
+
+  .megamenu__chevron {
+    margin-left: 5px;
+    stroke: var(--color-font);
+    stroke-width: 2px;
+  }   
+
   /* Mega submenu */
   .megamenu--item-1.active > .megamenu--submenu {
     opacity: 1;

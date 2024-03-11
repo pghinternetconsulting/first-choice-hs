@@ -657,6 +657,10 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
   color: #ffffff;
 }
 
+.header-home .megamenu__chevron {
+  stroke: white;
+}
+
 /* MENU TEXT BLACK ON SCROLL */
 div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky li a,
 div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky li span,

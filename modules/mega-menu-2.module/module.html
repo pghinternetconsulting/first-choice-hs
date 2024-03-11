@@ -28,7 +28,14 @@
 
   {% if node.children && item.menu_type != "simple_link" %}
     <span class="megamenu--item-link {{ item.menu_type }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
-    node.linkTarget }}>{{ node.label }}</span>
+    node.linkTarget }}>{{ node.label }}
+    {% if node.children %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="megamenu__chevron" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+      </svg>
+    {% endif %}
+    
+    </span>
   {% else %}
   <a class="megamenu--item-link {{ item.menu_type }}" href="{{ link_url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
     node.linkTarget }}>{{ link_text }}</a>
