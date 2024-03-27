@@ -11,5 +11,12 @@ megamenus.forEach(function(megamenu) {
         otherMegamenu.classList.remove('active');
       }
     });
+
+    // when click outside of the megamenu, remove active class
+    document.addEventListener('click', function(event) {
+      if (!megamenu.contains(event.target)) {
+        megamenu.classList.remove('active');
+      }
+    });
   });
 });

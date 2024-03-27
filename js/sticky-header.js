@@ -4,23 +4,17 @@ jQuery(document).ready(function ($) {
 	};
 
 	function scrollFunction() {
+		console.log('scrollFunction')
+		const header = document.querySelector('header.header');
+		console.log(header)
+
 		if (
 			document.body.scrollTop > 60 ||
 			document.documentElement.scrollTop > 60
 		) {
-			$(
-				'div[data-global-resource-path="first-theme-hs/templates/partials/header.html"]'
-			).addClass("sticky");
-			$(
-				'div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"]'
-			).addClass("sticky");
+		    header.classList.add('sticky');
 		} else {
-			$(
-				'div[data-global-resource-path="first-theme-hs/templates/partials/header.html"]'
-			).removeClass("sticky");
-			$(
-				'div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"]'
-			).removeClass("sticky");
+			header.classList.remove('sticky');
 		}
 	}
 

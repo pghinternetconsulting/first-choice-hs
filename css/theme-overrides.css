@@ -426,6 +426,7 @@ tfoot td {
 
 .header {
   background-color: {{ header_bg_color }};
+  transition: 0.2s;
 }
 
 .menu__link,

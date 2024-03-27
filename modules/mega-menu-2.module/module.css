@@ -41,7 +41,7 @@
     height: 100%;
     padding: 20px 10px;
     text-transform: uppercase;
-    border-bottom: 4px solid transparent !important;
+    color: var(--color-font);
   }
 
   .megamenu--item-1 > .megamenu--item-link:hover {
@@ -51,7 +51,6 @@
   .megamenu--item-1:hover > .megamenu--item-link,
   .megamenu--item-1 > .megamenu--item-link.active-item {
     color: #4b9343;
-    border-bottom: 4px solid #4b9343 !important;
   }
 
   .megamenu--item-1:hover > .megamenu--item-link .megamenu__chevron,

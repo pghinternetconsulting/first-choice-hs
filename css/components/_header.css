@@ -12,6 +12,13 @@
   padding: 0 1rem;
 }
 
+@media (min-width: 992px) {
+  .header__row-1 {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 991px) {
   .header__row-1,
   .header__row-2 {
@@ -347,11 +354,6 @@
     padding-bottom: 0px !important;
   }
 
-  .header-home #nav-icon span,
-  .header-internal #nav-icon span {
-    background: #000 !important;
-  }
-
   .header__navigation--toggle {
     background: none !important;
   }
@@ -609,18 +611,14 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] .
   transition: ease all 0.3s;
 }
 
-.header .h-logo-dark {
+/* this is for home */
+.header:not(.sticky) .h-logo-dark {
   display: none;
+  position: relative;
 }
 
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .h-logo-light,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky .h-logo-light {
+.header.sticky .h-logo-light {
   display: none;
-}
-
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .h-logo-dark,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky .h-logo-dark {
-  display: block;
 }
 
 @media (min-width: 992px) {
@@ -662,11 +660,10 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
 }
 
 /* MENU TEXT BLACK ON SCROLL */
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky li a,
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky li span,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky li a,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky li span {
-  color: #000000;
+div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] {
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 
 .header-home .hs-search-field__input,
@@ -681,10 +678,6 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
   display: flex;
   width: calc(100% - 220px);
   justify-content: flex-end;
-}
-
-body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717){
-  padding-top: 120px;
 }
 
 .menu__item--depth-1 {
@@ -720,8 +713,9 @@ body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id
     color: #4b9343 !important;
   }
 
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"] header,
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] header {
+  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"] header:not(.sticky),
+  div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] header:not(.sticky) {
+    transition: 0.2s;
     background-color: transparent !important;
   }
 
@@ -789,7 +783,7 @@ body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id
   }
 
   body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) {
-    padding-top: 66px;
+    padding-top: 66px !important;
   }
 }
 
@@ -841,4 +835,26 @@ body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id
   .menu__submenu .menu__link {
     padding: 0.2rem 1.05rem !important;
   }
+}
+
+
+/* Sticky header in some pages */
+body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717){
+  padding-top: 120px;
+}
+
+body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717):has(div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"]) .body-container {
+  margin-top: -115px;
+}
+
+/* color of nav items on sticky header in dark pages */
+@media (min-width: 992px) {
+  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) .header:not(.sticky) .megamenu--item-1 > .megamenu--item-link {
+    color: white;
+  }
+
+  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) .header:not(.sticky) .megamenu__chevron {
+    stroke: white;
+  }
+
 }

@@ -144,11 +144,9 @@
 
 @media only screen and (max-width: 767px) {
 	.hs-hero__picture img {
-		max-height: 530px;
 	}
 
 	.hs-hero {
-		max-height: 530px;
 		height: 800px;
 	}
 
