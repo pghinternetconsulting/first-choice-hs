@@ -344,11 +344,6 @@
     margin-top: 70px;
   }
 
-  .header-home {
-    padding: 0px !important;
-    background-color: #ffffff !important;
-  }
-
   .header__container {
     padding-top: 5px !important;
     padding-bottom: 0px !important;
@@ -404,10 +399,6 @@
     -moz-transition: 0.25s ease-in-out;
     -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
-  }
-
-  .header-home.sticky #nav-icon span {
-    background: #000000;
   }
 
   #nav-icon span:nth-child(1) {
@@ -582,49 +573,27 @@
 }
 
 /* Header container */
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] {
-  background-color: #ffffff;
-  position: fixed;
-  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
-  top: 0;
-  z-index: 999;
-  width: 100%;
-}
-
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] .megamenu--item-1>a {
-  color: #000;
-}
-
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] .megamenu--item-1>.active-item {
-  color: #4b9343 !important;
-}
-
-.header-home {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  transition: ease all 0.3s;
-}
-
-.header-internal {
-  transition: ease all 0.3s;
-}
 
 /* this is for home */
-.header:not(.sticky) .h-logo-dark {
+.header:not(.sticky) {
+  background-color: transparent;
+}
+
+.hs-content-id-78640669571 .header:not(.sticky) .h-logo-dark,
+.hs-content-id-111007323013 .header:not(.sticky) .h-logo-dark {
   display: none;
   position: relative;
 }
 
-.header.sticky .h-logo-light {
+body:not(.hs-content-id-78640669571, .hs-content-id-111007323013) .h-logo-light,
+.hs-content-id-78640669571 .header.sticky .h-logo-light,
+.hs-content-id-111007323013 .header.sticky .h-logo-light {
   display: none;
 }
 
 @media (min-width: 992px) {
 
-  div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .header,
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky .header {
+  div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .header {
     background-color: #fff !important;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
     padding-top: 25px;
@@ -632,8 +601,7 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] .
   }
 }
 
-div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .hs-search-field__input,
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"].sticky .hs-search-field__input {
+div[data-global-resource-path="first-theme-hs/templates/partials/header.html"].sticky .hs-search-field__input {
   border: 1px solid #000000;
 }
 
@@ -650,28 +618,12 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home.htm
   border-bottom: 3px;
 }
 
-.header-home li a,
-.header-home li span {
-  color: #ffffff;
-}
-
-.header-home .megamenu__chevron {
-  stroke: white;
-}
 
 /* MENU TEXT BLACK ON SCROLL */
-div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] {
+div[data-global-resource-path="first-theme-hs/templates/partials/header.html"] {
   position: sticky;
   z-index: 999;
   top: 0;
-}
-
-.header-home .hs-search-field__input,
-.header-internal .hs-search-field__input {
-  width: 220px;
-  border-radius: 7px;
-  border: none;
-  margin-left: 10px;
 }
 
 .header__column {
@@ -713,8 +665,7 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
     color: #4b9343 !important;
   }
 
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home.html"] header:not(.sticky),
-  div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"] header:not(.sticky) {
+  div[data-global-resource-path="first-theme-hs/templates/partials/header"] header:not(.sticky) {
     transition: 0.2s;
     background-color: transparent !important;
   }
@@ -725,14 +676,6 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
 
   .menu__submenu--level-2>.menu__item:first-child:before {
     content: unset !important;
-  }
-
-  .header-home li a .hs-highlight-title {
-    color: #333 !important;
-  }
-
-  .header-home li a .hs-highlight-title:hover {
-    color: #4b9343 !important;
   }
 }
 
@@ -745,13 +688,6 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
 }
 
 @media screen and (min-width: 1151px) and (max-width: 1366px) {
-
-  .header-home .hs-search-field__input,
-  .header-internal .hs-search-field__input {
-    width: 200px;
-    margin-left: 0px;
-  }
-
   .header li a,
   .header li span {
     padding: 1.2rem 0.75rem;
@@ -759,13 +695,6 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
 }
 
 @media screen and (min-width: 992px) and (max-width: 1150px) {
-
-  .header-home .hs-search-field__input,
-  .header-internal .hs-search-field__input {
-    width: 170px;
-    margin-left: 0px;
-  }
-
   .header li a,
   .header li span {
     letter-spacing: 0px;
@@ -780,10 +709,6 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
 
   header {
     padding: 0px;
-  }
-
-  body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) {
-    padding-top: 66px !important;
   }
 }
 
@@ -839,21 +764,17 @@ div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.h
 
 
 /* Sticky header in some pages */
-body:not(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717){
-  padding-top: 120px;
-}
-
-body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717):has(div[data-global-resource-path="first-theme-hs/templates/partials/header-home-2.html"]) .body-container {
+body:is(.hs-content-id-78640669571, .hs-content-id-111007323013) .body-container {
   margin-top: -115px;
 }
 
 /* color of nav items on sticky header in dark pages */
 @media (min-width: 992px) {
-  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) .header:not(.sticky) .megamenu--item-1 > .megamenu--item-link {
+  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013) .header:not(.sticky) .megamenu--item-1 > .megamenu--item-link {
     color: white;
   }
 
-  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013, .hs-content-id-159787394717) .header:not(.sticky) .megamenu__chevron {
+  body:is(.hs-content-id-78640669571, .hs-content-id-111007323013) .header:not(.sticky) .megamenu__chevron {
     stroke: white;
   }
 

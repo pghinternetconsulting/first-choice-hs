@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro activeNode() %}
-  {{ {"class": "menu-link active-item", "aria-current": "page"}|xmlattr }}
+  {{ {"class": "megamenu--item-link active-item {{ item.menu_type }}", "aria-current": "page"}|xmlattr }}
 {% endmacro %}
 
 {% macro linkTarget() %}
@@ -24,11 +24,12 @@
 
   {% set link_url = item.menu_type == "simple_link" ? item.simple_link.menu_simple_link.url.href : node.url %}
   {% set link_text = item.menu_type == "simple_link" ? item.simple_link.link_text  : node.label %}
-
+  {% set classes_mega = node.activeNode ? "megamenu--item-link active-item {{ item.menu_type}}"  : 'megamenu--item-link {{ item.menu_type}}' %}
+  {% set classes_simple = content.url == link_url ? "megamenu--item-link active-item {{ item.menu_type}}"  : 'megamenu--item-link {{ item.menu_type}}' %}
 
   {% if node.children && item.menu_type != "simple_link" %}
-    <span class="megamenu--item-link {{ item.menu_type }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
-    node.linkTarget }}>{{ node.label }}
+    <span class="{{ classes_mega }}" {{ linkTarget() if
+    node.linkTarget }}>{{ node.label }} 
     {% if node.children %}
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="megamenu__chevron" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
@@ -37,7 +38,7 @@
     
     </span>
   {% else %}
-  <a class="megamenu--item-link {{ item.menu_type }}" href="{{ link_url }}" {{ activeNode() if node.activeNode }} {{ linkTarget() if
+  <a class="{{ classes_simple}}" href="{{ link_url }}" {{ linkTarget() if
     node.linkTarget }}>{{ link_text }}</a>
   {% endif %}
 
