@@ -192,6 +192,10 @@
   color: var(--color-primary) !important;
 }
 
+.has-submenu.megamenu--item-2 > .megamenu--item-link .megamenu__chevron {
+  display: none;
+}
+
 .megamenu--submenu-menu.level-2 {
   padding-left: 0;
 }
