@@ -78,13 +78,14 @@ var hsResultsPage = function (_resultsClass) {
 		}
 		function fillResults(results, searchPath) {
 			results.forEach(function (result, i) {
-				if (result.title.includes(searchPath)) {
-					/*        
-          console.log(result.title);
-          console.log(result.start_date);
-          console.log(result.end_date); 
-          */
-
+				/* 				
+				console.log("result.title: " + result.title);
+				console.log("result.cost: " + result.cost);
+				console.log("result.start_date: " + result.start_date);
+				console.log("result.end_date: " + result.end_date); 
+				*/
+				if (result.title.replace(/&amp;/g, "&").includes(searchPath)) {
+					// console.log("HERE");
 					addResult(
 						result.url,
 						result.cost,
@@ -113,9 +114,12 @@ var hsResultsPage = function (_resultsClass) {
 				if (request.status >= 200 && request.status < 400) {
 					var data = JSON.parse(request.responseText);
 					// console.log(data);
-					// console.log('DIEGO');
+					// console.log("DIEGO");
 					if (data.total > 0) {
-						// console.log(data);
+						/*
+						console.log(data);
+						console.log("searchPath: " + searchPath);
+						*/
 						fillResults(data.events, searchPath);
 					} else {
 						emptyResults(data.searchTerm);
